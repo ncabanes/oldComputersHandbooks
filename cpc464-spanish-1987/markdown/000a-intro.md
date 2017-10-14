@@ -6,7 +6,7 @@ La informática ha evolucionado mucho en muy poco tiempo. De todas las innovacio
 
 Las características de los ordenadores, tanto en el aspecto mecánico y electrónico (hardware) como en el de la programación (software) avanzan tan deprisa que incluso a los usuarios expertos les resulta difícil mantenerse al día. Por consiguiente, harían falta miles de páginas para describir exhaustivamente el BASIC del CPC464, su sistema operativo y su hardware.
 
-Este manual es solamente una introducción al CPC464 y a su software. Para complemetarlo se han publicado numerosos libros y guías de todo tipo que el usuario puede encontrar en librerías y tiendas de ordenadores.
+Este manual es solamente una introducción al CPC464 y a su software. Para complementarlo se han publicado numerosos libros y guías de todo tipo que el usuario puede encontrar en librerías y tiendas de ordenadores.
 
 Los usuarios que ya conozcan otros dialectos de BASIC no encontrarán ninguna dificultad en habituarse muy deprisa al AMSTRAD BASIC. Los demás apreciarán enseguida la estructura directa y clara de esta implementación del lenguaje, que ha sido diseñada para obviar las ambigüedades y el oscurantismo de otras versiones de BASIC.
 
@@ -22,7 +22,7 @@ Finalmente, el apéndice 1 es un glosario de la terminología informática y un 
 
 © Copyright 1987 AMSTRAD plc
 
-El contenido de este manual y el producto en él descrito no pueden ser adaptados ni reproducidos, ni total ni parcialmente, salvo con el permiso escrito de AMSTRAD plc (`Amstrad').
+El contenido de este manual y el producto en él descrito no pueden ser adaptados ni reproducidos, ni total ni parcialmente, salvo con el permiso escrito de AMSTRAD plc ('Amstrad').
 
 El producto descrito en este manual, así como los diseñados para ser utilizados con él, están sujetos a desarrollo y mejoras continuas. Toda la información técnica relativa al producto y su utilización (incluida la que figura en este manual) es suministrada por Amstrad de buena fe. Admitimos, no obstante, que en este manual puede haber errores u omisiones. El usuario puede obtener una lista de correcciones y modificaciones solicitándola a Amstrad o de sus distribuidores. Rogamos a los usuarios que rellenen y envíen a los distribuidores las tarjetas de registro y de garantía.
 
@@ -59,13 +59,13 @@ Edición española producida por
 Vector Ediciones, S.A. (91-202 49 40)
 
 AMSTRAD es marca registrada de Amstrad plc
+
 Queda estrictamente prohibido utilizar la marca y la palabra AMSTRAD sin la debida autorización
 
 IMPORTANTE 
 
 A lo largo de este manual vamos a utilizar la letra de tipo Univers negra para representar
-los caracteres que aparecen en la pantalla y los que el usuario debe introducir por el teclado. Los nombres de las teclas los escribiremos recuadrados; así, por ejemplo, [INTRO] indica que
-usted debe pulsar esta tecla, no escribir las letras I, N, T, R y O.
+los caracteres que aparecen en la pantalla y los que el usuario debe introducir por el teclado. Los nombres de las teclas los escribiremos recuadrados; así, por ejemplo, [INTRO] indica que usted debe pulsar esta tecla, no escribir las letras I, N, T, R y O.
 
 1. Para conectar el teclado, el monitor y la unidad modulador/fuente de alimentación a
 otros aparatos, siga escrupulosamente las instrucciones que damos en este manual y en los manuales de otros periféricos Amstrad. De lo contrario, el ordenador puede resultar seriamente dañado y la garantía quedará anulada.
@@ -82,18 +82,13 @@ y operaciones de mantenimiento al servicio técnico de Amstrad España.
 6. No utilice ni almacene el equipo a temperaturas demasiado altas ni demasiado bajas,
 ni en lugares húmedos, polvorientos o sometidos a grandes vibraciones.
 
-7. Mantenga alejado del ordenador todo tipo de líquidos (café, refrescos, etc.). El ordena-
-dor puede resultar gravemente dañado si lo salpica con cualquier líquido. Si esto llega
-a ocurrir, consulte al servicio técnico de Amstrad España.
+7. Mantenga alejado del ordenador todo tipo de líquidos (café, refrescos, etc.). El ordenador puede resultar gravemente dañado si lo salpica con cualquier líquido. Si esto llega a ocurrir, consulte al servicio técnico de Amstrad España.
 
-8. Cada vez que se apaga el ordenador, se pierden todos los datos y programas que pudie- ill	ra haber en su memoria. Si desea grabar el programa antes de apagar el ordenador,
-consulte la Parte 6 del 'Curso de introducción'.
+8. Cada vez que se apaga el ordenador, se pierden todos los datos y programas que pudiera haber en su memoria. Si desea grabar el programa antes de apagar el ordenador, consulte la Parte 6 del 'Curso de introducción'.
 
-9. Evite que el magnetófono y las cintas estén sometidos a la influencia de campos magné-
-ticos (altavoces, televisores, imanes, etc.).
+9. Evite que el magnetófono y las cintas estén sometidos a la influencia de campos magnéticos (altavoces, televisores, imanes, etc.).
 
-10. No apague el ordenador cuando haya una cinta en el magnetófono y esté pulsado el
-botón PLAY (o REC y PLAY).
+10. No apague el ordenador cuando haya una cinta en el magnetófono y esté pulsado el botón PLAY (o REC y PLAY).
 
 11. Aunque no apague el ordenador, no deje la cinta en el magnetófono mucho tiempo con el botón PLAY pulsado.
 
