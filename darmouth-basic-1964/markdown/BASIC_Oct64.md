@@ -1,4 +1,4 @@
-﻿# BASIC
+# BASIC
 
 Dartmouth College Computation Center 1 October 1964
 
@@ -19,24 +19,30 @@ The development of the BASIC Language, and of this Manual,, has been supported
 in part by the National Science Foundation under the terms of Grant NSF GE 
 3864.
 
-### ( == Revision must continue here == )
-
 ## TABLE OF CONTENTS
 
-I    What is a Program    1
-II    A BASIC Primer    3 2. 1 An Example    3 2. 2 Expressions, Numbers, and Variables    8
-2.3    Loops    12 2. 4 Use of the Time Sharing System    14 2.5 Errors and Debugging    21
-2.    6 Summary of Elementary BASIC Statements    26
-III    More Advanced BASIC    31
-3.    1 More About PRINT    31 3. 2 Lists and Tables    36
-3.    3 Functions and Subroutines    39
-3.4    Some Ideas for More Advanced Programmers    43
-IV    Card BASIC    50
-4.    1 Purpose    50 4. 2 How to Prepare a Deck    50 4. 3 Differences in Operation    50 4.4 MAT    51
-V    Appendices    53
-A.    Error Stops    53
-B.    Limitations on BASIC    55
-C.    The 15 BASIC Statements    56
+* **I What is a Program**
+* **II A BASIC Primer**
+* 2.1 An Example
+* 2.2 Expressions, Numbers, and Variables
+* 2.3 Loops
+* 2.4 Use of the Time Sharing System
+* 2.5 Errors and Debugging
+* 2.6 Summary of Elementary BASIC Statements
+* **III More Advanced BASIC**
+* 3.1 More About PRINT
+* 3.2 Lists and Tables
+* 3.3 Functions and Subroutines
+* 3.4 Some Ideas for More Advanced Programmers
+* **IV Card BASIC**
+* 4.1 Purpose
+* 4.2 How to Prepare a Deck
+* 4.3 Differences in Operation
+* 4.4 MAT
+* **V Appendices**
+* A. Error Stops
+* B. Limitations on BASIC
+* C. The 15 BASIC Statements
 
 ## I. WHAT IS A PROGRAM?
 
@@ -69,14 +75,18 @@ qualities which make poetry possible but computing impossible. Instead, you
 present your program in a language that resembles ordinary mathematical 
 notation, which has a simple vocabulary and grammar, and which permits a 
 complete and precise specification of your program. The language that you will 
-use is BASIC (Beginner's All purpose Symbolic Instruction Code) which is at the 
-same time precise, simple, and easy to understand.
+use is BASIC (**B**eginner's **A**ll purpose **S**ymbolic **I**nstruction 
+**C**ode) which is at the same time precise, simple, and easy to understand.
 
 Your first introduction to the BASIC language will be through an example. Next 
 you will learn how to use the Dartmouth Time Sharing System to execute BASIC 
 programs. Finally, you will study the language in more detail with emphasis on 
 its rules of grammar and on examples that show the application of computing to 
 a wide variety of problems.
+
+### ( == Revision must continue here == )
+
+
 
 ## II. A BASIC PRIMER
 
@@ -86,10 +96,18 @@ The following example is a complete BASIC program for solving two simultaneous
 linear equations in two unknowns with possibly several different right hand 
 sides. The equations to be solved are
 
+A<sub>1</sub>X<sub>1</sub> + A<sub>2</sub>X<sub>2</sub> = B<sub>1</sub>
+
+A<sub>3</sub>X<sub>1</sub> + A<sub>4</sub>X<sub>2</sub> = B<sub>2</sub>
+
 Since there are only two equations, we may find the solution by the formulas
 
+X1 = (B1A4 - B2A2) / (A1A4-A3A2)
+
+X2 = (A1B2 - A3B1) / (A1A4-A3A2)
+
 It is noted that a unique solution does not exist when the denominator 
-AjA^-A^A^ is equal to zero. Study the example carefully --in most cases the 
+A1A4-A3A2 is equal to zero. Study the example carefully --in most cases the 
 purpose of each line in the program is self-evident.
 
 ```basic
@@ -99,22 +117,18 @@ purpose of each line in the program is self-evident.
 30    READ Bl, B2
 37    LET XI = (B1*A4 - B2 * A2 ) / D
 42    LET X2 = ( Al * B2 - A3 * Bl)/D
-55    PRINT XI, X2
-60    G£) T(J 30
-65    PRINT "N<J UNIQUE S0LUTI0N"
+55    PRINT X1, X2
+60    GO TO 30
+65    PRINT "NO UNIQUE SOLUTION"
 70    DATA 1, 2,4
 80    DATA 2, -7, 5
 85    DATA 1, 3, 4, -7
 90    END
-A;3X1 + = B2
-(B1A4- B2A2>
-(AiA4- A3A$
-<A1B2" A3B1>
 ```
 
 We immediately observe several things about the above sample program. First, 
 all lines in the program start with a line number. These serve to identify the 
-lines in the program, each one of which is called a statement; thus, a program 
+lines in the program, each one of which is called a **statement**; thus, a program 
 is made up of statements, most of which are instructions to be performed by the 
 computer. These line numbers also serve to specify the order in which the 
 statements are to be performed by the computer, which means that you could type 
