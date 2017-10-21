@@ -1,4 +1,4 @@
-# BASIC
+﻿# BASIC
 
 Dartmouth College Computation Center 1 October 1964
 
@@ -84,9 +84,6 @@ programs. Finally, you will study the language in more detail with emphasis on
 its rules of grammar and on examples that show the application of computing to 
 a wide variety of problems.
 
-### ( == Revision must continue here == )
-
-
 
 ## II. A BASIC PRIMER
 
@@ -102,12 +99,12 @@ A<sub>3</sub>X<sub>1</sub> + A<sub>4</sub>X<sub>2</sub> = B<sub>2</sub>
 
 Since there are only two equations, we may find the solution by the formulas
 
-X1 = (B1A4 - B2A2) / (A1A4-A3A2)
+X<sub>1</sub> = (B<sub>1</sub>A<sub>4</sub> - B<sub>2</sub>A<sub>2</sub>) / (A<sub>1</sub>A<sub>4</sub>-A<sub>3</sub>A<sub>2</sub>)
 
-X2 = (A1B2 - A3B1) / (A1A4-A3A2)
+X<sub>2</sub> = (A<sub>1</sub>B<sub>2</sub> - A<sub>3</sub>B<sub>1</sub>) / (A<sub>1</sub>A<sub>4</sub>-A<sub>3</sub>A<sub>2</sub>)
 
 It is noted that a unique solution does not exist when the denominator 
-A1A4-A3A2 is equal to zero. Study the example carefully --in most cases the 
+A<sub>1</sub>A<sub>4</sub>-A<sub>3</sub>A<sub>2</sub> is equal to zero. Study the example carefully --in most cases the 
 purpose of each line in the program is self-evident.
 
 ```basic
@@ -115,7 +112,7 @@ purpose of each line in the program is self-evident.
 15    LET D = Al * A4 - A3 * A2
 20    IF D = 0 THEN 65
 30    READ Bl, B2
-37    LET XI = (B1*A4 - B2 * A2 ) / D
+37    LET X1 = (B1*A4 - B2 * A2 ) / D
 42    LET X2 = ( Al * B2 - A3 * Bl)/D
 55    PRINT X1, X2
 60    GO TO 30
@@ -157,7 +154,11 @@ shown in statement number 65.) Thus, spaces may be used, or not used, at will
 to "pretty up" a program and make it more readable. For instance, statement 15 
 could have been typed as
 
-15 LETD=Al *A4-A2*A3 a fully equivalent though less readable form.
+```basic
+15 LETD=Al*A4-A2*A3
+```
+
+a fully equivalent though less readable form.
 
 Turning now to the individual statements in the program, we observe that the 
 first statement, numbered 10, is a READ statement. When the computer encounters 
@@ -175,31 +176,31 @@ very simple (consisting of only a single variable) to the very complex. The
 rules for forming these expressions are given in detail in the next section, 
 but for now we point out that:
 
-1.    Variable names consist of a single capital letter possibly followed by a single digit;
+1. Variable names consist of a single capital letter possibly followed by a single digit;
 
-2.    The symbol * (asterisk) is always used to denote multiplication;
+2. The symbol * (asterisk) is always used to denote multiplication;
 
-3.    Parentheses may be needed to specify the order of the computation because the entire expression must appear on a single line;
+3. Parentheses may be needed to specify the order of the computation because the entire expression must appear on a single line;
 
 4. No subscripts or superscripts as Such are permitted, also because the expression must appear on a single line.
 
-In line 20 the computer asks a question! "Is I) equal to 0?" If the answer is 
-yes, then the next statement to be executed by the computer is the one numbered 
-65. If the answer is no, the computer continues to statement 30, the next 
-highe<r number ednon*''(a&efr 20.
+In line 20 the computer asks a question! "Is D equal to 0?" If the answer is 
+yes, then the next statement to be executed by the computer is the one numbered 65. 
+If the answer is no, the computer continues to statement 30, the next 
+higher numbered one after 20.
 
-In line 30 the computer causes the variables B1 and B2 to be given the values next appearing in the DATA Statements elsewhere in the program. Since the first four data have already been used up, B1 is given the fifth value -7, and B2 is given the sixth value 5.
+In line 30 the computer causes the variables B1 and B2 to be given the values 
+next appearing in the DATA statements elsewhere in the program. Since the first 
+four data have already been used up, B1 is given the fifth value -7, and B2 is 
+given the sixth value 5.
 
 The statements numbered 37 and 42 complete the computation of
 the solution, XI and X2. Notice that the denominator has been previously
 evaluated as the variable D. Thus it is not necessary to repeat the formula
 given in statement 15. Notice also how parentheses are used to specify that
 the numerator of the fraction consists of the entire quantity B1*A4 - B2*A2.
-If the parentheseslhadbeen omitted by mistake, the expression computed
-
-B2*A2
-
-would have been B1*A4--y— , which is incorrect.
+If the parentheses had been omitted by mistake, the expression computed
+would have been B1*A4 - (B2*A2 / D), which is incorrect.
 
 Now that the answers have been computed, they will be printed out for you to 
 see when the computer encounters statement 55. Notice that the comma is used to 
@@ -211,7 +212,7 @@ next statement number 30. We observe that the second encounter of statement 30
 will cause the variables B1 and B2 to be given the values 1 and 3, 
 respectively, the next available ones in the DATA statements.
 
-After completing the computation for the second set of right hand §id$f 
+After completing the computation for the second set of right hand sides and
 printing the answers, the computer will give the last values, 4 and -7. to the 
 variable B1 and B2, compute and print the third set of answers, and then stop, 
 because there is no more data when the READ statement 30 is encountered for the 
@@ -223,9 +224,11 @@ cause the computer to execute statement 65 next. Statement 65 is again a PRINT
 statement, but instead of numerical answers being printed out, it will produce 
 the English message
 
-N0 UNIQUE SOLUTION We could have used any other recognizable tnessnge between 
-the two quotation marjcs that would have indicated to us that no unique 
-solution was possible for the given coefficients.
+NO UNIQUE SOLUTION 
+
+We could have used any other recognizable tnessnge between the two quotation 
+marks that would have indicated to us that no unique solution was possible for 
+the given coefficients.
 
 After printing the warning message the computer will execute next statement 90, 
 an END statement, which stops the running of the program. (The running will 
@@ -243,28 +246,30 @@ wish the data to be used by the various READ statements in your program.
 Expressions in BASIC look like mathematical formulas, and are formed from 
 numbers, variables, operations, and functions.
 
-A number may contain up to nine digits with or without a decimal point, and 
+A **number** may contain up to nine digits with or without a decimal point, and 
 possibly with a minus sign. For example, the following numbers are acceptable 
 in BASIC:
 
-5    2.5    123456789 .123456789 -123456
+    5    2.5    123456789 .123456789 -123456
 
-To extend the range of numbers, a factor of a power of ten may be attached, using the letter E to stand for "times ten to the power". Again, the following examples are all acceptable forms for the same number in BASIC,
+To extend the range of numbers, a factor of a power of ten may be attached, 
+using the letter E to stand for "times ten to the power". Again, the following 
+examples are all acceptable forms for the same number in BASIC,
 
--12. 345 -12345 E-3 -. 12345E2 -12345000E-6 -.00012345E5
+    -12.345 -12345 E-3 -. 12345E2 -12345000E-6 -.00012345E5
 
-It should be noted, however, that the E notation cannot stand alone;; 1000 may 
+It should be noted, however, that the E notation cannot stand alone; 1000 may 
 be written 10E2 or 1E3 but not E3 (which looks like a variable and is so 
-interpreted in BASIC.) It should also be noted that . 000123456789 is illegal, 
-and must be written as, say, . 123456789E-3..
+interpreted in BASIC.) It should also be noted that .000123456789 is illegal, 
+and must be written as, say, .123456789E-3.
 
-A variable in BASIC is denoted by any letter, or by any letter followed by a 
+A **variable** in BASIC is denoted by any letter, or by any letter followed by a 
 digit. For instance, these are acceptable variable names:
 
-A    X    N5    X0    K9    01
+    A    X    N5    X0    K9    O1
 
-The difference between 0 and 0, and between I and 1 should be observed. Thus, 
-10 is acceptable while any of 10, 1,0, and 10 are not (the last one is the 
+The difference between O and 0, and between I and 1 should be observed. Thus, 
+I0 is acceptable while any of 1O, 1, 0, and 10 are not (the last one is the 
 number ten.)
 
 A variable in BASIC stands for a number, usually one that is not known to tke 
@@ -276,24 +281,32 @@ Expressions are formed by combining variables and numbers together with
 arithmetic operations and parentheses just as in ordinary mathematical 
 formulas. The symbols
 
-+ - * / f
+    + - * / ^
 
-stand for "plus", "minus", "times", "divided by", and "to the power", T'
-
+stand for "plus", "minus", "times", "divided by", and "to the power", 
 respectively. Parentheses are used in the usual way, as in
 
-(Al + X)*(B - ctD7)
+    (Al + X)*(B - C^D7)
 
 Because expressions must be presented as a single line, parentheses are
 often required where they might not be needed in ordinary mathematical
 notation. Thus,
 
-A - B is written as (A - B)/C C
+     A - B 
+    -------
+       C
+
+is written as 
+
+    (A - B)/C
 
 to show that the entire quantity A - B is to be divided by C. Omitting the 
-parentheses would leave A - B/G , which is interpreted as A - (B/C) .
+parentheses would leave A - B/C , which is interpreted as A - (B/C) .
 
 Another example that arises quite often is
+
+@@### ( == Revision must continue here == )
+
 
 A/(B*C) which is written as J    or
 
