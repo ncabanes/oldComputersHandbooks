@@ -1309,24 +1309,24 @@ to compute a table of values of the sine function in degrees.
 The use of DEF is limited to those cases where the value of the function can be 
 computed within a single BASIC statement. Often much more complicated 
 functions, or perhaps even pieces of program that are not functions, must be 
-calculated at several different points within the program. For this, the G0SUB 
+calculated at several different points within the program. For this, the GOSUB 
 statement may frequently be useful.
 
-The form of a G0SUB statement is illustrated as follows: 25 G(JSUB 180
+The form of a GOSUB statement is illustrated as follows: 25 G(JSUB 180
 
-The effect of the G0SUB is exactly the same as a G0T0 except that note is taken by the computer as to where the G0SUB statement is in the program. As soon as a RETURN statement is encountered, the computer automatically goes back to the statement immediately following the G0SUB. As a skeleton example,    ^
+The effect of the GOSUB is exactly the same as a G0T0 except that note is taken by the computer as to where the GOSUB statement is in the program. As soon as a RETURN statement is encountered, the computer automatically goes back to the statement immediately following the GOSUB. As a skeleton example,    ^
 
 ```basic
-100 LET X = 3 110 G0SUB 400 120 PRINT U, V, W
+100 LET X = 3 110 GOSUB 400 120 PRINT U, V, W
 200    LET X = 5
-210    G0SUB 400
+210    GOSUB 400
 220    LET Z = U + 2*V + 3*W
 I
 400 LET U = X*X 410 LET V = X*X*X
 420 LET W - X*X*X*X + X*X*X + X*X + X 430 RETURN
 ```
 
-When statement 400 is entered by the G0SUB 400 in line 110, the computations in 
+When statement 400 is entered by the GOSUB 400 in line 110, the computations in 
 lines 400, 410, and 420 are performed, after which the computer goes back to 
 statement 120. When the subroutine is entered from statement 210, the computer 
 goes back to statement 220.
@@ -1356,10 +1356,10 @@ user n0. 999999 problem name: gcd3n0
 20 read a, b, c
 30 let x = a
 40 let y = b
-50 g0sub 200
+50 GOSUB 200
 60 let x = g
 70 let y = c
-80 g0sub 200
+80 GOSUB 200
 90 print a, b, c, g
 100 g0 t0 20
 110 data 60, 90, 120
@@ -1629,44 +1629,42 @@ s.
 The various error messages that can. occur in BASIC, together with their 
 interpretation, are now given:
 
-Error Message DIMENSION T00 LARGE
-ILLEGAL CONSTANT ILLEGAL FORMULA
-ILLEGAL RELATION
-ILLEGAL LINE NUMBER ILLEGAL INSTRUCTION
-ILLEGAL VARIABLE INCORRECT FORMAT
-END IS NOT LAST
-Interpretation
-The size of a list or table is too large for the available storage. Make them smaller, (See Appendix B.)
-More than nine digits or incorrect form in a constant number.
-Perhaps the most common error message, may indicate missing parentheses, illegal variable names, missing multiply signs, illegal numbers, or many other errors. Check the statement thoroughly.
-Something is wrong with the relational expression in an IF-THEN statement. Check to see if you used one of the six permissable relational symbols.
-Line number is of incorrect form, or contains more than five digits.
-Other than one of the fifteen legal BASIC instructions has been used following the line number.
-An illegal variable name has been used.
-The format of an instruction is wrong. See especially IF-THEN's and FOR's.
-Self-explanatory, it also occurs if there are two or more END statements in the program.
-NO END INSTRUCTION
-The program has no END statement.
-N0 DATA
-UNDEFINED FUNCTION UNDEFINED NUMBER PROGRAM TOO LONG
-TOO MUCH DATA TOO MANY LABELS
-TOO MANY LOOPS
-NOT MATCH WITH FOR
-FOR WITHOUT NEXT
-CUT PROGRAM OR DIMS.
-SUBSCRIPT ERROR ILLEGAL RETURN
-There is at least one READ statement in the program, but no DATA statements.
-A function such as FNF ( ) has been used without appearing in a DEF Statement. Check for typographical errors.
-The statement number appearing in a GO TO or IF-THEN statement does not appear as a line number in the program.
-Either the program itself is too long for the available storage, or there are too many constants and printed labels. (See Appendix B,)
-There is too much data in the program. (See Appendix B.)
-The total length of all printed labels in the program exceeds the limit. (See Appendix B.)
-There are too many FOR-NEXT combinations in the program. The upper limit is 26. (See Appendix B.)
-An incorrect NEXT statement, perhaps with a wrong variable given. Also, check for incorrectly nested FOR statements.
-A missing NEXT statement, This message can also occur in conjunction with the previous one.
-Either the program is too long, or the amount of space reserved by the DIM statements is too much, or a combination of these. This message can be eliminated by either cutting the length of the program, or by reducing the size of the lists and tables.
-A subscript has been called for that lies outside the range specified in the DIM statement, or if no DIM statement applies, outside the range 0 through 10.
-Occurs if a RETURN is encountered before the first G0SUB during the running of a program. (Note: BASIC does not require the G0SUB to have an earlier statement number -- only to perform a G0SUB before performing a RETURN.)
+| Error Message | Interpretation |
+| DIMENSION TOO LARGE | The size of a list or table is too large for the available storage. Make them smaller, (See Appendix B.)
+| ILLEGAL CONSTANT | More than nine digits or incorrect form in a constant number.
+| ILLEGAL FORMULA | Perhaps the most common error message, may indicate missing parentheses, illegal variable names, missing multiply signs, illegal numbers, or many other errors. Check the statement thoroughly.
+| ILLEGAL RELATION | Something is wrong with the relational expression in an IF-THEN statement. Check to see if you used one of the six permissable relational symbols.
+| ILLEGAL LINE NUMBER | Line number is of incorrect form, or contains more than five digits.
+| ILLEGAL INSTRUCTION | Other than one of the fifteen legal BASIC instructions has been used following the line number.
+| ILLEGAL VARIABLE | An illegal variable name has been used.
+| INCORRECT FORMAT | The format of an instruction is wrong. See especially IF-THEN's and FOR's.
+| END IS NOT LAST | Self-explanatory, it also occurs if there are two or more END statements in the program.
+| NO END INSTRUCTION | The program has no END statement.
+| NO DATA | There is at least one READ statement in the program, but no DATA statements. |
+| UNDEFINED FUNCTION | A function such as FNF ( ) has been used without appearing in a DEF Statement. Check for typographical errors.
+| UNDEFINED NUMBER | The statement number appearing in a GO TO or IF-THEN statement does not appear as a line number in the program.
+| PROGRAM TOO LONG | Either the program itself is too long for the available storage, or there are too many constants and printed labels. (See Appendix B,)
+| TOO MUCH DATA  | There is too much data in the program. (See Appendix B.)
+| TOO MANY LABELS | The total length of all printed labels in the program exceeds the limit. (See Appendix B.)
+| TOO MANY LOOPS | There are too many FOR-NEXT combinations in the program. The upper limit is 26. (See Appendix B.)
+| NOT MATCH WITH FOR | An incorrect NEXT statement, perhaps with a wrong variable given. Also, check for incorrectly nested FOR statements.
+| FOR WITHOUT NEXT | A missing NEXT statement, This message can also occur in conjunction with the previous one.
+| CUT PROGRAM OR DIMS. | Either the program is too long, or the amount of space reserved by the DIM statements is too much, or a combination of these. This message can be eliminated by either cutting the length of the program, or by reducing the size of the lists and tables.
+| SUBSCRIPT ERROR | A subscript has been called for that lies outside the range specified in the DIM statement, or if no DIM statement applies, outside the range 0 through 10.
+| ILLEGAL RETURN | Occurs if a RETURN is encountered before the first GOSUB during the running of a program. (Note: BASIC does not require the GOSUB to have an earlier statement number -- only to perform a GOSUB before performing a RETURN.)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### APPENDIX B -- limitations on BASIC
 
@@ -1718,10 +1716,10 @@ NEXT<^unsubscripted variable^ 10 NEXT XI
 END 10 END
 ST0P
 DEF
-G0SUB
+GOSUB
 STOP 10 ST0P
 DEF FN <Aetter^ (^subscripted variabl^) = ^xpressioi^ 10 DEF FNG( Z ) = 1 + SQR(1 + Z * Z)
-G0SUB <\line number) 10 G0SUB 110
+GOSUB <\line number) 10 GOSUB 110
 RETURN
 DIM
 REM
