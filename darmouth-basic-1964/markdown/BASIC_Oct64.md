@@ -1630,6 +1630,7 @@ The various error messages that can. occur in BASIC, together with their
 interpretation, are now given:
 
 | Error Message | Interpretation |
+|---------------|----------------|
 | DIMENSION TOO LARGE | The size of a list or table is too large for the available storage. Make them smaller, (See Appendix B.)
 | ILLEGAL CONSTANT | More than nine digits or incorrect form in a constant number.
 | ILLEGAL FORMULA | Perhaps the most common error message, may indicate missing parentheses, illegal variable names, missing multiply signs, illegal numbers, or many other errors. Check the statement thoroughly.
@@ -1641,7 +1642,7 @@ interpretation, are now given:
 | END IS NOT LAST | Self-explanatory, it also occurs if there are two or more END statements in the program.
 | NO END INSTRUCTION | The program has no END statement.
 | NO DATA | There is at least one READ statement in the program, but no DATA statements. |
-| UNDEFINED FUNCTION | A function such as FNF ( ) has been used without appearing in a DEF Statement. Check for typographical errors.
+| UNDEFINED FUNCTION | A function such as FNF ( ) has been used without appearing - in a DEF Statement. Check for typographical errors.
 | UNDEFINED NUMBER | The statement number appearing in a GO TO or IF-THEN statement does not appear as a line number in the program.
 | PROGRAM TOO LONG | Either the program itself is too long for the available storage, or there are too many constants and printed labels. (See Appendix B,)
 | TOO MUCH DATA  | There is too much data in the program. (See Appendix B.)
@@ -1656,33 +1657,30 @@ interpretation, are now given:
 
 
 
-
-
-
-
-
-
-
-
-
-
 ### APPENDIX B -- limitations on BASIC
 
-There are some limitations imposed on BASIC by the limited amount of computer storage. Listed below are some of these limitations, in particular, those that are related to the error messages in APPENDIX A. The reader should realize that while the BASIC language itself is fixed, in time some of these limitations may be relaxed slightly.
-Item
-Length of program
-Constants and printed labels Data
-Length of printed labels T0R statements
-Limitation
-Difficult to relate to the BASIC program, but in general about two feet of teletype paper filled with BASIC statements is about it.
-The total number of constants and different printed labels must not exceed 175.
-There can be no more than 300 data numbers.
-The total length of printed labels cannot exceed something slightly less than 600 characters.
-There can be no more than 26 F(JR statements in a program.
-GO T0 and IF-THEN statements The total number of these statements
-combined cannot exceed 80.
-Lists and Tables
-The total number of elements in all the lists and tables combined cannot exceed 1500.
+There are some limitations imposed on BASIC by the limited amount of computer 
+storage. Listed below are some of these limitations, in particular, those that 
+are related to the error messages in APPENDIX A. The reader should realize that 
+while the BASIC language itself is fixed, in time some of these limitations may 
+be relaxed slightly.
+
+| Item | Limitation |
+|------|------------|
+| Length of program | Difficult to relate to the BASIC program, but in general about two feet of teletype paper filled with BASIC statements is about it.
+| Constants and printed labels  | The total number of constants and different printed labels must not exceed 175.
+| Data | There can be no more than 300 data numbers.
+| Length of printed labels | The total length of printed labels cannot exceed something slightly less than 600 characters.
+| FOR statements | There can be no more than 26 FOR statements in a program.
+| GO TO and IF-THEN statements | The total number of these statements combined cannot exceed 80.
+| Lists and Tables | The total number of elements in all the lists and tables combined cannot exceed 1500.
+
+
+
+
+
+
+
 
 ### APPENDIX C -- Summary of the 15 BASIC Statements
 
