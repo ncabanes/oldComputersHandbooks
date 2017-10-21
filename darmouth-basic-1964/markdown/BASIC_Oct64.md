@@ -419,11 +419,11 @@ body of the loop, and a way to get out.
 
 Because loops are so important, and because loops of the type shown
 in the example arise so often, BASIC provides two statements to enable one
-to specify such a loop much more concisely. They are the F0R and the
+to specify such a loop much more concisely. They are the FOR and the
 NEXT statements, and would be used as follows in the example above:
 
 ```basic
-10 F0R X = 1 T0 100 
+10 FOR X = 1 TO 100 
 20 PRINT X, SQR(X) 
 30 NEXT X 
 40 END
@@ -435,7 +435,7 @@ which X is increased each time is implied to be unity. If instead we wished
 to print the square roots of the first 50 even numbers, we would have used
 
 ```basic
-10 F0R X = 2 TQ> 100 STEP 2 
+10 FOR X = 2 TQ> 100 STEP 2 
 20 PRINT X, SQR(X) 
 30 NEXT X 
 40 END
@@ -447,7 +447,7 @@ To print the square roots of the multiples of 7 that are less than 100, one
 might use for line number 10
 
 ```basic
-10 F0R X = 7 TQV100 STEP 7 
+10 FOR X = 7 TQV100 STEP 7 
 ```
 
 The loop will be performed for all values of X that are less than or equal to 
@@ -482,7 +482,7 @@ is the ordinary carriage return. More importantly, the computer ignores all
 typed lines until this key is pressed-. It must be used after each line in a 
 BASIC program, and after each line which MODELS 33 and 3$ KEYBOARD ARRANGEMENT
 
-© [
+© 
 
 is a communication to the system.
 
@@ -714,13 +714,13 @@ program as first written down oh paper was:
 ```basic
 10    READ D
 20    LET X0 = 0
-30    F0R X = 0 T0 3 STEP D
+30    FOR X = 0 TO 3 STEP D
 40    IF SIN(X) M THEN 100
 50    LET X0 = X
 60    LET M = SIN(XO)
 70    PRINT X0, X, D
 80    NEXT X0
-90    G0 T0 20
+90    GO TO 20
 100    DATA . 1, . 01, . 001
 110    END
 ```
@@ -887,11 +887,11 @@ Labels and expressions may appear in the same print statement.
 Much more variety is permitted in PRINT statements than is shown here. The 
 additional flexibility is explained in section 3. 1.
 
-#### 2.6.4 G0 T0 and IF-THEN
-Form:    <C[line number^ G0 T0 <(line numbers-
-Example: 150 G0T0 75
-240 G<Z> T0 850
-Comment: Sometimes called an unconditional go to, G0 T0 is used to interrupt the normal sequence of executing statements in the increasing order of their line numbers.
+#### 2.6.4 GO TO and IF-THEN
+Form:    <C[line number^ GO TO <(line numbers-
+Example: 150 GOTO 75
+240 G<Z> TO 850
+Comment: Sometimes called an unconditional go to, GO TO is used to interrupt the normal sequence of executing statements in the increasing order of their line numbers.
 Form:    <^line number^ IF ^expression^ ^relatioi^
 ^expression> THEN <*Line number^
 Example: 140 IF X ^ Y + Z THEN 200
@@ -907,19 +907,19 @@ Meaning less than
 less than or equal equal
 greater than or equal greater than not equal
 
-#### 2. 6. 5 F0R and NEXT Form:
+#### 2. 6. 5 FOR and NEXT Form:
 
 Example:
 Comment:
 Comment:
-<Oine number^ F0R ^Variable/* = <4xpression^> T0 ^expressions
+<Oine number^ FOR ^Variable/* = <4xpression^> TO ^expressions
 or
-<^line number^ F0R <^rariable]> = ^expressior^ T0 ^expression^> STEP ^expressions
-120 F0R X4 = (17 + C0S(A)) /3 T0 3*SQR(10) STEP 1/4
+<^line number^ FOR <^rariable]> = ^expressior^ TO ^expression^> STEP ^expressions
+120 FOR X4 = (17 + C0S(A)) /3 TO 3*SQR(10) STEP 1/4
 (This represents the body of the loop. )
 235 NEXT X4
 
-Omitting the STEP part of the F0R statement is equivalent to having the 
+Omitting the STEP part of the FOR statement is equivalent to having the 
 stepsize equal to unity.
 
 The above example will, assuming A to be equal to 0, cause the body of the loop 
@@ -936,17 +936,17 @@ the statement following the NEXT; the variable used in the FOR statement then
 has the value it had during the last passage through the loop ( 9. 25 in the 
 above example.)
 
-Example: 240 F<JR X = 8 T0 3 STEP -1
+Example: 240 F<JR X = 8 TO 3 STEP -1
 
 Comment: The body of the loop is performed with X equal to
 8, 7, 6, 5, 4, and 3, and X has the value 3 upon leaving the loop.
 
-Example: 456 F0R J = -3T0 12 STEP 2
+Example: 456 FOR J = -3T0 12 STEP 2
 
 Comment: The body of the loop will be performed with J equal to -3, -1, 1, 3, 
 5, 7, 9, and 11. J will have the value 11 upon leaving the loop.
 
-Example: 50 F0R Z = 2 T0 -2
+Example: 50 FOR Z = 2 TO -2
 
 Comment: The body of the loop will not be performed. Instead, the computer will 
 proceed to the statement immediately following the corresponding NEXT. The 
@@ -1289,7 +1289,7 @@ function must appear at two or more locations in the program. Thus,
 ```basic
 10    DEF FNF(Z) = SIN(Z*P)
 20    LET P = 3. 14159265/180
-30    F0R X = 0 TQ> 90
+30    FOR X = 0 TQ> 90
 40    PRINT X, FNF(X)
 50    NEXT X
 60    END
@@ -1299,7 +1299,7 @@ might be more efficiently written as
 
 ```basic
 20 LET P = 3. 14159265/180 
-30 F0R X = 0 T0 90 
+30 FOR X = 0 TO 90 
 40 PRINT X, SIN(X*P) 
 50 NEXT X 
 60 END
@@ -1314,7 +1314,7 @@ statement may frequently be useful.
 
 The form of a GOSUB statement is illustrated as follows: 25 G(JSUB 180
 
-The effect of the GOSUB is exactly the same as a G0T0 except that note is taken by the computer as to where the GOSUB statement is in the program. As soon as a RETURN statement is encountered, the computer automatically goes back to the statement immediately following the GOSUB. As a skeleton example,    ^
+The effect of the GOSUB is exactly the same as a GOTO except that note is taken by the computer as to where the GOSUB statement is in the program. As soon as a RETURN statement is encountered, the computer automatically goes back to the statement immediately following the GOSUB. As a skeleton example,    ^
 
 ```basic
 100 LET X = 3 110 GOSUB 400 120 PRINT U, V, W
@@ -1444,7 +1444,7 @@ Most programmers eventually write or encounter a program something like this:
 20 LET S = S + X 
 30 IF X >= 2 THEN 60 
 40 LET X = X + . 1 
-50 G0 T0 20 
+50 GO TO 20 
 60 PRINT S 
 70 END
 ```
@@ -1475,16 +1475,16 @@ loop with integers. The example may be rewritten as follows:
 20    LET S = S + N/10
 30    IF N >= 20 THEN 60
 40    LET N = N + 1
-50    G0T0 20
+50    GOTO 20
 60    PRINT S
 70    END
 ```
 
-Better still, a F0R statement can shorten the program to
+Better still, a FOR statement can shorten the program to
 
 ```basic
 10 LET X = 0 
-20 F0R N = 1 T0 20 
+20 FOR N = 1 TO 20 
 30 LET S = S + N/10 
 40 NEXT N 
 50 PRINT S 
@@ -1689,7 +1689,7 @@ LET
 READ
 DATA
 PRINT
-G0T0
+GOTO
 IF-THEN
 F0R
 NEXT
@@ -1699,23 +1699,23 @@ DATA ^number)> , <^number^> , . . . , ^number) 10 DATA 1, 2, -3, 7, 123.479, -2.
 PRINT ^label^ , or <^label^ ^expression/* , or
 <^expression^
 10 PRINT "SINE", "X - " X(I, K), A + B*C0S(Y)
-G0T0 <^line number^ 10 G0T0 17
+GOTO <^line number^ 10 GOTO 17
 IF ^expressions <^elational^ <^expressionS THEN
 <Q.ine number^
 10 IF X + Y > 0 THEN 419
 F(#R <^unsubscripted variabl^1 = ^expression^ T<J .
 ^expressioi^ STEP .^expressioi^
-10 T0K 1=1 T0 17
-10 F0R XI = 0 10 7 STEP 0. 5
+10 TOK 1=1 TO 17
+10 FOR XI = 0 10 7 STEP 0. 5
 NEXT<^unsubscripted variable^ 10 NEXT XI
 (continued on next page)
 -56-
 (continued) END
 END 10 END
-ST0P
+STOP
 DEF
 GOSUB
-STOP 10 ST0P
+STOP 10 STOP
 DEF FN <Aetter^ (^subscripted variabl^) = ^xpressioi^ 10 DEF FNG( Z ) = 1 + SQR(1 + Z * Z)
 GOSUB <\line number) 10 GOSUB 110
 RETURN
