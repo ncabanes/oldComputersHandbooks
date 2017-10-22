@@ -108,19 +108,19 @@ A<sub>1</sub>A<sub>4</sub>-A<sub>3</sub>A<sub>2</sub> is equal to zero. Study th
 purpose of each line in the program is self-evident.
 
 ```basic
-10    READ Al, A2, A3, A4
-15    LET D = Al * A4 - A3 * A2
-20    IF D = 0 THEN 65
-30    READ Bl, B2
-37    LET X1 = (B1*A4 - B2 * A2 ) / D
-42    LET X2 = ( Al * B2 - A3 * Bl)/D
-55    PRINT X1, X2
-60    GO TO 30
-65    PRINT "NO UNIQUE SOLUTION"
-70    DATA 1, 2,4
-80    DATA 2, -7, 5
-85    DATA 1, 3, 4, -7
-90    END
+10  READ A1, A2, A3, A4
+15  LET D = A1 * A4 - A3 * A2
+20  IF D = 0 THEN 65
+30  READ B1, B2
+37  LET X1 = (B1*A4 - B2*A2) / D
+42  LET X2 = (A1*B2 - A3*B1) / D
+55  PRINT X1, X2
+60  GO TO 30
+65  PRINT "NO UNIQUE SOLUTION"
+70  DATA 1, 2,4
+80  DATA 2, -7, 5
+85  DATA 1, 3, 4, -7
+90  END
 ```
 
 We immediately observe several things about the above sample program. First, 
@@ -347,7 +347,7 @@ cosine of X
 
 X must be expressed in radian measure.
 
-TAN(X) ATN(X) EXP(X) ABS(X) L0G(X) SQR(X)
+TAN(X) ATN(X) EXP(X) ABS(X) LOG(X) SQR(X)
 
 tangent of X
 
@@ -357,7 +357,7 @@ X
 (Two other functions, RND(X) and INT(X), are explained in section 3. 3) The argument of a function may be any expression, no matter how complicated. For example
 are all acceptable in BASIC.
 
-The use of the L0G and SQR functions requires a word of caution. In each case 
+The use of the LOG and SQR functions requires a word of caution. In each case 
 the argument is made positive before applying the function, since neither 
 function is defined for negative arguments. Many times, though not always, an 
 attempt to have the computer extract the square root of a negative number 
@@ -367,7 +367,7 @@ such occasions, hopefully rare, may therefore be unnoticed.
 The user may define new functions using the DEF statement, which is discussed 
 in section 3.3.
 
-SQR( Bt 2 - 4*A*C ) - 17 Z - EXP( XI + L0G( A/Xl )) * TAN(A) SQR( SIN(Q) f 2 + C0S(Q) f 2 )
+SQR( Bt 2 - 4*A*C ) - 17 Z - EXP( XI + LOG( A/Xl )) * TAN(A) SQR( SIN(Q) f 2 + C0S(Q) f 2 )
 
 ### 2.3 Loops
 
@@ -435,7 +435,7 @@ which X is increased each time is implied to be unity. If instead we wished
 to print the square roots of the first 50 even numbers, we would have used
 
 ```basic
-10 FOR X = 2 TQ> 100 STEP 2 
+10 FOR X = 2 TO 100 STEP 2 
 20 PRINT X, SQR(X) 
 30 NEXT X 
 40 END
@@ -1263,8 +1263,18 @@ defined function must be three letter s, the iitOi of which are FN . The user
 thus may define up to 26 functioihs. The following examples illustrate the form 
 of the DEF statement:
 
-25 DEF FNF(Z) = SIN(Z*P) (where P has the value 3. 14159265/180)
-40 DEF FNL(X) = L0G(X)/L0G(1O) Thus, FNF is the sine function measured in degrees, and FNL is the function log-to-the-base-ten.
+```basic
+25 DEF FNF(Z) = SIN(Z*P) 
+```
+
+(where P has the value 3. 14159265/180)
+
+```basic
+40 DEF FNL(X) = LOG(X)/LOG(1O) 
+```
+
+Thus, FNF is the sine function measured in degrees, and FNL is the function 
+log-to-the-base-ten.
 
 The DEF statement may occur anywhere in the program. The user needs to be 
 cautioned that the variable used in the DEF statement must not be subscripted, 
@@ -1277,19 +1287,25 @@ fit into one line. It could involve many other variables besides the one
 denoting the argument of the function. Thus,
 
 ```basic
-60 DEF FNX(X) = SQR(X*X + Y*Y) may be used to set up a function that computes the square root Of the sum of the squares of X and Y. To use FNX, one might use the following:
+60 DEF FNX(X) = SQR(X*X + Y*Y) 
+```
+
+may be used to set up a function that computes the square root Of the sum of 
+the squares of X and Y. To use FNX, one might use the following:
+
+```basic
 10 LET Y = 30
 20 LET SI = FNX(40)
 ```
 
-Of course, SI would end up having t^e value 50.
+Of course, SI would end up having the value 50.
 It should be noted that one does not need DEF unless the defined
 function must appear at two or more locations in the program. Thus,
 
 ```basic
 10    DEF FNF(Z) = SIN(Z*P)
-20    LET P = 3. 14159265/180
-30    FOR X = 0 TQ> 90
+20    LET P = 3.14159265/180
+30    FOR X = 0 TO 90
 40    PRINT X, FNF(X)
 50    NEXT X
 60    END
@@ -1298,7 +1314,7 @@ function must appear at two or more locations in the program. Thus,
 might be more efficiently written as
 
 ```basic
-20 LET P = 3. 14159265/180 
+20 LET P = 3.14159265/180 
 30 FOR X = 0 TO 90 
 40 PRINT X, SIN(X*P) 
 50 NEXT X 
