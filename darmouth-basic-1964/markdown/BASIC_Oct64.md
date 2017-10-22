@@ -155,7 +155,7 @@ to "pretty up" a program and make it more readable. For instance, statement 15
 could have been typed as
 
 ```basic
-15 LETD=Al*A4-A2*A3
+15 LETD=A1*A4-A2*A3
 ```
 
 a fully equivalent though less readable form.
@@ -283,10 +283,14 @@ formulas. The symbols
 
     + - * / ^
 
-stand for "plus", "minus", "times", "divided by", and "to the power", 
+stand for "plus", "minus", "times", "divided by", and "to the power" (*), 
 respectively. Parentheses are used in the usual way, as in
 
-    (Al + X)*(B - C^D7)
+    (A1 + X)*(B - C^D7)
+
+(* Note: The operation actually works with the absolute value of the left 
+argument. Thus X ^ Y is interpreted as |X| ^ Y . If X could be negative and 
+you want X^3 , you should write X*X*X or X*X^2 )
 
 Because expressions must be presented as a single line, parentheses are
 often required where they might not be needed in ordinary mathematical
@@ -305,15 +309,14 @@ parentheses would leave A - B/C , which is interpreted as A - (B/C) .
 
 Another example that arises quite often is
 
-@@### ( == Revision must continue here == )
+       A
+    -------
+     B * C
 
 
-A/(B*C) which is written as J    or
+which is written as A/(B*C)  or  A/B/C
 
-B*C    ^ A/B/C
 A/B*C will be interpreted the same as (A/B)*C or (A*C)/B .
-
-(^J The operation actually works with the absolute value of the left argument. Thus Xt Y is interpreted as JxJ 'f" Y . If X could be negative and you want Xf3 , you should write X*X*X or X*X/|'2
 
 The way that expressions are interpreted can be summarized in terms of several 
 rules, which correspond to standard mathematical notation. These are:    1
@@ -330,31 +333,40 @@ from left to right.
 
 The first rule tells us that in (A + B)*C we compute A + B first, then multiply 
 the result by C, an obvious interpretation. The second rule tells us that in A 
-+ B*Cf D we first compute C^D , then multiply by B, and finally add to A. An 
-equivalent expression is A + (B*(CfD)) . The third rule states that A - B - C 
++ B*C ^ D we first compute C^D , then multiply by B, and finally add to A. An 
+equivalent expression is A + (B*(C^D)) . The third rule states that A - B - C 
 is interpreted as (A - B) - C and not as A - (B - C) . Applied to multiplies 
-and divides, the rule tells us to interpret A/B/C as (A/B)/Cand not as A/(B/C). 
-For raising to a power, AtBfC means (A f B) f C or, equivalently, Af (B*C) . If 
-you intend A^B'f C) , you must use that form.
+and divides, the rule tells us to interpret A/B/C as (A/B)/C and not as A/(B/C). 
+For raising to a power, A^B^C means (A ^ B) ^ C or, equivalently, A^ (B*C) . If 
+you intend A^ (B^C) , you must use that form.
 
-In addition to the arithmetic operations, some of the more common standard functions are available. For example, to compute + you would use SQR(1 + X"f 2) . The other standard functions are used in this same way, that is, the BASIC name of the function followed by the argument enclosed in parentheses.
+In addition to the arithmetic operations, some of the more common standard 
+functions are available. For example, to compute the root of 1+x<sup>2</sup> 
+you would use SQR(1 + X^2). The other standard functions are used in this same 
+way, that is, the BASIC name of the function followed by the argument enclosed 
+in parentheses.
 
-Function name SIN(X) C0S{X)
+| Function name | Purpose
+|---------------|---------
+| SIN(X) | sine of X (X must be expressed in radian measure)
+| COS(X) | cosine of X (X must be expressed in radian measure)
+| TAN(X) | tangent of X (X must be expressed in radian measure)
+| ATN(X) | arctangent (in radians) of X
+| EXP(X) | natural exponential of X, e<sup>X</sup>
+| ABS(X) | absolute value of X, \|x\|
+| LOG(X) | natural logarithm of `|x|`
+| SQR(X | square root of `|x|`
 
-Purpose sine of X
+(Two other functions, RND(X) and INT(X), are explained in section 3. 3) The 
+argument of a function may be any expression, no matter how complicated. For 
+example 
 
-cosine of X
+```basic
+SQR( B ^ 2 - 4*A*C ) - 17 
+Z - EXP( X1 + LOG( A/X1 )) * TAN(A) 
+SQR( SIN(Q) ^ 2 + COS(Q) ^ 2 )
+```
 
-X must be expressed in radian measure.
-
-TAN(X) ATN(X) EXP(X) ABS(X) LOG(X) SQR(X)
-
-tangent of X
-
-arctangent (in radians) of X natural exponential of X, e absolute value of X, Jxj natural logarithm of |x| square root of jx|
-X
-
-(Two other functions, RND(X) and INT(X), are explained in section 3. 3) The argument of a function may be any expression, no matter how complicated. For example
 are all acceptable in BASIC.
 
 The use of the LOG and SQR functions requires a word of caution. In each case 
@@ -367,7 +379,7 @@ such occasions, hopefully rare, may therefore be unnoticed.
 The user may define new functions using the DEF statement, which is discussed 
 in section 3.3.
 
-SQR( Bt 2 - 4*A*C ) - 17 Z - EXP( XI + LOG( A/Xl )) * TAN(A) SQR( SIN(Q) f 2 + C0S(Q) f 2 )
+
 
 ### 2.3 Loops
 
@@ -400,7 +412,7 @@ following program makes use of a loop.
 10 LET X = 0
 20 LET X = X + 1 
 30 PRINT X, SQR(X) 
-40 IF X <=100 THEN 20 
+40 IF X<=100 THEN 20 
 50 END
 ```
 Statement 10, which gives to X the value 0, is the initialization of the loop. 
@@ -409,13 +421,12 @@ Statement 20, which increases the value of X by unity, is the statement that
 insures that the loop is not merely repeting exactly the same thing --an 
 infinite loop! 
 
-Statement 30 is the body of the loop, the computation in which 
-we are interested. 
+Statement 30 is the body of the loop, the computation in which we are interested. 
 
-And statement 40 provides an exit from the loop after the 
-desired computation has been completed. All loops contain these four 
-characteristics: initialization, modification each time through the loop, the 
-body of the loop, and a way to get out.
+And statement 40 provides an exit from the loop after the desired computation 
+has been completed. All loops contain these four characteristics: 
+initialization, modification each time through the loop, the body of the loop, 
+and a way to get out.
 
 Because loops are so important, and because loops of the type shown
 in the example arise so often, BASIC provides two statements to enable one
@@ -430,7 +441,7 @@ NEXT statements, and would be used as follows in the example above:
 ```
 
 Statement 10 contains both the initial and final values of X. Statement 30
-specifies that X be increased to its next value* In this case, the value by
+specifies that X be increased to its next value. In this case, the value by
 which X is increased each time is implied to be unity. If instead we wished
 to print the square roots of the first 50 even numbers, we would have used
 
@@ -447,33 +458,43 @@ To print the square roots of the multiples of 7 that are less than 100, one
 might use for line number 10
 
 ```basic
-10 FOR X = 7 TQV100 STEP 7 
+10 FOR X = 7 TO 100 STEP 7 
 ```
 
 The loop will be performed for all values of X that are less than or equal to 
 100, in this case, for X equal to 7, 14, ... , 91, 98.
 
+
 ### 2.4 Use of the Time Sharing System
 
 The Dartmouth Time Sharing System consists of a large central computer with a 
-number of input-output stations (currently* model 35 teletype machines.) 
-Individuals using the input-oUtpUtustations are able to "share" the use of the 
+number of input-output stations (currently, model 35 teletype machines.) 
+Individuals using the input-output stations are able to "share" the use of the 
 computer with each other in such a way as to suggest that they each have sole 
 use of the computer. The teletype machines are the devices through which the 
 user communicates with the computer.
 
+
+
+
+
 Teletype machines are like ordinary typewriters, with certain modifications to 
 make them suitable for transmitting messages over telephone lines. They have a 
 nearly standard keyboard for letters and numbers, the most notable differences 
-being that all letters aire capitals and that the numeral one is not the same 
+being that all letters are capitals and that the numeral one is not the same 
 as the letter L. In addition there are several special characters which can be 
 typed using either of the two "SHIFT" keys; these include the following special 
 symbols that are used in BASIC programs:
 
-+ - * / t
-( ) < > . , ;
+    + - * / ^ =
+    ( ) < > . , ;
 
-There is a "CTRL," key that is related to standard teletype communications, but all the control symbols are ignored by BASIC. A layout of the keyboard is shown on the following page. It should be studied until the locations of these symbols are familiar.
+There is a "CTRL" key that is related to standard teletype communications, but 
+all the control symbols are ignored by BASIC. A layout of the keyboard is shown 
+on the following page. It should be studied until the locations of these 
+symbols are familiar.
+
+### ( == Revision must continue here == )
 
 There are three special keys that the user must know about.
 
@@ -1555,7 +1576,8 @@ in the future.
 
 ### 4. 1 Purpose
 
-A card-operated (on-line) version of BASIC is available and provides the following advantages over teletypes:
+A card-operated (on-line) version of BASIC is available and provides the 
+following advantages over teletypes:
 
 (1)    Longer programs are.allowed. ; .
 
@@ -1567,7 +1589,9 @@ A card-operated (on-line) version of BASIC is available and provides the followi
 
 ### 4. 2 How to Prepare a Deck.
 
-You punch on cards a program almost exactly the way you would type it on a teletype, with one instruction per card. Due to the fact that there are fewer symbols on a key-punch, the following modifications are needed:
+You punch on cards a program almost exactly the way you would type it on a 
+teletype, with one instruction per card. Due to the fact that there are fewer 
+symbols on a key-punch, the following modifications are needed:
 
 In PRINT, use single quote (') in place of quote (").
 
@@ -1755,13 +1779,13 @@ In this summary it is assumed that all statements begin with a line number. Foll
     FOR <unsubscripted variable> = <expression> TO <expression> STEP <expression>
 
 ```basic
-10 FOR 1 = 1 TO 17
+10 FOR I = 1 TO 17
 10 FOR X1 = 0 TO 7 STEP 0.5
 ```
 
 #### NEXT
 
-NEXT < unsubscripted variable> 
+    NEXT <unsubscripted variable> 
 
 ```basic
 10 NEXT X1
@@ -1816,7 +1840,6 @@ NEXT < unsubscripted variable>
 ```
 
 #### REM
-
 
     REM <any string of characters whatsoever>
 
