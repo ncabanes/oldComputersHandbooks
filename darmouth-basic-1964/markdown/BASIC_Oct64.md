@@ -1702,7 +1702,7 @@ be relaxed slightly.
 
 In this summary it is assumed that all statements begin with a line number. Following each is one example.
 
-** LET  **
+#### LET
 
     LET <variable> = <expression>
     
@@ -1710,7 +1710,7 @@ In this summary it is assumed that all statements begin with a line number. Foll
 10 LET X1 = Y + Z + ( Z / A - B ^ D1)
 ```
 
-** READ **
+#### READ
 
     READ <variable> , <variable> , ... , <variable> 
 
@@ -1718,45 +1718,112 @@ In this summary it is assumed that all statements begin with a line number. Foll
 10 READ X, Y, Z , A1, Q(I, J)
 ```
 
-DATA
-PRINT
-GOTO
-IF-THEN
-F0R
-NEXT
+#### DATA
 
+    DATA <number> , <number> , ... , <number>
+    
+```basic
+10 DATA 1, 2, -3, 7, 123.479,-2. 35E-4
+```
 
-DATA ^number)> , <^number^> , . . . , ^number) 10 DATA 1, 2, -3, 7, 123.479, -2. 35E-4
-PRINT ^label^ , or <^label^ ^expression/* , or
-<^expression^
-10 PRINT "SINE", "X - " X(I, K), A + B*C0S(Y)
-GOTO <^line number^ 10 GOTO 17
-IF ^expressions <^elational^ <^expressionS THEN
-<Q.ine number^
+#### PRINT
+
+    PRINT <label> , or <label> <expression> , or <expression>
+
+```basic
+10 PRINT "SINE", "X = " X(I, K), A + B*COS(Y)
+```
+
+#### GOTO
+
+    GOTO <line number>
+
+```basic
+10 GOTO 17
+```
+
+#### IF-THEN
+
+    IF <expressions> <relational> <expression> THEN <line number>
+
+```basic
 10 IF X + Y > 0 THEN 419
-F(#R <^unsubscripted variabl^1 = ^expression^ T<J .
-^expressioi^ STEP .^expressioi^
-10 TOK 1=1 TO 17
-10 FOR XI = 0 10 7 STEP 0. 5
-NEXT<^unsubscripted variable^ 10 NEXT XI
-(continued on next page)
--56-
-(continued) END
-END 10 END
-STOP
-DEF
-GOSUB
-STOP 10 STOP
-DEF FN <Aetter^ (^subscripted variabl^) = ^xpressioi^ 10 DEF FNG( Z ) = 1 + SQR(1 + Z * Z)
-GOSUB <\line number) 10 GOSUB 110
-RETURN
-DIM
-REM
-RETURN 10 RETURN
-DIM ^letter/' ( <integer)> ), or ^letter]> ( <Jntege^> ,
-<Jnteger)> )
-10 DIM A(17), B(3, 20)
-REM ^any string of characters whatsoever^ 10 REM THIS IS THE END OF APPENDIX C
+```
 
-NOTES
+#### FOR
+
+    FOR <unsubscripted variable> = <expression> TO <expression> STEP <expression>
+
+```basic
+10 FOR 1 = 1 TO 17
+10 FOR X1 = 0 TO 7 STEP 0.5
+```
+
+#### NEXT
+
+NEXT < unsubscripted variable> 
+
+```basic
+10 NEXT X1
+```
+
+#### END
+
+    END 
+
+```basic
+10 END
+```
+
+#### STOP
+
+    STOP 
+
+```basic
+10 STOP
+```
+
+#### DEF
+
+    DEF FN <letter> (subscripted variable) = <expression>
+
+```basic
+10 DEF FNG( Z ) = 1 + SQR(1 + Z * Z)
+```
+
+#### GOSUB
+
+    GOSUB <line number> 
+
+```basic
+10 GOSUB 110
+```
+
+#### RETURN
+
+    RETURN 
+
+```basic
+10 RETURN
+```
+
+#### DIM
+
+    DIM <letter> ( <integer)> ), or <letter> ( <integer> , <integer> )
+
+```basic
+10 DIM A(17), B(3, 20)
+```
+
+#### REM
+
+
+    REM <any string of characters whatsoever>
+
+```basic
+10 REM THIS IS THE END OF APPENDIX C
+```
+
+
+### NOTES
 
