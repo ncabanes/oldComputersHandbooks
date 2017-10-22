@@ -1701,16 +1701,31 @@ be relaxed slightly.
 ### APPENDIX C -- Summary of the 15 BASIC Statements
 
 In this summary it is assumed that all statements begin with a line number. Following each is one example.
-LET
-READ
+
+** LET  **
+
+    LET <variable> = <expression>
+    
+```basic
+10 LET X1 = Y + Z + ( Z / A - B ^ D1)
+```
+
+** READ **
+
+    READ <variable> , <variable> , ... , <variable> 
+
+```basic
+10 READ X, Y, Z , A1, Q(I, J)
+```
+
 DATA
 PRINT
 GOTO
 IF-THEN
 F0R
 NEXT
-LET <Cvariable"^ - <^expression^ 10 LET XI = Y + Z + ( Z /A - B f Dlj
-READ <^variable^ , ^variable)* , ... , <(variable> 10 READ X, Y, Z , Al, Q(I, J)
+
+
 DATA ^number)> , <^number^> , . . . , ^number) 10 DATA 1, 2, -3, 7, 123.479, -2. 35E-4
 PRINT ^label^ , or <^label^ ^expression/* , or
 <^expression^
