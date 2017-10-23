@@ -487,62 +487,53 @@ symbols that are used in BASIC programs:
 
 There is a "CTRL" key that is related to standard teletype communications, but 
 all the control symbols are ignored by BASIC. A layout of the keyboard is shown 
-on the following page. It should be studied until the locations of these 
-symbols are familiar.
+here. It should be studied until the locations of these symbols are familiar.
 
-### ( == Revision must continue here == )
+![](teletypeKeyboard.png)
 
 There are three special keys that the user must know about.
 
 "RETURN",    which is located at the right hand end of the third row of keys, 
 is the ordinary carriage return. More importantly, the computer ignores all 
 typed lines until this key is pressed-. It must be used after each line in a 
-BASIC program, and after each line which MODELS 33 and 3$ KEYBOARD ARRANGEMENT
+BASIC program, and after each line which is a communication to the system.
 
-© 
+"<-", which is located on the letter "Oh" key while the "SHIFT" key is 
+depressed, erases the last character typed. If the user notices that he has 
+just mistyped a letter or a symbol, he pushes this key, which tells the 
+computer to ignore the previously typed character. Pushing the backwards arrow 
+more than once will delete the same number of characters, but only to the start 
+of the line. For example, the sequence 
 
-is a communication to the system.
-
-V".
-
-"ALT MODE",
-
-which is located on the letter "Oh" key while the "SHIFT" key is depressed, erases the last character typed. If the user notices that he has just mistyped a letter or a symbol, he pushes this key, which tells the computer to ignore the previously typed character. Pushing the backwards arrow more than once will delete the same number of characters, but only to the start of the line. For example, the sequence
-ABCWT^-DE will appear as ABODE
+    ABC<-<-DE will appear as ABCDE
 
 while
 
-100 LET^^^OO LET X = Y
+    100 LET<-<-<-<-<-<-<-2OO LET X = Y
 
 will appear as
 
-200 LET X = Y
+    200 LET X = Y
 
-located at the left hand end of the third row of keys, is pressed to delete an 
-entire typed line. It may be used at any time before a "RETURN" is.used.
+"ALT MODE", located at the left hand end of the third row of keys, is pressed to delete an 
+entire typed line. It may be used at any time before a "RETURN" is used.
 
 Besides the keyboard itself, there are four buttons that are needed to operate 
 the teletype machine.
 
-BUTTON
-
-"ORIG" the leftmost of six small buttons on the right.
-
-FUNCTION
-
-Turns on the teletype machine.
-
-"CLR" next to "ORIG. " Turns off the teletype.
-
-"LOC LF" , to the left of Feeds the paper to permit tearing off. the space bar.
-
-"BUZ-RLS" , rightmost Turns off the buzzer, which goes on of the six small when the paper supply is low. buttons.
+| BUTTON | FUNCTION
+|--------|-----------
+| "ORIG" the leftmost of six small buttons on the right. | Turns on the teletype machine.
+| "CLR" next to "ORIG."  | Turns off the teletype.
+| "LOC LF" , to the left of the space bar. | Feeds the paper to permit tearing off. 
+| "BUZ-RLS" , rightmost of the six small buttons.| Turns off the buzzer, which goes on  when the paper supply is low. 
 
 All other buttons and gadgets, including the telephone dial, are not connected.
 
+
 When you sit down at a teletype machine, you must start by typing
 
-HELLO
+    HELLO
 
 followed, as always, by a "RETURN". This starts the so-called HELLO sequence, a 
 short series of questions and answers that serve to tell the computer who you 
@@ -561,7 +552,7 @@ When the computer asks about NEW or OLD, you type NEW unless you wish to
 retrieve an OLD program in order to continue working on it.
 
 Finally, the computer asks for the name of your problem. You type any six 
-letters, digits, or characters that you wish. If you are retrieving an (JLD 
+letters, digits, or characters that you wish. If you are retrieving an OLD 
 program, you must be careful to type the problem name exactly as you typed it 
 originally.
 
@@ -576,7 +567,9 @@ your program with a line number. These line numbers should:
 
 - start at the very beginning of the line.
 
-After completely typing the program, you type RUN
+After completely typing the program, you type 
+
+    RUN
 
 The computer will now analyze and run your program. It will then print a line 
 that contains your user number, the problem name, the date, and the time of 
@@ -592,85 +585,84 @@ the total computing time used by the run. (In many cases it will show 0
 seconds, indicating that the entire run required less than 0. 5 seconds.)
 
 A complete history of a successful run of the linear equation solver presented 
-earlier is shown on the following page.
+earlier is shown here:
 
-Besides HELL0 and RUN, there are several extremely useful commands that may be 
+    HELLO
+    USER NUMBER--999999
+    SYSTEM—BASIC
+    NEW OR OLD--NEW
+    NEW PROBLEM NAME-—LINEAR
+    READY.
+    10    READ A1, A2, A3, A4
+    15    LET D = A1 * A4 - A3 * A2
+    20    IF D = 0 THEN 65
+    30    READ B1, B2
+    37    LET X1 = (B1*A4 - B2*A2)/D
+    42    LET X2 = (A1*B2 - A3*B1)/D
+    55    PRINT X1, X2
+    60    GO TO 30    
+    65    PRINT "    NO UNIQUE SOLUTION
+    70    DATA 1, 2,4
+    80    DATA 2, -7, 5
+    85    DATA 1, 3, 4, -7
+    90    END    
+    RUN        
+
+    USER No. 999999 PR0BLEM NAME: LINEAR 6 SEPT. 1964 TIME: 22:33
+    4    -5.5
+    .666667    .166667
+    -3.66667    3.83333
+    TIME: 1 SECS.
+
+
+Besides HELLO and RUN, there are several extremely useful commands that may be 
 given to the computer by typing at the start of a new line the command followed 
 by pressing the "RETURN" key.
 
-STOP    causes the computer to stop whatever it is doing with
+*  **STOP**    causes the computer to stop whatever it is doing with
 the program. STOP may be used even with the computer is typing out; in this 
 case it responds to your simply typing the letter S even without a "RETURN".
 
-LIST    will type out a complete listing of the program as it is,
-including all the corrections that have been made. To stop
+*  **LIST**    will type out a complete listing of the program as it is,
+including all the corrections that have been made. To stop listing after it has started but before it is completed, type S.
 
-hell0
-user number--999999
-system—basic
-new 0r 0ld--new
-nevi pr0blem name—linear
-ready.
-10    read a1    f a2, a3, a4
-15    let d =    a1 * a4 - a3 * a2
-20    if d = 0    then 65
-30    read b1    , b2
-37    let xi    = (b1*a4 - b2 * a2
-42    let x2 =    < a1 * b2 - a3 * 1
-55    print xi    , x2
-60    g0 t0 30    
-65    print "    n0 unique s0luti0n
-70    data 1,    2,4
-80    data 2,    -7, 5
-85    data 1    , 3, 4, -7
-90    end    
-run        
-
-user n0. 999999 pr0blem name: linear 6 sept. 1964 time: 22:33
-4    -5.5
-.666667    .166667
--3.66667    3.83333
-time: 1 secs.
-
-listing after it has started but before it is completed, type S.
-
-LIST--XXXXX will type out a listing of the program starting at line number 
+*  **LIST--XXXXX** will type out a listing of the program starting at line number 
 XXXXX and continuing to the end or until the S key is pressed. For instance, 
 LIST--70 in the linear equations problem will start listing at line 70, 
 permitting the user to inspect the DATA statements without waiting for the 
 early part of the program to be listed.
 
-SAVE    If the user is done working with a program at the moment and wishes to 
+*  **SAVE**    If the user is done working with a program at the moment and wishes to 
 return to it at a later time, he should save it. For instance, if the user must 
 leave the teletype and is only half finished with the original typing, he types 
 SAVE. Later on, he retrieves exactly what he saved by typing (DLD. He may then 
 continue with the typing as if nothing had happened.
 
-UNSAVE    If a user has finished with a program that he has saved at some 
+* **UNSAVE**    If a user has finished with a program that he has saved at some 
 earlier time, he types UNSAVE. This action destroys the saved program, making 
 room for other saved programs. All users are urgently requested to UNSAVE all 
 programs for which they no longer have need.
 
-CATALOG In case a user is working with several different programs and forgets 
+*  **CATALOG** In case a user is working with several different programs and forgets 
 what names he gave them, typing CATALOG requests the computer to list the names 
 of all programs currently being saved by that user.
 
-NEW    Typing NEW will permit the programmer to start a new problem. This 
+*  **NEW**    Typing NEW will permit the programmer to start a new problem. This 
 command may be given at any time, and has the effect of erasing the previous 
-program (unless it was saved. ) The computer will ask for the name of the new 
+program (unless it was saved.) The computer will ask for the name of the new 
 problem.
 
-OLD    This command is similar to NEW, but retrieves the named saved program, 
+*  **OLD**    This command is similar to NEW, but retrieves the named saved program, 
 which may then be added to. Either OLD or NEW must be used in connection with 
 the HELLO sequence, but either may be also used at any later time as well. 
 Repeated use of OLD does not affect the saved program; it remains saved until 
 it is unsaved, or until a new version is saved in place of it.
 
-SCRATCH This command is very close to NEW in that it erases the previous work 
+*  **SCRATCH** This command is very close to NEW in that it erases the previous work 
 and presents a clean slate. It differs by retaining the name of the previous 
 problem instead of asking for a new name.
 
-RENAME    serves to supply a new problem name for the current work without 
+*  **RENAME**    serves to supply a new problem name for the current work without 
 erasing it. It is useful if one wishes to save two similar versions of a 
 program. Save the first, use RENAME, make the desired modifications, and then 
 save or run the modified version.
@@ -679,6 +671,9 @@ When the user is finished with a session at the teletype, it is necessary only
 to leave the machine. The user should plan his session at the teletype to avoid 
 long trances. If such happens, the user should save his work, and leave the 
 machine for someone else to use. Remember the motto,
+
+> TYPING IS NO SUBSTITUTE FOR THINKING
+
 
 ### 2.5    Errors and Debugging
 
@@ -698,15 +693,19 @@ discovered, the correction is made by retyping the incorrect line or lines, by
 inserting new lines, or by deleting existing lines. These three kinds of 
 corrections are made as follows:
 
-Changing a line    Type it correctly with the same line number.
+* Changing a line : Type it correctly with the same line number.
 
-Inserting a line    Type it with a line number between those of the two existing lines.
+* Inserting a line : Type it with a line number between those of the two existing lines.
 
-Deleting a line    Type the line number only.
+* Deleting a line : Type the line number only.
 
 Notice that being able to insert a line requires that the original line numbers 
 not be consecutive numbers. For this reason, most users will start out using 
-line numbers that are multiples of five Or ten, but that is up to them.
+line numbers that are multiples of five or ten, but that is up to them.
+
+
+### ( == Revision must continue here == )
+
 
 These corrections can be made at any ti nSe , either before or after a run. 
 They may even be made in an earlier part 6f the program while you are typing 
