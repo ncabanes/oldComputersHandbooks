@@ -354,8 +354,8 @@ in parentheses.
 | ATN(X) | arctangent (in radians) of X
 | EXP(X) | natural exponential of X, e<sup>X</sup>
 | ABS(X) | absolute value of X, \|x\|
-| LOG(X) | natural logarithm of `|x|`
-| SQR(X | square root of `|x|`
+| LOG(X) | natural logarithm of \|x\|
+| SQR(X | square root of \|x\|
 
 (Two other functions, RND(X) and INT(X), are explained in section 3. 3) The 
 argument of a function may be any expression, no matter how complicated. For 
@@ -474,10 +474,6 @@ computer with each other in such a way as to suggest that they each have sole
 use of the computer. The teletype machines are the devices through which the 
 user communicates with the computer.
 
-
-
-
-
 Teletype machines are like ordinary typewriters, with certain modifications to 
 make them suitable for transmitting messages over telephone lines. They have a 
 nearly standard keyboard for letters and numbers, the most notable differences 
@@ -546,9 +542,9 @@ All other buttons and gadgets, including the telephone dial, are not connected.
 
 When you sit down at a teletype machine, you must start by typing
 
-HELL0
+HELLO
 
-followed, as always, by a "RETURN". This starts the so-called HELL0 sequence, a 
+followed, as always, by a "RETURN". This starts the so-called HELLO sequence, a 
 short series of questions and answers that serve to tell the computer who you 
 are and what you wish to do .
 
@@ -561,8 +557,8 @@ When the computer asks for yOur user number, type it. (Don't forget the
 The next information you must supply is the name of the system or language; in 
 this case it will be BASIC.
 
-When the computer asks about NEW or (JLD, you type NEW unless you wish to 
-retrieve an (JLD program in order to continue working on it.
+When the computer asks about NEW or OLD, you type NEW unless you wish to 
+retrieve an OLD program in order to continue working on it.
 
 Finally, the computer asks for the name of your problem. You type any six 
 letters, digits, or characters that you wish. If you are retrieving an (JLD 
@@ -602,13 +598,11 @@ Besides HELL0 and RUN, there are several extremely useful commands that may be
 given to the computer by typing at the start of a new line the command followed 
 by pressing the "RETURN" key.
 
-STCjP    causes the computer to stop whatever it is doing with
-
-the program. ST(JP may be used even with the computer is typing out; in this 
+STOP    causes the computer to stop whatever it is doing with
+the program. STOP may be used even with the computer is typing out; in this 
 case it responds to your simply typing the letter S even without a "RETURN".
 
 LIST    will type out a complete listing of the program as it is,
-
 including all the corrections that have been made. To stop
 
 hell0
@@ -666,10 +660,10 @@ command may be given at any time, and has the effect of erasing the previous
 program (unless it was saved. ) The computer will ask for the name of the new 
 problem.
 
-<$LD    This command is similar to NEW, but retrieves the named saved program, 
-which may then be added to. Either 0LD or NEW must be used in connection with 
+OLD    This command is similar to NEW, but retrieves the named saved program, 
+which may then be added to. Either OLD or NEW must be used in connection with 
 the HELLO sequence, but either may be also used at any later time as well. 
-Repeated use of QiLD does not affect the saved program; it remains saved until 
+Repeated use of OLD does not affect the saved program; it remains saved until 
 it is unsaved, or until a new version is saved in place of it.
 
 SCRATCH This command is very close to NEW in that it erases the previous work 
@@ -1368,8 +1362,8 @@ lines 400, 410, and 420 are performed, after which the computer goes back to
 statement 120. When the subroutine is entered from statement 210, the computer 
 goes back to statement 220.
 
-The user must be very careful not to write a program in which a GO&SUB appears 
-inside a subroutine which itself is entered via a GCjSUB; it just won't work.
+The user must be very careful not to write a program in which a GOSUB appears 
+inside a subroutine which itself is entered via a GOSUB; it just won't work.
 
 As a complete illustration, the next page contains a program that determines 
 the Greatest Common Divisor of three integers, using the celebrated Euclidean 
