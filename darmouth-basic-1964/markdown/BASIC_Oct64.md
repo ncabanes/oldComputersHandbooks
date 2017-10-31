@@ -319,7 +319,7 @@ which is written as A/(B*C)  or  A/B/C
 A/B*C will be interpreted the same as (A/B)*C or (A*C)/B .
 
 The way that expressions are interpreted can be summarized in terms of several 
-rules, which correspond to standard mathematical notation. These are:    1
+rules, which correspond to standard mathematical notation. These are:
 
 1.    The expression inside a parentheses pair is computed before the 
 parenthesized quantity is used in further computations.
@@ -624,7 +624,8 @@ the program. STOP may be used even with the computer is typing out; in this
 case it responds to your simply typing the letter S even without a "RETURN".
 
 *  **LIST**    will type out a complete listing of the program as it is,
-including all the corrections that have been made. To stop listing after it has started but before it is completed, type S.
+including all the corrections that have been made. To stop listing after it 
+has started but before it is completed, type S.
 
 *  **LIST--XXXXX** will type out a listing of the program starting at line number 
 XXXXX and continuing to the end or until the S key is pressed. For instance, 
@@ -704,34 +705,31 @@ not be consecutive numbers. For this reason, most users will start out using
 line numbers that are multiples of five or ten, but that is up to them.
 
 
-### ( == Revision must continue here == )
-
-
-These corrections can be made at any ti nSe , either before or after a run. 
-They may even be made in an earlier part 6f the program while you are typing 
-the later lines. Simply retype the offeS&iii| llfefe with it6 original line 
+These corrections can be made at any time , either before or after a run. 
+They may even be made in an earlier part of the program while you are typing 
+the later lines. Simply retype the offending line with its original line 
 number, and then continue typing the rest of the program.
 
-The whole process of locating errors or "debugging11 a program is illustrated 
-by a case history which starts on the next page. It takes Ud from the HELL0 
+The whole process of locating errors or "debugging" a program is illustrated 
+by a case history which starts on the next page. It takes us from the HELLO 
 sequence to the final successful printing of the correct answers. The circled 
 numbers refer to comments, which start below. For convenience, the portions 
 typed by the computer are underlined or margin-lined, although no underlining 
 is used on the actual computer.
 
-The problem is to locate the maximum point oh the sine curve between 0 and 3 by 
+The problem is to locate the maximum point on the sine curve between 0 and 3 by 
 searching along the x-axis. The searching will be done three times, first with 
-a spacing of 0.1, then with spacing s of 0. 01, and 0. 001. In each case will 
+a spacing of 0.1, then with spacings of 0.01, and 0.001. In each case will 
 be printed the location of the maximum, the maximum, and the spacing. The 
-program as first written down oh paper was:
+program as first written down on paper was:
 
 ```basic
 10    READ D
 20    LET X0 = 0
 30    FOR X = 0 TO 3 STEP D
-40    IF SIN(X) M THEN 100
+40    IF SIN(X) <= M THEN 100
 50    LET X0 = X
-60    LET M = SIN(XO)
+60    LET M = SIN(X0)
 70    PRINT X0, X, D
 80    NEXT X0
 90    GO TO 20
@@ -739,13 +737,18 @@ program as first written down oh paper was:
 110    END
 ```
 
+
+
+### ( == Revision must continue here == )
+
+
 ```txt
-hell0
-user number--999999
-system--3asic
-new 0r 0ld--new
-new pr0blem name—maxsin
-ready.
+    HELLO
+    USER NUMBER--999999
+    SYSTEM--BASIC
+    NEW OR OLD--NEW
+    NEW PROBLEM NAME-—MAXSIN
+    READY.
 ```
 
 ```basic
