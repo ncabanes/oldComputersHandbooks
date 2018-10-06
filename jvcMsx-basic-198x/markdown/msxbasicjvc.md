@@ -1,15 +1,21 @@
-CONTENTS 
-Prologue What is MSX ........................... .. 
-STEP 1 Give Your Computer an Order!..... 
-STEP 2 Let’s Write a Program! ............. .. 
-STEP 3 Are Functions Difficult? ............ .. 
-STEP 4 Lct’s Paint a Picture with the MSX 
-STEP 5 MSX Music Class ..................... .. 
+
+# CONTENTS 
+
+* [Prologue](#prologue) What is MSX
+* [STEP 1](#step-1) Give Your Computer an Order! 
+* [STEP 2](#step-2) Let’s Write a Program!
+* [STEP 3](#step-3) Are Functions Difficult?
+* [STEP 4](#step-4) Let’s Paint a Picture with the MSX 
+* [STEP 5](#step-5) MSX Music Class
+
 Sample Programs .................................... .. 
 Design Sheets .......................................... .. 
 INDEX ................................................. ..
 
-Preface 
+### ( == This conversion is still under revision == )
+
+### Preface 
+
 This book is written as an introduction for the beginner who will 
 be writing BASIC programs on an MSX computer. It presents easy 
 to understand explanations of the basic principles of MSX-BASIC 
@@ -19,179 +25,163 @@ you should be able to write simple programs by yourself, as well
 as modify other programs. Let’s get used to BASIC by actually using 
 the MSX computer to draw lines, produce sounds and perform 
 other operations. 
-How this hook is organized: 
+
+#### How this book is organized: 
+
 l. This book is written with the assumption that you know how to operate 
 the computer and use the keyboard. 
+
 2. The subject matter will be much easier to understand if you enter and 
 run each program as you read through the book. 
+
 3. The command words used in each explanation are framed in large type, 
 so it's easy to look them up in the index. 
+
 4. Items containing a black mark v in the middle of the explanation, provide 
 additional information to make the subject matter easier to understand. 
-Note: 
+
+**Note:**
+
 1. If you have carefully followed the contents of this book and there are 
 still unclear points, omissions or other mistakes in the text, please contact 
 your sales representative for additional information. 
+
 2. Please understand that Japan Victor Corporation can not provide compensation 
-or be responsible for any errors or problems which are the result 
-of the items mentioned above. 
-2
+or be responsible for any errors or problems which are the result of the items 
+mentioned above. 
 
-@ . 
-Prologue 
-What is [LEI] 
-it .ta. -@@ 
-3
 
-It's necessary for us to use words in order 
-to speak. In the same way, in order 
-for people to be able to communicate 
-with a computer, it's necessary to use a 
+## Prologue 
+
+What is **MSX**
+
+It's necessary for us to use words in order to speak. In the same way, in order 
+for people to be able to communicate with a computer, it's necessary to use a 
 programming language such as BASIC. 
-Up to now, depending on either the 
-computer or the computer manufacturer, 
-both the BASIC and its functions 
-have been different. As a result, when 
-certain types of software, such as programs 
-written in BASIC, are used on a 
-specific computer, that software can’t be 
-used on a different kind of computer. 
-However, on computers, both 
-the hardware and the software have 
-been standardized. As a result, all software 
-with the E logo will run on 
-any E computer. 
-This means that you can share your software 
-with any of your friends who also 
-have an MSX computer. 
-4 
-Lt/is" a 
-r*“\\‘,.l 
-Ifin 
-I‘ 
-‘itit. anbL u r_. - M \\ 
-"/1 r 
-1?; ae- ‘
-) - I:
 
-The Key ls in the Program if 
-In order to make a computer run, you 
-have to study how to write a program. 
-.-ft)/t .~, I) ; l 
-CI) 
-\ 
-/ 5"’ 
-If a program is entered into the computer, 
-it reads one line of the program 
-at a time, and then operates 
-according to the indicated instructions. 
-ln other words, a program is 
-the written set of instructions which 
-contain the appropriate commands 
-for the computer to perform. 
-Well everybody. do your best to leam 
-how to write your own programs all 
-by yourself. 
-10 REMVQQQVQVQUQU 
-20 REM. HC-7GB Q 
-39 REMVVUVUQUUVQV 
+Up to now, depending on either the computer or the computer manufacturer, both 
+the BASIC and its functions have been different. As a result, when certain 
+types of software, such as programs written in BASIC, are used on a specific 
+computer, that software can’t be used on a different kind of computer. However, 
+on **MSX** computers, both the hardware and the software have been standardized. As a 
+result, all software with the **MSX** logo will run on any **MSX** computer. 
+
+This means that you can share your software with any of your friends who also 
+have an MSX computer. 
+
+### The Key is in the Program
+
+In order to make a computer run, you have to study how to write a program. 
+
+If a program is entered into the computer, it reads one line of the program at 
+a time, and then operates according to the indicated instructions. ln other 
+words, a program is the written set of instructions which contain the 
+appropriate commands for the computer to perform. 
+
+Well everybody. do your best to leam how to write your own programs all by 
+yourself. 
+
+```
+10 REM ------------ 
+20 REM -  HC-7GB  - 
+39 REM ------------
 40 COLOR l5,4:CLS 
 50 LOCATE 5,2 
-60 PRINT “MSX Personal 
-Computer” 
+60 PRINT "MSX Personal Computer" 
 70 LOCATE 12,5 
-80 PRINT “.lVC" 
+80 PRINT "JVC" 
 90 LOCATE 11,7 
-I00 PRINT “HC-7GB" 
-110 PLAY “CDEFE” 
+I00 PRINT "HC-7GB" 
+110 PLAY "CDEFE" 
 120 END 
-vim Q’ n 
-II""i.I|l;||:: 9 
-II:I:I:II"‘:I.1I'ZI-I'u':':;'| ii.-':.-:-'-'----'-'-’
+```
 
-STEP 1 
-Give Your Computer 
-an Order!
-us.\_ I | ‘l A
-/ 
-6 
-Eae‘@s4Gl.s‘: !
+# STEP 1 
+
+## Give Your Computer an Order!
 
 A program uses commands to indicate to the computer what it must do. 
 However, there is also a way to use a computer without using a program. A 
 computer can be run by either method. It isn’t necessary to distinguish between 
 the two as they both use the same command language. 
-This mode is used to obtain direct 
-_ [)|reQt |\/Igde results without storing the commands 
-in the computer. 
-For example, 
-The key is used to inform 
-the computer when the input is 
-@ finished. Be sure to press the 
-key at the end of every input 
-line. 
-PRINT “ABC” i 
-ABC 
-OK 
-U it Work IS performed according to the programmed 
-= order. 
-\_ l I‘ ET . 
-1‘ p C gfix}. 
-. " E. ‘ mi W‘-~, V C __f,._._ ‘ 
-‘ - ‘pa? 
-_-L 
-C‘; .1. 
-6-,--I 0- 21-I "/- 7 .g; ', 
-The Direct Mode $0" 
-The computer can read and write characters 
-directly. 
-7
 
-All input lines start with a line 
-Program |\/|Qd(-3 number in the program mode. In 
-this mode, the program is executed 
-after the program is recorded 
-by the computer. 
-fml*———— REMARK command 
-I0 REM PROGRAM I 
-line nurnber— ‘T
-20 A =10 : B=5 
-Lem tcolon 
+### Direct Mode
+
+This mode is used to obtain direct results without storing the commands 
+in the computer. 
+
+For example, 
+
+```
+PRINT "ABC" [RETURN]
+```
+
+The [RETURN] key is used to inform the computer when the input is finished. Be 
+sure to press the [RETURN] key at the end of every input line. 
+
+```
+ABC 
+Ok
+```
+
+_The Direct Mode: The computer can read and write characters directly._
+
+
+
+### Program Mode
+
+All input lines start with a line number in the program mode. In this mode, the 
+program is executed after the program is recorded by the computer.
+ 
+```
+10 REM PROGRAM 1
+20 A=10 : B=5 
 30 PRINT A,B 
-40 PRINT A* B 
-50 PRINT A + B 
-60 PRINT A— B 
+40 PRINT A*B 
+50 PRINT A+B 
+60 PRINT A-B 
 70 PRINT A/B 
 80 END 
-LL T -*1 END command 
-The line numbers are used to in- 
-Line Number form the computer of the correct 
-order of the operations to be performed. 
-Any number from B to 
-65529 may be used. 
-The contents of the remarks statement 
-arc ignored when the program 
-runs. They are only used to 
-make the program easier to understand. 
-An apostrophe (‘) may be 
-used if the REM statement is 
-omitted. 
-8
+```
 
-When the END statement is encountered, 
-it stops the program. 
+_Work is performed according to the programmed order._
+
+#### Line Number
+
+The line numbers are used to inform the computer of the correct order of the 
+operations to be performed. Any number from B to 65529 may be used. 
+
+#### REM
+
+The contents of the remarks statement are ignored when the program runs. They 
+are only used to make the program easier to understand. An apostrophe (‘) may 
+be used if the REM statement is omitted. 
+
+#### END
+
+When the END statement is encountered, it stops the program. 
+
 Next, let's enter this program. 
-Before starting to write the program the following command 
-should be entered. 
-l NEW l 
-This command clears the entire 
-NEW program storage area. 
-If this command is not used at the beginning of a program, the 
-program commands from the previous program may not be 
-erased. When this happens, it’s possible that program commands 
-of the new program may be mixed with the statements already 
-)) 
-If the old programs remain, bugs will appear. 
+
+Before starting to write the program the following command should be entered. 
+
+```
+NEW [RETURN]
+```
+
+#### NEW
+
+This command clears the entire program storage area. 
+
+If this command is not used at the beginning of a program, the program commands 
+from the previous program may not be erased. When this happens, it’s possible 
+that program commands of the new program may be mixed with the statements 
+already in memory.
+
+_If the old programs remain, bugs will appear._
+
+# Revision must continue at this point
+
 r K 
 Therefore 
 l I0 REM PROGRAM 1 ‘ 
@@ -221,7 +211,7 @@ key while holding the key down.
 ' This is a convenient command to use when lines are added to 
 other lines, because an increment of 19 is often used in 
 pI'Ogl'Hl'l'l$. H, /% 
-i aw ill“ 40 ‘J -3 
+i aw ill" 40 ‘J -3 
 - '-._1 
 1?
 ‘I 
@@ -243,8 +233,11 @@ entered. If it's correct, let's try and run the program.
 i RUN i 
 ll
 
-This command is used to execute 
-RUN a program in memory. 
+#### RUN
+
+This command is used to execute a program in memory. 
+
+```
 I0 REM PROGRAM I 
 20 A= 10 : B=5 
 30 PRINT A,B 
@@ -253,13 +246,16 @@ SB PRINT A+B
 66 PRINT A— B 
 70 PRINT A / B 
 80 END 
-Q RUN 
+```
+
+```txt
+RUN 
 10 5 
 50 
 15 
 52 
 OK 
-I 
+```
 How did it go? Did everything run properly? 
 ' Common Errors 
 I Syntax error in line number i 
@@ -270,7 +266,7 @@ last number in the error message indicates the line number where
 the error occurred. Find and correct the mistake in the indicated 
 line number. Please refer to the reference book for more detailed 
 information as there are many other possible error messages besides 
-“Syntax Error”. Let's take another look at the program by 
+"Syntax Error". Let's take another look at the program by 
 entering 
 I2
 
@@ -278,8 +274,10 @@ gr;-..... ,1"Jiii1;
 An error message tells the line number of a ) 10) ' ' ' 
 mistake. ' \‘>°" ' 
 I usr I 
-The LIST command displays the 
-program on the screen. 
+
+#### LIST
+
+The LIST command displays the  program on the screen. 
 Format 
 LIST ............................. .. The entire program is displayed 
 on the screen 
@@ -296,7 +294,7 @@ on the screen
 (1) Rewriting a command 
 Suppose that you want to change the A+ B in line 50 to A*B. 
 Move the cursor key to the position of the " + " sign and enter 
-the “*" symbol. Then press the keTheyfo.llowing 
+the "*" symbol. Then press the keTheyfo.llowing 
 characters will then appear. 
 I so PRlNTA=t=B I 
 I3
@@ -356,52 +354,66 @@ Line number 50 is changed to I0. The
 lines after that increase by 5. 
 I5
 
-This command erases many lines 
-DELETE at once. 
+#### DELETE
+
+This command erases many lines at once. 
+
 Format 
-DELETE first line number to be erased—last line numbe 
-to be erased 
+
+```
+DELETE first line number to be erased—last line number to be erased 
+```
+
 If the first line number to be erased is omitted, a value of 0 is 
 entered. 
-DELETE l0—40... Lines 10 to 40 are erased. 
-DELETE — l00..... The lines from the beginning of the 
-program to line 100 are erased. 
-16
 
-M_Inf.b1ll_/_QHWJ 
-\_h_ _ 
-N' ’ 
-¢VJmI__ 
-W‘ 
--ILV.eEMim _rI _7 \/rHp Gm\WO aI 
-Te0E17Ma\P5EPW2a/‘m/FA//A Sm
+```
+DELETE 10—40
+```
+
+Lines 10 to 40 are erased. 
+
+```
+DELETE -100
+```
+
+The lines from the beginning of the program to line 100 are erased. 
+
+
+## STEP 2
+### Let's write a program
 
 Let’s study some of the basic commands necessary to write a program. Since 
 programs are written in the following order BASIC COMMANDS, FORMAT, 
 PROGRAM LINES AND EXPLANATIONS, when you are entering the program 
 lines by yourself, let's also master BASIC at the same time. Be very careful 
-about entering the comma “ , ” semicolon " ; " and other symbols. Just one 
+about entering the comma "," semicolon ";" and other symbols. Just one 
 mistake can make a big difference in the way the program runs. 
-This command is used the most 
-for writing letters and numbers. 
-PRINT “character string” —> The characters enclosed in 
+
+#### PRINT
+
+This command is used the most for writing letters and numbers. 
+
+PRINT "character string" —> The characters enclosed in 
 double quotation marks 
 are displayed on the 
 screen. 
+
+
 PRINT numerical value ~> The numerical value is 
 displayed on the screen as 
 shown. 
+
 PRINT —> One line of blanks is displayed 
 on the screen. 
-% 
-~.\-‘:.\-‘ “*‘ 
-I I g_' t~§-I Character strings and answers to calculations can ) 
+
+Character strings and answers to calculations can ) 
 also be written instantly. 
 I8
 
-I0 PRINT “ABCDEF" 
-20 PRINT “UV. " 
-30 PRINT “5 *9” 
+I0 PRINT "ABCDEF" 
+20 PRINT "UV. " 
+30 PRINT "5 *9" 
 40 PRINT 
 50 PRINT 59 
 60 PRINT 54=9 
@@ -439,7 +451,7 @@ OK
 in 
 Abbreviated Format 
 Instead of writing PRINT in each statement, the PRINT command 
-may be omitted and a question mark “'2” can be used as 
+may be omitted and a question mark "'2" can be used as 
 an abbreviation. 
 The answer for line 50 was 2E + l4. This might seem like a strange 
 number, but this just means that the number 2 is followed by a 
@@ -447,12 +459,12 @@ string of I4 zeros.
 / 
 20
 
-' Mistakes using the comma “.” and the colon “;" 
+' Mistakes using the comma "." and the colon ";" 
 Enter the following program. 
-I0 PRINT “ABC” 
-20 PRINT "A", “B”, “C” 
+I0 PRINT "ABC" 
+20 PRINT "A", "B", "C" 
 30 PRINT I, 2, 3 
-40 PRINT “A” ; “B” ; “C” 
+40 PRINT "A" ; "B" ; "C" 
 50PRINTl;2;3 
 60 END 
 Q RUN 
@@ -473,28 +485,40 @@ are displayed. Then the first I4 places of the second variable
 are displayed. When the semicolon is displayed, this indicates that 
 the next filed to be printed will be start at the first character following 
 the preceding field. 
+
 The first character in a numeric field is blank so that the minus 
 sign can be printed if necessary. There is also another space at 
 the end of a numeric field, so it will not be connected to the next 
 field when displayed. 
-2!
 
-This command is used to clear the 
-C LS screen. 
-| 1 
+
+#### CLS
+
+This command is used to clear the screen. 
+
+```
+CLS
+```
+
 The clear screen command erases the contents of the screen and 
 positions the cursor at the home position (upper left of the screen). 
-This command moves the cursor 
-to the specified position. 
-l LOCATE horizontal position, vertical position I 
+
+#### LOCATE
+
+This command moves the cursor  to the specified position. 
+
+´´´
+LOCATE horizontal position, vertical position I 
+´´´
+
 The small dark square on the screen is known as the cursor. When 
 the PRINT command is used the characters can be written in the 
 cursor position. Because the cursor can be moved freely to any 
 location specified by the program, characters can also be written 
 in any desired location. 
 I0 CLS 
-20 PRINT “MSX BASIC” 
-30 LOCATE 10,10 : PRINT “HELLO” 
+20 PRINT "MSX BASIC" 
+30 LOCATE 10,10 : PRINT "HELLO" 
 40 END 
 Q RUN 
 I7 
@@ -504,14 +528,14 @@ OK ‘IO characters LL0
 22
 
 ' Up to now only one command could be written on a line but 
-in BASIC by using the colon “:” any number of commands 
+in BASIC by using the colon ":" any number of commands 
 in a single line. When a number of commands are written in 
 a single line using the colon, this is called a multistatement. If 
 line 30 is written as 
-I 30 LOCATE 10,10 : PRINT “HELLO” l 
+I 30 LOCATE 10,10 : PRINT "HELLO" l 
 this is the same as 
 30 LOCATE 10,10 
-35 PRINT “I-IELLO" 
+35 PRINT "I-IELLO" 
 If a program is written in multistatements the program will become 
 shorter. The advantage of this is that the program will run 
 faster. However, if many statements are written in the same line, 
@@ -529,19 +553,29 @@ everitica
 I (0,22) (36,22) I 
 23
 
-_,Command to jump to the specified 
-line. 
+#### GOTO
+
+Command to jump to the specified line. 
+
 Format 
-l GOTO line number ‘ 
+
+```
+GOTO line number
+```
+
 This command causes the program to jump to the specified line 
 number. A program is executed in the correct order specified by 
 the program line numbers. The GOTO command is used when 
 you want to change the order of execution. 
-10 A=l 
+
+```
+10 A=1 
 20 PRINT A 
-30 A=A+l 
+30 A=A+1 
 40 GOTO 26 
 50 END 
+```
+
 a RUN 
 @\lO\lJt-RnbJl~JI—' 
 DO not use this command until you learn how to interrupt execution 
@@ -552,47 +586,64 @@ Variable:
 l0A=l 
 20 PRINTA 
 30 A=A+l 
-The character “A” used here is called a variable number. 
+The character "A" used here is called a variable number. 
 A variable is used as a container or storage area for a numerical 
 value which can change. Please remember the name which is attached 
 to the container or storage area. 
 Format Q) 
+
 I Variable name = expression i 
-In this case the equals sign doesn't mean "equals" or “is the same 
-as”. Instead, this means that the value on the right is entered into 
-the value on the left. I 1 In this case, I is entered to the container or storage area called “A” 
+
+In this case the equals sign doesn't mean "equals" or "is the same 
+as". Instead, this means that the value on the right is entered into 
+the value on the left. I 1 In this case, I is entered to the container or storage area called "A" 
+
 Format @ 
+
 i PRINT variable name 1 
 ' 20 PRINT A ‘ 
-ln this case the value entered in the storage area called “A” is 
+
+In this case the value entered in the storage area called "A" is 
 displayed on the screen. 
+
 l 30A=A+l ‘ 
+
 This statement means that 1 is added to the value of A. This is 
 entered into the storage area A and becomes the new value of A. 
-25
+
 
 The first character of a variable must be an alphabetic character. 
 After that either letters or numbers up to 255 can be used. Variable 
 names of more than three characters can't be distinguished 
 by the computer. 
-Al23 
-A124] These are all interpreted as the same variable 
+
+```txt
+A123 
+A124 
 A125 
+```
+
+These are all interpreted as the same variable 
+
 Only the first two characters can be distinguished by the 
 computer. 
+
 40 GOTO 20 
+
 This means jump to line 20. When this program is run, numbers 
 will be displayed one after another on the screen without stopping. 
 The computer will execute the lines up to line 40 one by one. The 
 program never reaches the line 50 END statement because when 
 it gets to line 40 it jumps back to line 26. 
-1 0 
+
+10 
 20 
 30 Loop 
 40 
 ... To stop execution. read the explanation of 
 STOP on the next page. 
-26
+
+
 
 This command is used to interrupt 
 STQP the program execution. 
@@ -623,84 +674,96 @@ CONT
 54 
 55 
 56 
-The interrupted line number will be stored and 
-used later. 
-;.».:i:ii:::" - 
-¢0..._..... \&,\_\'\\ _ 
-iI§’;i1: ‘".. 
-“°;§;l /I \\<>---L 
-\1O 
-\3o--_--~--~-- | 
-|§0-- ~ . . . . ___ 
+
+The interrupted line number will be stored and used later. 
+
 Break in line number 
 28
 
 Format 
-Command to repeal the same 
-process 
+Command to repeal the same process 
+
+```
 FOR variable = beginning value TO ending value 
 NEXT variable 
+```
 This command is used to repeat the same process within a program 
 a fixed number of times, and then stop automatically. 
-10 FOR I=l TO 10 
+
+```
+10 FOR I=1 TO 10 
 20 PRINT I 
-30 NEXT l 
-40 END 
+30 NEXT 1 
+40 END
+```
+ 
 3 RUN 
 O7<;\ooo~|o\u|-s>w:~.:- 
 FOR T9 
 H *1 .. , 
 l 
+
 It hasn't reached the final value yet, has it? 
-c.-' 
-'3 
-.2‘-if,‘ 
-/vT 
-v- “ 
-1, 
-29
+
+
 
 The same variable name must be used in the FOR and the NEXT 
 statement. 
+
 When the value of a variable is changed in constant steps, the 
 size of each step can be specified with the STEP command. 
+
 I STEP variable increment 
 is written like this 
+
+```
 10 FOR l=l TO 10 STEP 2 
 20 PRINT l 
 30 NEXT l 
 40 END 
+```
+
 Q RUN 
 IO
 7<\o-.iuiw- 
 __ STEP 2 
 ‘$‘F-*1-W W Z 
-This program will display the numbers from I to 10 on the screen 
+
+This program will display the numbers from 1 to 10 on the screen 
 When the STEP 2 is entered, the numbers displayed on the screen 
 will increase by 2 each time 
-v '.-l“'f‘§r__ __ 
-1/ ‘T 
-If there are many stens in a subroutine the nurri 
-ber of written repetitions can be reduced 
-30
 
-Command to assign data input 
-from the keyboard to a variable. 
+If there are many stens in a subroutine the number of written repetitions can be reduced 
+
+#### INPUT
+
+Command to assign data input from the keyboard to a variable. 
+
 Format 
-I INPUT variable i 
-Up to now, the following method has been used to inform the 
-computer of a variable value. 
-I 
+
+```
+INPUT variable
+```
+
+Up to now, the following method has been used to inform the computer of a variable value. 
+
+```
 lfi A=l0 
 20 B=2fl 
+```
+
 At the beginning of the program where the variable values are 
 defined. This is used when you want to change the values of the 
 variables. The program has to be corrected. 
+
 The INPUT command is used to input variable values from the 
 keyboard. 
+
+```
 Ifl INPUT A 
 20 PRINT A=t=3 
 30 END 
+```
 Q RUN 
 '?l 
 31
@@ -708,20 +771,26 @@ Q RUN
 The question mark will appear. This means that the computer is 
 asking you what the value for the variable A in the line lfl should 
 be. For example, if you enter 
-[H J 
+
+[H J] 
+
 The computer will perform the calculation on line 20 as 5 it 3. The 
 answer will be 15. 
+
 Using the INPUT command 
+
 is output, but you have no way of knowing whether character 
 or numeric information is requested, or how you should answer. 
-If characters enclosed in quotation marks (“) follow the INPUT 
+If characters enclosed in quotation marks (") follow the INPUT 
 command, those characters will be displayed before the question 
 mark. 
+
 Format 
-l INPUT “character string”;variable l 
+
+l INPUT "character string";variable l 
 Well? let's change line 10 in the last program and then try and 
 run the program 
-lfl INPUT “HOW MUCI-I IS A”;A 
+lfl INPUT "HOW MUCI-I IS A";A 
 20 PRINT A13 
 36 END 
 P $5 RUN 
@@ -729,24 +798,39 @@ l HOW MUCH IS A? I l
 32
 
 According to a condition 
+
 Format 
+
+```
 l IF condition THEN statement I 
+```
+
 If a specified condition is met, the operations following the THEN 
 statement are performed. If the condition is not met, the next line 
 in the program is executed. 
+
 Format @ 
+
+```
 l IF condition THEN line number ‘ 
+```
+
 If a condition is met, the program will jump to the specified line 
 number. If the condition is not met the next line in the program 
 is executed. 
+
 The IF - THEN command is used when conditional judgements 
 have to be performed. 
+
+```
 I0 INPUT A 
-20 IF A>5l/I THEN PRINT “GREATER THAN SH" 
+20 IF A>5l/I THEN PRINT "GREATER THAN SH" 
 :GOTO I0 
-30 PRINT “LESS THAN 50” 
+30 PRINT "LESS THAN 50" 
 40 GOTO I0 
 50 END 
+```
+
 When this program is run, and the question mark appears, enter 
 any number and press the key. 
 When the number which is input is greater than 50, 
@@ -755,8 +839,11 @@ V GREATER THAN 50 J
 
 appears When the number which is input is less than 50, the following 
 message is displayed. 
+
 LESS THAN 50 
+
 Conditional format 
+
 Symbol Expression Meaning 
 A=B 
 A>B 
@@ -787,32 +874,46 @@ in the same line without any problem. For example IF condition
 THEN command ELS,E,|ine number|. TIIIS command IS HOW USCCI In 
 th preceding program. 
 II/I INPUT A 
-20 IF A>Sl?I THEN PRINT “GREATER THAN 55" 
-ELSE PRINT “LESS THAN 50” 
+20 IF A>Sl?I THEN PRINT "GREATER THAN 55" 
+ELSE PRINT "LESS THAN 50" 
 30 GOTO I0 
 40 END 
--2.___ _ “is ti; H.) 
+-2.___ _ "is ti; H.) 
 35 
 I IF condition THEN line number(I) ELSE line number(2) ‘
 
-This command is used to jump to 
-GOSUB ~ RETURN a subroutine. 
+#GOSUB ~ RETURN
+
+This command is used to jump to a subroutine. 
+
 Format @ 
-GOFUB line number 
+
+```
+GOSUB line number 
 RETURN 
+```
+
 After jumping to the specified line number and performing the 
 subroutine, by using the statement in the subroutine, the 
 program returns to the line following the GOSUB statement. 
+
 Format @ 
+
+```
 GO?UB line number 
 RETURN line number 
+```
+
 This is similar to the previous example. The program branches 
 to the line number and performs the subroutine, but the program 
 returns to the line number specified in the RETURN statement. 
-¢ A subroutine is a part of a program which repeats the same 
+
+A subroutine is a part of a program which repeats the same 
 operations any number of times when the program is executed. 
+
 This is extremely convenient as it can be called 
 whenever it is needed. 
+
 This small operation contained within a program is called a 
 subroutine. _ % 
 AI’! J 
@@ -824,16 +925,16 @@ than returns.
 36
 
 The next program calculates the surface area of a block 
-I0 INPUT “HEIGHT”;A 
-20 INPUT “WIDTH”;B 
-30 INPUT “DEPTH";C 
+I0 INPUT "HEIGHT";A 
+20 INPUT "WIDTH";B 
+30 INPUT "DEPTH";C 
 40 GOSUB 70 
-50 PRINT “SURFACE AREA ,S 
+50 PRINT "SURFACE AREA ,S 
 69 END 
 75 S=2*(A*B+A*C+B*C) 
 80 RETURN 
 When the program is run, and the computer WIII ask for the values 
-for HEIGHT? WIDTH? and DEPTH”, enter 4, 5 and 6 
+for HEIGHT? WIDTH? and DEPTH", enter 4, 5 and 6 
 After line 70 a subroutine is performed The program returns to 
 line SB after the in line 80, and then displays the calcu- 
 Iation. 
@@ -846,13 +947,21 @@ one subroutine do this calculation.
 gas
 . Tat av
 
-This command is used to enter 
-READ ~ DATA data- 
+#### READ ~ DATA
+
+This command is used to enter data 
 Format 
+
+```
 I READ variable l, variable 2, variable 3... I 
+```
 Data is entered as represented by variable (I), variable (2) and 
 variable (3). 
-I DATA constant(I), c0nstant(2), constant(3) I 
+
+```
+DATA constant(I), c0nstant(2), constant(3) I 
+```
+
 More than one constant can be contained in a DATA statement. 
 When the variable value is entered, a number of fixed constants 
 can be entered. 
@@ -860,10 +969,14 @@ When the variable value is entered, the INPUT statement is used
 to represent values such as A: I0, B=2B etc. 
 However, there is also another way to enter data besides this 
 method. This is done by using the READ-DATA statements. 
+
+```
 lfl READ X,Y,Z 
 20 PRINT X;Y;Z 
 30 DATA 10,20,391 
 49 END 
+```
+
 Q RUN 
 10 20 30 
 OK 
@@ -873,42 +986,60 @@ I
 In line 20 the READ X, Y, Z statement reads and enters (loads) 
 the values of X, Y and Z. The values entered for X, Y and Z correspond 
 to the values in either lines I0, 20, or 30. 
+
 The READ statement variables can have either a numeric value 
 or a character variable. 
+
 For example in the next program, the average test scores for Tom, 
 Dick and Harry can be calculated. 
+
+```
 ID FOR I = I TO 3 
 20 READ A$, B, C, D 
 39 X = INT((B + C + D)/3) 
-40 PRINT AS; “AVERAGE SCORE ";X 
+40 PRINT AS; "AVERAGE SCORE ";X 
 SB NEXT 
 60 END 
 7B DATA Tom, 74, 69, 78 
 80 DATA Dick, 66, 55, 6l 
 90 DATA Harry, 87, 76, 73 
+```
+
 Q RUN 
+
+```txt
 Tom AVERAGE SCORE 73 
 Dick AVERAGE SCORE 60 
 Harry AVERAGE SCORE 78 
 OK 
-I 
-39
+```
+
 
 10 FOR l=l TO 3 
 50 NEXTI 
 The FOR-NEXT commands in lines I0 and 50 will be repeated 
 three times. Three repetitions are necessary to perform the calculations 
 for each of the three students. 
+
 Line 20 reads each student’s name and grades for English, 
 mathematics and science. This information is contained in the 
 DATA statements in lines 70, 80 and 90. 
-I 30 X=INT((B+C+D)/3) I 
+
+```
+30 X=INT((B+C+D)/3)
+```
+
 This statement adds the three grades and then divides them by 
 3 to get the average. 
+
 The INT command is used to obtain the positive integral value 
 (i.e. without any fractions) after the sum of B + C + D is divided 
 by 3. We’ll study the INT command in more detail later. 
-I 40 PRINT A$; “AVERAGE ”;X 
+
+```
+40 PRINT A$; "AVERAGE ";X 
+```
+
 The name which was loaded in line 20 and the average calculated 
 in line 30 are displayed. 
 _ I |z£AD 
@@ -922,11 +1053,16 @@ makes it easy to enter a number of variables.
 This command is used to read and 
 enter data after it has already been 
 read in one time. 
+
 Data which was loaded by the READ~ DATA commands normally 
 can’t be read again after it has been loaded once. However, 
 it is often necessary to use the same data a number of times. 
+
+#### RESTORE
+
 The RESTORE command enables the data to be loaded again after 
 it has already been loaded once. 
+
 ’"\ Format *'\l_‘* 
 I RESTORE 
 10 READ A, B, C 
@@ -944,10 +1080,14 @@ I
 4|
 
 Format @ 
+```
 RESTORE line number 
+```
 will 
 When this command is used the data in the specified line number 
 be loaded next. 
+
+```
 10 READ A, B, C 
 20 RESTORE 90 
 30 READ D,E,F 
@@ -957,6 +1097,8 @@ SB PRINT D;E;F
 70 DATA 10, 25, 315 
 8B DATA 40, SB, 60 
 90 DATA 70, 80, 90
+```
+
 @ 
 10 20 30 
 7B 86 90 
@@ -975,21 +1117,31 @@ of which performs a preset process.
 Lets study how to use some of the more useful functions. 
 (A w 
 _ _ ib 
+
 Preset processing of variables is efficient. 
+
+#### CHR$
+
 This returns the character which 
 corresponds to the numeric or 
 variable value. 
+
 Format 
+
+```
 i CHR$ (numeric value) i 
 i CHRS (variable value) i 
+```
+
 The variable value must be between 0 to 255. 
+
 I PRINT cnastes) l 
 A
 OK 
 I 
 44
 
-The character “A" is displayed on the screen. This is because the 
+The character "A" is displayed on the screen. This is because the 
 65th character in the characier code chart is "A". 
 The computer can also display other characters besides the ones 
 on the keyboard. The chart of the assigned numbers for characters 
@@ -997,61 +1149,39 @@ and graphics is contained within the computer. This number
 which is assigned to a character is called the character code or 
 ASCII code. 
 Character Coda Chart 
-"PIG 40 
-—.5=>rr| 
-*1-| 
-o1A2 551 an c 
-+ l’ p 1 
-N-BO O© N-—-Obj CHIP I-C 'r>i::: -—-03¢ 
-@¥ fin 
-3 aq sci; u"l .' 
-O b; .436 XN - 
-to C n bi F2 1/‘- G S it O t'1 Iii’I 
--t -_ 
-& Z co -L- U -1
-. 
-Q. i El ii fl OI I QH 
-0 '3 OE 5 (11 C E U a O N ca I hf 
-l D O PP 6 ‘I1 4. f v a fl Q (:1 I I ‘I: 
-\l ¢- 
-i O 4 H \’\' C ii ‘_' it '-E -T 
-8 I >< h X L‘ '4 r U '6' 
-U l 9 - -< ). ii fis- aw ii ++ Qb 
-:- E =l= @- N 1 Z C- :-. 
-i__? 
-E D 
-+ I ‘A P1 k II
-V1 .1, T.\\ I %_ 
-0 la-g. < F‘ P: <> //// X Tl 
-U ‘J ‘Z _- l I11 _- -KI i a95 V 
-F‘-_. > 7! ll >1 _- v.-» ( 4 A 
-'|'l ii-+-V T’ v\sr O >- .“ ) rm A P 
-rad? 
-Us 
-_v 
+
 The character code in the chart above is determined as follows 
 (horizontal column number) X 16 + (vertical column 
 number)=(assigned character code) 
-45
 
 This returns the integer and rell\
 lT moves any fractions. This command 
 is used for positive 
 numbers. 
+
 Format 
+
 i [NT (numeric value) J 
 V PRlNTlNT(3.l4) l 
 The fraction of 3.14 is removed and the positive number 3 is displayed. 
-This command returns a random 
-number between I and 0. 
+
+#### RND
+
+This command returns a random number between I and 0. 
+
 Format 
+
 i RND (numeric value = -1, 0 or l) 
+
+```
 ta FOR l=l TO 5 
 20 X:lNT(RND(l)>i- 10) 
 ‘ 30 Y=lNT(RND(l)* ta) 
 T 40 PRINT "x=";x;*-v=";v 
 so NEXT 1 
 60 END 
+```
+
 When this program is run X is equal to a value ranging from D 
 to 9. Y is equal to a value from I to I0. This operation will write 
 out the results five times. 
@@ -1066,12 +1196,16 @@ This command is used to represent
 ||\|KEY$ characters input from the 
 keyboard. 
 Format 
-I lNKEY$ i 
+
+```
+I INKEY$ i 
+```
+
 If a key on the keyboard is pressed, the value of that character 
 is returned. ll" no key on the keyboard is pressed, a space (null 
 string) is returned for that value. 
 10 A$=lNKEY$ 
-20 lF A$=“ " THEN GOTO l0 
+20 lF A$=" " THEN GOTO l0 
 30 PRINT A$ 
 40 END 
 When this program is run, press any key on the keyboard. The 
@@ -1081,41 +1215,42 @@ will end.
 
 I0 X= l0:Y= lfl:CLS 
 20 A$=lNKEY$ 
-30 IF A$=“S” THEN X=X— l:GOTO 70 
-40 IF A$=“D” THEN X=X+ l:GOTO 70 
-Sfl IF A$=“E” THEN Y=Y—1:GOTO 99 
-60 IF A$=“X” THEN Y=Y+ l:GOTO 99 
+30 IF A$="S" THEN X=X— l:GOTO 70 
+40 IF A$="D" THEN X=X+ l:GOTO 70 
+Sfl IF A$="E" THEN Y=Y—1:GOTO 99 
+60 IF A$="X" THEN Y=Y+ l:GOTO 99 
 76 IF X<flTHEN X=B l 
 86 IF X>28 THEN X=28 
 90 IF Y-<0 THEN Y=B 
 lflfl IF Y>20 THEN Y=2B 
-I10 LOCATE X,Y:PRINT “ Q " 
+I10 LOCATE X,Y:PRINT " Q " 
 I20 GOTO 20 
 I30 END 
-This program displays the “ U ” on the screen. If “S” is entered 
-it will move to the left side. If “D” is entered it will move to the 
-right side. If “E” is entered it will move up. If “X" is entered 
+This program displays the " U " on the screen. If "S" is entered 
+it will move to the left side. If "D" is entered it will move to the 
+right side. If "E" is entered it will move up. If "X" is entered 
 it will move down. 
 Program flow can be controlled from the key- 
 ) H! 
 Sf-Q’!-4.?
 48
 
-STEP 4 
-Let’s Paint a Picture with 
-the E53 ! 
-/ ( ~. 
-‘ F P l_ J ~‘ I 
-mi, ._ 
-‘I i 1 
-49
+## STEP 4 
+### Let’s Paint a Picture with 
 
 Let's draw pictures with the MSX! 
+
 Lets’s study some commands and draw some pictures now. We'll combine some 
 of the commands that have appeared before to create some graphics. 
+
 This command selects the screen. 
+
 Format 
+
+```
 i SCREEN mode i 
+```
+
 The screen mode is specified by values from 0 to 3. 
 MSX computer has four kinds of screen modes in all. 
 Mode 0: Text Screen l 
@@ -1190,8 +1325,11 @@ U 'l ‘ I background were the same color.
 
 Well, let's try and paint a picture with the MSX computer and 
 the next program. 
+
 This program used circles and straight lines to make a snowman 
 and a house. Now let's make the snow fall in the sky. 
+
+```
 10 REM SNOWMAN 
 20 SCREEN 2 
 30 LINE (0,l40)—(255,140), 5 
@@ -1223,8 +1361,11 @@ I90 PAINT (l40,60), 1
 290 LINE (l75,22)—(l70,45), 13 
 300 LINE (I70,45)—(145,35), I3 
 90 LINE (30,l40)—(70,110), 10, BF I 
+```
+
 BF 
 BF 
+
 Program title set mode 
 set mode 
 background sky 
@@ -1238,68 +1379,35 @@ mouth
 ~ buttons 
 l bucket on heed 
 54
-
+```
 320 FOR l=l TO 500 
 330 X= INT(RND(1)*256) mace ms in sky 
 340 Y = lNT(RND(1)* 91) at random 
 350 PSET (X, Y), 15 
 331600 oNEoXroT I310 l,c,o,,nt,i,n,u,,e,,,d,is °la"in° 
 380 END 
+```
+
 To paint a line with the MSX computer, the position of the dots 
 on the screen must be displayed one by one. In order to paint 
 the picture of a snowman, the positions of the necessary points 
 are drawn in a diagram.
-55
 
-6:62 
-/ 
-fi_°gQ_ 
-_I 
-E16220$"‘88_:_ 
-/>N“mM/n<‘/_X 
-\\‘/\1 
-gl mm“9(/m“‘// 
-®b\ 
-gm°(u¢\\ 
-9m___ 
-_/)/ 
-/;Q2<__39_: 
-‘:2g‘8S__ Z6PFZUW‘OO‘ :_ 
-I6R“N: 
-//_ 
-/E_8__ 
-a:2n:gs 
-_,__F‘“___ 
-G:3_6:ms 
-5EfiQ§°~g::Q/:/Z 
-aSsflgz_wu 
-E'u6:7°i___'/n_$2162:2 / 
-w__ w___°$_ 
-m6:6°m::Emz$Og2 
-/Q5°: 
-/ES'aant:Y 
-g8s_ 
-/05/53 
-_aw_N8‘ _‘/ 
-Q‘\_°dm9moH:; 
-__Z8_(BO_m_ 
-___ 
-D“wk V_BOmU am“___Wmkm 7.8 InToYwO ah mmmm 
-9 
-mmm__mmmW0 Ummmmm 
-h___VB 8 h88 _U'0' ‘hB _mHBr CObm mInh___ 8Dm8 _U 
-8 OVQr ‘hB SC'8OH
 
 Selection for line drawing 
+
 SCREEN 
 I 20 SCREEN 2 
+
 This selects a high resolution mode of 256 (horizontal) X 192 (vertical) 
 dots. As a result there are 256 individual horizontal points 
 and 192 vertical points which can be painted. These are known 
 as graphic coordinates. 
 horizontal (255.8) 
+
 ll you’ro thinking that it's 256 and not 255. 
 To make sure that you're counting the zero. 
+
 . Q 
 C
 VB
@@ -1312,11 +1420,17 @@ B(255,l00) in color number 5 (light blue).
 57
 
 Format 
+
+```
 I LINE (starting point)- (ending point), color code I 
+```
+
 When the color code is omitted, the color specified for the character 
 code is used. 
 When a line is drawn by the LINE statement, it can also be abbreviated 
 as follows. 
+
+```
 50 LINE (25,110)-(50,90), 6 
 60 LINE (50, 90)—(80, 110), 6 
 70 LINE (80, 110)-(25, 110), 6 
@@ -1324,8 +1438,14 @@ Q
 so LiNE (25, l10)—(50,90), 6 I 
 ea LINE -(80,110), 6 
 10 LiNE -(25,110), 6 
+```
+
 Command for painting a rectangle 
+
+```
 I 90 LINE (30,l40)—(70,110), I0, BF I 
+```
+
 In this command a diagonal line is drawn from point A (30,140) 
 to point B (70,110) and connected. This forms the diagonal of 
 a rectangle which will be painted yellow (color mode 10). The inside 
@@ -1360,6 +1480,8 @@ The high color resolution can’t be used on SCREEN 2.
 The color code designations for painting SCREEN 2 graphics are 
 not the same. The colors for SCREEN 3 graphics must be specified 
 separately. 
+
+```
 I0 SCREEN 2 
 20 LlNE(l00,l0)—(50,l00), l 
 30 LlNE—(2flfl,lS0), 1 
@@ -1367,6 +1489,8 @@ I0 SCREEN 2
 50 PAINT(l0fl,8D), I 
 60 GOTO 60 
 79 END 
+```
+
 This program paints a black triangle when it is run. 
 After the triangle is drawn, it then paints the inside portion black. 
 .-—__ 
@@ -1375,6 +1499,7 @@ After the triangle is drawn, it then paints the inside portion black.
 are the same and sometimes they're different. 
 60
 
+```
 I0 SCREEN 3 
 20 LlNE(l%,l0)—(5fl,l00), l 
 39 LINE—(200,l5l5), l 
@@ -1382,6 +1507,7 @@ I0 SCREEN 3
 50 PAlNT(l00,80),2,l 
 60 GOTO 60 
 70 END 
+```
 When this program is run it paints a black triangle. 
 After the triangle has been drawn, it paints the inside portion 
 green. 
@@ -1407,9 +1533,9 @@ ent radii each having the same center.
 ln line SB the statement GOTO 50 causes the ellipses which were 
 drawn to be displayed continuously. To stop the display press the 
 and keys. 
+
 If 
-Q’ __-_-i-> 
-\ 
+
 A circle is defined by the location of the center and 
 the length ol the radius. It you don't specify the 
 color. it will be the same as the text cherectere. 
@@ -1417,9 +1543,11 @@ The correct format for the circle command is shown below.
 CIRCLE (center point), radius length (in dots), color 
 code, starting point degree, ending point degree, ratio 
 (of radius length to width). 
+
 The parameters from the color code to the ratio may be omitted. 
 v When the color code parameter is omitted, the color specified 
 in the COLOR command is used. 
+
 0 When the start point degree parameter is omitted a value of 
 0 is used. 
 I When the end point degree parameter is omitted a value of 6.28 
@@ -1430,8 +1558,10 @@ is used.
 
 The start point angle is defined as the first position where the circle 
 will be drawn from. 
+
 The end point angle is defined as the last position where the circle 
 will be drawn to. 
+
 L 57 counterclockwise 
 U 
 3. l4 
@@ -1451,14 +1581,16 @@ radiusWn
 " f-I~ Remember that when the ratio is lass than 1. the 
 L radius specification represents the maximum 
 length of the radius. 
-63
 
+```
 10 SCREEN 2 
 20 C1RCLE(60,50), 40,1 
 30 C1RCI.E(8fl,15l6), 50,1, -1.57, — 3.14,1 
 40 CIRCLE (160,100), 6fl,1,,,2 
 SB GOTO 50 
 60 END 
+```
+
 Line 20 draws the circle. 
 I cm<1E<6».s»>,4@. 1i;_1i?'f;ff6.'-_'2I8I;I_i.E l 
 The parameters within the broken line can be omitted. 
@@ -1466,23 +1598,32 @@ The parameters within the broken line can be omitted.
 I CIRCLE (85,156), 513,1, -1.57, - 3.14,] 
 1.57 
 3.14 
+
 The minus sign connects the center of the circle 
 with the start and end points. 
+
 In line 40 a circle is drawn. 
+
 F CIRCLE(l60,lB0), 60, 1, {Q}, §_'§§_2}i:} ,2 
+
 The parameters inside the broken lines may be omitted 
-64
+
+#### PSET
 
 Command to draw a dot 
-PS ET 
+ 
 T 350 PSET (X,Y), 15 I 
 This command draws a white dot at the graphic coordinates (X,Y). 
 When no value is specified, X is preset to 320 and Y to 360. 
+
+```
 320 FOR1=1TO 500 
 330 X = lNT(RND(1) is 256) 
 340 Y =1NT(RND(1)* 91) 
 350 PSET(X,Y), 15 
 360 NEXT I 
+```
+
 These commands draw 500 white dots at the graphic coordinates 
 (256,916). The first value indicates the horizontal position, and the 
 second value indicates the horizontal position. 
@@ -1490,15 +1631,14 @@ second value indicates the horizontal position.
 90‘ 
 Format 
 I1|u 
-The falling snow can be 
-changing the color code 
-|
-11I 
-colored black or red by 
-‘ PSET (horizontal value , vertical value), color code 
-65
+The falling snow can be colored black or red by changing the color code 
 
-PS ET 
+```
+PSET (horizontal value , vertical value), color code 
+```
+
+#### PSET 
+
 Command to draw a dot 
 350 PSET (X,Y), 15 
 This command draws a white dot at the graphic coordinates (X Y) 
@@ -1524,30 +1664,27 @@ colored black or red by
 I PSET (horizontal value , vertical value), color code 
 65
 
-Command to erase a point at a 
-P R ES ET specified position. 
+###PRESET
+
+Command to erase a point at a specified position. 
+
 Format 
+
+```
 I PRESET (horizontal value , vertical value), color code. 
+```
+
 If a color code other than the specified background is specified, 
 it will be the same as the PSET color code. 
 This is O.l(. 
+
 All the commands which were used in the program "Snowman" 
 have been explained. 
 Enter the characters RUN. 
-is--, i 
--5 
-‘CO7) 
-.‘.'@ 
-is,... .-C 
-5I? 
-@907 
+
 Heyl Why did you make the eyes dillerent colors? 
-. ‘.6. _ ' . . 
-_ :3 \> 
-~ 4 
-‘ 
-% j 
-66
+
+
 
 Command to set a point or extend 
 DRAW a line. 
@@ -1573,26 +1710,27 @@ J ' _4
 
 10 COLOR l5,l,1 
 20 SCREEN 2 
-30 DRAW “BM50,S0” 
-40 DRAW “F60 G20 H60 E20” 
+30 DRAW "BM50,S0" 
+40 DRAW "F60 G20 H60 E20" 
 50 GOTO 50 
 60 END 
 Q RUN 
 Line 10 defines the screen color. 
 Line 20 defines the screen mode. 
-1 30 DRAW“BM50,50” 
+1 30 DRAW"BM50,50" 
 This statement specifies the point where the drawing will start 
 68
 
-»-2: 
-atUV 
-" iiiiihe 
-191 — 
 Evan if you know the directions, it you don't know 
 the starting point you can't draw anything. 
+
 Format 
-I DRAW “BM X-coordinate, Y-coordinate” I 
-I 40 DRAW “F60G20H60E20” I 
+
+```
+I DRAW "BM X-coordinate, Y-coordinate" I 
+I 40 DRAW "F60G20H60E20" I 
+```
+
 A rectangle will be drawn starting at the point (50,50). The sides 
 of the rectangle will be then be drawn 60 dots to the lower right. 
 20 dots to the lower left, 60 dots to the upper right and 20 dots 
@@ -1605,52 +1743,73 @@ it's somewhat harder to change the angle.
 69
 
 Next lets draw a number of rectangles in a row. 
+
+```
 10 COLOR 15,l,1 
 20 SCREEN 2 
-30 DRAW“BM50,50" 
+30 DRAW"BM50,50" 
 40 FOR l=l TO 20 
-50 DRAW“BM + 5,0" 
-60 DRAW“F60Ci20H60E20" 
+50 DRAW"BM + 5,0" 
+60 DRAW"F60Ci20H60E20" 
 70 NEXT l 
 80 GOTO 80 
 90 END 
+```
+
 The statements in line 40 FOR l= 1 TO 20 and line 70 NEXT 1 
 cause 20 rectangles to be drawn. However, they will all be drawn 
 in the same position. ln order to see each separate rectangle, each 
 rectangle should be moved over a little bit from the position of 
 the previous rectangle. This is done by the command in line 50. 
-I 50 DRAW“BM+5,0” I 
+
+```
+I 50 DRAW"BM+5,0" I 
+```
+
 This statement moves the starting point of each rectangle that is 
 drawn, 5 dots to the right each time. 
+
 Format 
-DRAW “BM " 
+
+DRAW "BM " 
 Vertical motion + moves down 
 (Y coordinate) — moves up 
 Horizontal motion + moves to the right 
 (X coordinate) — moves to the left 
+
 70
 
 For example, the statement 
-I 50 DRAW“BM+5,+2” I 
+
+```
+I 50 DRAW"BM+5,+2" I 
+```
+
 causes 20 rectangles which shift to the lower right side of the screen 
 t0 be drawn. 
-ln the DRAW command, instead of using parameters enclosed 
+
+In the DRAW command, instead of using parameters enclosed 
 in quotes like F60G20H60E20, character variables can also be 
 used.
-DRAW “X I? ;" 
+DRAW "X I? ;" 
 character variable 
+
+```
 10 COLOR 15, 1,1 
 20 SCREEN 2 
-30 DRAW“BM50,50" 
+30 DRAW"BM50,50" 
 40 FOR I= 1 TO 20 
-50 DRAW“BM + 5,0” 
-60 AS = “F60G20H60E20” 
-70 DRAW“XA$;" 
+50 DRAW"BM + 5,0" 
+60 AS = "F60G20H60E20" 
+70 DRAW"XA$;" 
 80 NEXT l 
 90 GOTO 90 
 100 END 
+```
+
 When this program is run it produces the same results as the program 
 on page 70. 
+
 IIIII }-is __ )7 
 C; The rectangles are layered like a row of dominoes. <>" v 
 71 
@@ -1660,21 +1819,27 @@ is >.3" \r
 _ . ' - - I . -rm .-»- .'%‘-r:.11=ar.~~‘¢ -1' 
 the Sprite figure 
 .- » :- 1-": at ‘ 
+
 Up to now we have been studying how to draw shapes using the 
 LINE and CIRCLE commands, although using these commands 
 to move figures is somewhat difficult. 
+
 The SPRITE command is extremely useful for this purpose. Before 
 studying the SPRITE command, lets learn a little bit more 
 about the background, Sprite and boundary screens. In this case, 
 the boundary screen is not used for screen display and will be 
 omitted. 
+
 itr Background Screen 
+
 The background screen is used for graphics which do not 
 move. Up to now, all of the LINE and CIRCLE commands 
 have not been moved on the background screen. There are 
 four modes for the background screen. The SCREEN command 
 is used to change these modes. 
+
 -Ir Sprite Screen 
+
 The Sprite screen is used for the purpose of moving graphic 
 figures. There are to 31 Sprite screen numbers which can 
 be attached to the Sprite screen. This means that there are 32 
@@ -1693,25 +1858,31 @@ t. I
 If nothing is written on the Sprite screen, it is transparent; 
 therefore up to 33 layers of images can be viewed on the 
 monitor. 
+
 Thus, when a figure drawn on a sprite screen at the back is 
 over lapped by one drawn on a sprite screen nearer the front 
 the overlapped portion of the figure at the back will disappear. 
 This makes it possible to give display an appearance of 
 depth. 
+
 1 -1'» Q 
 list ‘Q 
-§ ’\° S“ Background screen .5 
+§ ’\° S" Background screen .5 
 if-1: 55 " 
 ‘\.\r ~%prite screen 
 O 
+
 Sprite SGIBSHS BIB UBHSDBIBHK BXCBDI where 
 they contain figures. 
 Qég, 
+
 ln order to use the Sprite function, the following steps are 
 necessary. 
+
 0 Either 8 X 8 dot or 16 >< l6 dot Sprite patterns must be defined. 
 ' The data for characters to be displayed using the Sprite function 
 must be defined in character strings. 
+
 ' Both the Sprite screen number which the Sprite pattern will be 
 displayed on, as well as the display size (standard or expanded) 
 must be specified. 
@@ -1722,6 +1893,8 @@ Let’s make a Sprite pattern.
 First an 8><8 dot figure must be defined. 
 ln binary notation, a blank is expressed as 0 and a dark point 
 as a l. 
+
+```txt
 Binary 
 -' &BllflllflflB = 
 ~ &BBl0lfl000 =- 
@@ -1740,23 +1913,41 @@ Hexadecimal Decimal
 &H3E 
 &H7E 
 &HC7 
+```
+
 A Sprite pattern can be written like this, by using a character string 
 composed of eight character codes. 
+
 When the figure above is defined as a Sprite pattern, it is expressed 
 by using a character string like this. 
+
+```
 CHR$(2l6) + CHR$(80) + CHR$(248) + 
 CHR$(l68) + CHR$(l l5) + CHR$(62) + 
 CHR$(l26) + CHR$(l99) 
+```
+
 If decimal notation is not used, either binary or hexadecimal expressions 
 can be written as shown below. 
+
 Binary 
+
+```
 CHR$(&BllB1l000)+ CHR$(&B0lfllBflfl0) + ..................... .. 
 ....................... .. CHR$(&Bll00fl1ll) 
+```
+
 Hexadecimal 
+
+```
 CHR$(&HDH) + CHR$(&H5B) + .................................... .. 
 ............................... .. CHR$(&HC7) 
+```
+
 When binary or hexadecimal expressions are used, the following 
 symbols must be used before the numbers. 
+
+
 Binary &B 
 Hexadecimal &H 
 74
@@ -1764,15 +1955,23 @@ Hexadecimal &H
 Up to 256 8 >< 8 dot Sprite patterns can be defined on 
 the MSX computer. Each of them is given a special Sprite pattern 
 number. 
+
 Let’s assign Sprite pattern number 0 to the pattern which was just 
 created. 
+
+```
 SPRlTE$(0) = CHR$(2l6) + CHR$(8B) + 
 CHR$(248)+ CHR$(l68)+ 
 CHR$(l l5)+CHR$(62)+ 
 CHR$(l26)+CHR$(l99) 
+```
+
 Command to define a sprite 
+
 SPRlTE$ pattern 
+
 Format 
+```
 SPRITE$ (pattern number)=figure expressed as a 
 character string 
 Sprite patterns can only be displayed in SCREEN modes l to 3. 
@@ -1781,15 +1980,23 @@ SCREEN,fl ......................... .. 8x8 dot standard
 SCREEN,l ............. .. 8x8 dot expanded 
 SCREEN,2....... ............. .. 16x16 dot standard 
 SCREEN,3 ......................... .. l6x l6 dot expanded 
-75
+```
 
 The PUT SPRITE command is used to display a Sprite pattern 
 on the screen. 
 Command to display a sprite 
+```
 PUT SPRITE 
+```
+
 Formal 
+
+```
 PUT SPRITE Sprite screen number, Sprite position, 
 color code, Sprite pattern number 
+```
+
+```
 l0 COLOR l5,4,7 
 20 SCREEN 2,0 
 30 FOR N= l TO 8 
@@ -1800,6 +2007,8 @@ l0 COLOR l5,4,7
 80 GOTO 80 
 90 END 
 l00 DATA 2l6,80,24fl,l68,ll5,62,l26,199 
+```
+
 @ RUN 
 \* 12s 
 L The upper left position is specified for the Sprite 
@@ -1807,14 +2016,24 @@ screen.
 76
 
 The rabbit in the program above was displayed in white. 
+
+```
 I 70 PUT SPRITE B,(l28,96),l5,0 i 
+```
+
 This command specified Sprite screen number 8, position 028,96), 
 color code 15, and pattern number B to be drawn. 
+
 If a Sprite pattern is not defined by the SPRlTE$ command before 
 executing the PUT SPRITE command, nothing will be displayed 
 on the screen. 
+
 If line 28 is changed to 
+
+```
 I 20 SCREEN 2,1 I 
+```
+
 and the program is run the rabbit will be twice as big as before. 
 In this case, the 8 >< 8 Sprite dot pattern is expanded dot by dot 
 to twice its original size. 
@@ -1854,9 +2073,11 @@ l6‘l6°
 || I ff‘-r 
 16 1 r ‘°r,;, 
 é. 
+
 The rabbit pattern is the same when it is represented 
 by character strings written in binary, decimal 
 or hexadecimal. 
+
 78 
 fl‘ 
 i' I 
@@ -1864,6 +2085,8 @@ i' I
 J1,
 
 I To move a Sprite pattern 
+
+```
 10 COLOR 1s,4,7 
 20 SCREEN 2,1 
 30 FOR N=l TO s 
@@ -1871,23 +2094,28 @@ I To move a Sprite pattern
 sa NEXT N 
 so SPRlTE$(8) = as 
 70 PUT SPRITE 040,90), 15,0 
-1z_,c”= lNT(RND(1)7*1_5) 
+1z_,c"= lNT(RND(1)7*1_5) 
 14 FOR l=_,l_ rogggsgs 
 76__PUT SPRITE 0,srr-1;,-18,9), c, 0 
 rs NEXT i 
 an ooro 12 
 90 END 
 100 DATA 2l6,88,240,l68,l15,62,126,l99 
+```
+
 The parts which are underlined are rewritten or modified. 
 When this program is executed, the rabbit will change colors and 
 move from right to left. The program can be stopped and started 
 again by pressing the key. 
+
 I 76 PUT SPRITE 0,STEP(— 1,5), C,fl i 
+
 The rabbit can only be moved from position (fl,9fl) by using the 
 STEP command to indicate the variation range (— L8). 
-79
+
 
 Format 
+
 T STEP (horizontal variation, vertical variation) 1 
 Why don't you try changing the parameters in the STEP( — 1,8) 
 command of line 70 and observe the results? 
@@ -1907,6 +2135,8 @@ rabbit, I'll be light and easier to wnte.
 
 Character strings in binary notation must be created in the ordt r 
 shown below. 
+
+```txt
 01100001 
 11110011 
 10110011 
@@ -1918,22 +2148,29 @@ shown below.
 00111111 . 
 01111111 . 
 11101101 
-11111111 QQ@®@@@® 9®©99©@ 
+11111111
+```
+
+ QQ@®@@@® 9®©99©@ 
 ®
 Q 
 ®
 ® 
+```txt
 Character string DATA 
 97, 243, 179, $1, 63, 127, 237, 255 
 127, 63, 3|, 31, 3|, 63, 72,145 
 I28, 192, 64, 32, 0, 128, 192, 192 
 130, 55, 255, 250, 248, 248, 112, 224 
+```
 ‘IQ 
 I'm those numbers. 
 81
 
 Enter the following modifications to the previous program. Except 
 for these changes, it should run the same as it did before. 
+
+```
 20 SCREEN 2, 2 
 30 FOR N=1TO 32 
 100 DATA - - 
@@ -1950,28 +2187,43 @@ for these changes, it should run the same as it did before.
 I10 DATA 127, 63, 31, 31, 31, 63, 72,145 
 I20 DATA 128, 192, 64, 32, 0, 128, 192, 192 
 130 DATA 130, 55, 255, 250, 243. 248, 112, 224 
+```
+
 E iii1 t >"' um I re’ ‘(<9 
 Next time let's make it like this! 
 82
 
 ON SPRITE GOSUB 
 SPRITE 
+
 F0 rmat 
+
 I ON SPRITF. GOSUB litie number 1 
+
 This command calls the subroutine starting at the specified Iittc 
 when the locating of figures on two sprite screens are the sanic. 
+
 Interruptions can be generated by 
 QN/QFF/STQP using the SPRITE ON command. 
+
 Format 
+
+```
 1 SPRITE ON I 
+```
 The subroutine specified by the ON SPRITE GOSUB contntand 
 will then be executed. 
 1 SPRITE OF}-' 
+
 This command is used to prevent interrupts from being generated. 
 After this command has been executed, the ON SPRITE 
 GOSUB command can't be used until a SPRITE ON command 
 is cxccutcd. 
+
+```
 ii SPRITE STOP i 
+```
+
 This command stops Sprite interrupts. The difference between 
 this and the SPRITE OFF command is that when t is stopped, 
 it is evaluated whether or not there was an error in SPRITE. 
@@ -1985,6 +2237,8 @@ times and the program stops.
 L
 \
 > 
+
+```
 I0 SCREEN 2,1 
 20 AS = CHR$(2l6) + CHR$(80) + CHR$(24B) + 
 CHR$(l68)+CHR$(ll5)+CHR$(62)+ 
@@ -2005,17 +2259,22 @@ I30 SPRITE OFF
 140 FOR J =1 TO 30: BEEP: NEXT J 
 150 RETURN 120 
 S4
+```
 
 i Drawing character on the graphic screen Y 
 Up to now we've learned how to draw both text characters and 
 graphics. However, the screen modes have been separated into 
 text and graphic modes. Text and graphics couldn’t be used 
 together. 
+
 The next program shows how to write text characters on a graphic 
 screen. 
-H0\)SE ~.~=“J\ 
+
+H0\)SE ~.~="J\ 
 When you want to write text characters in the 
 graphic mode, it must be specified first. 
+
+```
 19 SCREEN 2 
 20 LINE(l2fl,ll0)—(l55,95),9 
 30 LINE-(l90,llfl),9 
@@ -2024,99 +2283,141 @@ graphic mode, it must be specified first.
 65 LINE(l35,l4fl)-(175,118), l5,BF 
 70 LINE(]55,l25)—(l65,1l5), 5,BF 
 80 LINE(l40,l4B)—(l50,l2fl), l,BF 
-90 OPEN“GRP:" FOR OUTPUT AS #1 
-lflfl DRAW“BMl2fl,7fl” 
-110 PRINT # l,“HOUSE” 
+90 OPEN"GRP:" FOR OUTPUT AS #1 
+lflfl DRAW"BMl2fl,7fl" 
+110 PRINT # l,"HOUSE" 
 126 CLOSE #1 
 I39 GOTO 130 
 143 END 
-85
+```
 
 To write alphanumeric characters on a graphic screen execute the 
 following command. 
-I 90 OPEN “GRP:” FOR OUTPUT AS #1 4 
+
+I 90 OPEN "GRP:" FOR OUTPUT AS #1 4 
+
 When this command is executed, the computer is informed that 
 text characters can be written on the graphic screen. 
+
 After this, the PRINT command can be used just like it is in the 
 text screen mode. The characters "HOUSE" are written by executing 
 the command 
-’ Ilfl PRINT # l,“HOUSE" I 
+
+```
+’ Ilfl PRINT # l,"HOUSE" I 
+```
+
 This specifies the beginning of the display position. 
-86 
-L I00 DRAW “BM 120,70” I
+
+```
+L I00 DRAW "BM 120,70" I
+```
 
 STEP 5 
 [EH Music Class 
-E“ 
+E" 
 87
 
 Let's study some of the commands which make music. These commands are 
 BEEP, PLAY and SOUND. However the SOUND command is somewhat 
 difficult so it won’t be covered here. 
+
+#### BEEP
+
 This makes the buzzer sound. 
+
 Format 
+
+```
 BEEP l 
+```
+
 Beeps the speaker. 
+
 I0 FOR l=l TO I0 
 20 BEEP 
 30 NEXT I 
 49 END 
 Q RUN 
+
 The buzzer will ring I0 times l 
+
 The BEEP command can’t change the tone or length the tone will 
 sound. 
+
 I can only talk like this. 
+
 Beam Fla: — 
-L‘ \ )1 
-L. 
-88
+
+#### PLAY
 
 This command performs music. 
+
 Format 
-l PLAY “character string" l 
+
+```
+l PLAY "character string" l 
+```
 Music expressed by a character string is played when this command 
 is executed. 
-l PLAY “CDEFRGAB” 
-This instruction plays “Do Re Mi Fa”, pauses briefly and then 
-plays “So La Ti". 
+
+```
+l PLAY "CDEFRGAB" 
+```
+
+This instruction plays "Do Re Mi Fa", pauses briefly and then 
+plays "So La Ti". 
+
 The characters A to G each represent a note of the musical scale. 
 character c D E F Q AlB 
+
 Mi Fa So 
-The character “R” represents a pause in the music. This is known 
+
+The character "R" represents a pause in the music. This is known 
 as a rest. A melody can be played by entering PLAY, followed 
 by the characters A to G or R enclosed in quotation marks. 
+
 F ;.uJ~J~ir1'+"t"FHl 
 J
 CDEFGABCDEFGA FF?’ A 
 _W —O 
 U l'|'l ‘U O 3' 
 ‘U3 
+
 octave O3 ocqave Q4 oemvq 05 
 89 
 note _La l Ti l
 
-Specifying Octaves 
+
+**Specifying Octaves**
+
 The MSX computer can play eight octaves. In order to designate 
-an octave use the letter “O" and a number (1 to 8). This 
+an octave use the letter "O" and a number (1 to 8). This 
 must be written before the characters (A to G) which represent 
 the tones of the scale. 
-PLAY “O3 CDEFGAB O4 CDEFGAB 
-O5 CDEFGAB” 
+
+PLAY "O3 CDEFGAB O4 CDEFGAB 
+O5 CDEFGAB" 
+
 This plays the scale for three octaves. Once a value for 0 is 
 specified, the same value is maintained until a new value for 
 O is encountered. When the computer is turned on the preset 
 value for O is (O4). 
+
 I Writing Sharps and Flats 
+
 In order to be able to play a melody, it is also necessary to 
 be able to play a half tone up (sharp) and a half tone down 
 (flat). 
+
 Sharps and Flats are written as follows. 
+
 A half tone up ................. .. # or + are written immediately 
 after the characters A to G. 
-A half tone down ............. .. A minus sign “ — " is written 
+A half tone down ............. .. A minus sign " — " is written 
 immediately after the characters 
 A to G. 
-The symbols “ it ”, “ + ”, and “ — " are the same as the black 
+The symbols " it ", " + ", and " — " are the same as the black 
 keys on the piano. 
 There are also some half tones which are exceptions. 
 C—is B, F—is E,B+ is C and E+ is F 
@@ -2126,28 +2427,39 @@ _i-;’.-§./ Kl "' >1
 90
 
 Writing the length of a tone 
+
 If there is a tone length parameter after the characters representing 
 the notes, those notes are played for the specified period 
 of time. If there is no number following a note, that note is 
 played for the length of time equal to the number following 
 the character L 
-PLAY “ClD2E4F8RlGl6A32B64" l 
+
+```
+PLAY "ClD2E4F8RlGl6A32B64" l 
+```
+
 The notes CDEF are gradually played faster and faster. After 
 a rest the notes GAB are played even quicker. The tone length 
 can be specified quite precisely by using a value from 1 to 64. 
-l>PLAY “C4D4E4F4G4A4B4” l 
+l>PLAY "C4D4E4F4G4A4B4" l 
+
 It’s rather inconvenient to specify the time value of a quarter 
 note for each note. In cases like this, it's easier to write it out 
 as shown below. 
-\ PLAY “L4 CDEFGAB” l 
+
+\ PLAY "L4 CDEFGAB" l 
+
 Isn't it easier to write it out like that? 
+
 If there are numbers following the characters A to G and R, 
 the tones will be played according to the indicated length. The 
 letter "L" is used to specify the tone length. The value specitied 
 for L is maintained until a new value for L is encountered. 
 When the computer is turned on the preset tone length value 
-is “L4”. 
+is "L4". 
+
 h l 
+
 note name Wno0tee I/2 note I/4 note l/8 note nI/o1t6e nHo3te2 
 musical symbol 
 value of L I 2 4 I 8 I6 32 
@@ -2155,11 +2467,13 @@ value of L I 2 4 I 8 I6 32
 9|
 
 ' Dotted notes 
+
 A dotted note is a note followed by a dot. Its length is 1.5 times 
 larger than the specified value for the tone length. 
 A period after the numeric value for the time length indicates 
 a dotted note. 
-“men dwohtote]d dotted dotted dotted dVot1te6d dUot3te2d ame e 
+
+"men dwohtote]d dotted dotted dotted dVot1te6d dUot3te2d ame e 
 l/2 note l/4 note l/8 note 
 note note note 
 musical symbol °' 
@@ -2168,8 +2482,11 @@ specified value l. 2. 4. 8. 16. 32.
 La 
 ;. x )1, 
 i it 
+
 A dotted note is played iust like it ls written. 
+
 I Writing rests 
+
 A rest is a pause in the melody. Rests are written the same way 
 notes are. The number following the R specifies the value of 
 the rest. 
@@ -2181,59 +2498,81 @@ rest rest rest rest
 92
 
 Setting the Tempo 
+
 The tempo within an entire piece will speed up and slow down 
 at times. This is accomplished by using the T parameter followed 
 by a number from (32 to 255). The larger numbers indicate 
 faster tempos. 
+
 A value indicated for the parameter will be maintained until 
 another T value is encountered. When the computer is turned 
 on the preset value for the tempo is T120. 
+
 Setting the volume 
+
 The V parameter and the numbers which follow (l to 15), indicate 
 the volume. 
-PLAY “LlV3CV6DV9EVl2FVl5G” l 
+
+PLAY "LlV3CV6DV9EVl2FVl5G" l 
+
 The volume will gradually increase as the scale is played. 
 When V is specified there is no sound at all. 
 When the computer is turned on, the preset value for the volume 
 is V8. 
+
 Specifying the tone 
+
 To change the tone color, use either the S or M parameter followed 
 by a number. 
+
 S changes the envelope shape. 
 M changes the envelope cycle. 
+
 The envelope can be specified by using the S and M parameters. 
+
 The cycle pattern of the volume is changed when this occurs. 
+
 At this time the vibrato characteristic is specified by the S 
 parameter, and the vibrato speed is specified by the M 
 parameter. 
+
 The S and M parameters should be used as a pair. The S and 
 M parameters can not be used at the same time as the V 
 (volume) parameter. 
 93
 
 The following program changes the tone and plays the scale. 
+
+```
 IB FOR S=B TO I4 
 29 FOR M = 1000 TO 10000 STEP 2000 
-30 PLAY “S = S;M = M;CDE” 
+30 PLAY "S = S;M = M;CDE" 
 40 NEXT M 
 50 NEXT S 
 60 END 
+```
+
 The value of the S parameter can be specified from 0 to l5. 
+
 The value of the M parameter can be specified from 1 to 65535 
-l PLAY “SIQMSBBB CDEFGAB" 
+l PLAY "SIQMSBBB CDEFGAB" 
+
 Try changing the numeric values which follow the S and M 
 parameters to produce a variety of different tones. 
 §t@l"l3W \ 1?‘ L
 
-Now let’s make the MSX computer perform “Home on the 
-Range’ ’ . 
-I0 PLAY “Tl28" 
-20 PLAY “O4L4CCFGA2L8FED4. B — B — 4" 
-30 PLAY “B — ZAB — O5C204FFF4. EF4G2 
-40 PLAY “G2L4CCFGA2L8FED4. B - 8B - 4" 
-50 PLAY “B — 2B — B — A4. GF4E4. FG4F2.” 
+Now let’s make the MSX computer perform "Home on the Range’ ’ . 
+
+```
+I0 PLAY "Tl28" 
+20 PLAY "O4L4CCFGA2L8FED4. B — B — 4" 
+30 PLAY "B — ZAB — O5C204FFF4. EF4G2 
+40 PLAY "G2L4CCFGA2L8FED4. B - 8B - 4" 
+50 PLAY "B — 2B — B — A4. GF4E4. FG4F2." 
 66 END 
-E. ii—..q‘% '1 “lee * 
+```
+
+E. ii—..q‘% '1 "lee * 
 note C 
 length 4 an §‘Tl so ~> 
 Cl 
@@ -2244,34 +2583,41 @@ G Q kl @‘II @‘I\ bi
 corn 0-n NO 
 -mill" u-n‘- Qbfi QN) 
 $31 _ 
-MO an‘ “W 
+MO an‘ "W 
 ‘FE 0 —B 
 BB 4 l 
-et F I ll ti ea H a.- NI an Q .“> Q0 as-vi P 
+et F I ll ti ea H a.- NI an Q ."> Q0 as-vi P 
 FG F 
 84 2 
 95
 
 I (€Cl|,(SEII,l‘G$l 
+
 The MSX computer isn 9 t all that simple. It can also play two and 
 three note chords. 
+
 For example, to play C E G at the same time, place a comma 
 between the notes of the chords as shown below. 
-I 
+ 
+
 Once you can play a scale, your repetoire will increase 
 considerably. 
-I‘,Y“F 1; 
-’ 1/I,'5~¢ “I :5:-1“-
+
+I‘,Y"F 1; 
+’ 1/I,'5~¢ "I :5:-1"-
 
 Sample Programs I 
+
 Sample l 
+
+```
 10 REM COLOR GRAPHICS 
 20 SCREEN 2 
 30 COLOR 15, I, 1 
 40 C = I 
 50 FOR X=35 TO 215 STEP 30 
 60 FOR Y=35 TO 155 STEP 30 
-70 PLAY “Vl4L6406A" 
+70 PLAY "Vl4L6406A" 
 80 CIRCLE (X, Y), 30, C 
 99 PAINT (X, Y), C 
 I00 C = C + 1 
@@ -2280,56 +2626,65 @@ I20 NEXT Y
 130 NEXT X 
 140 GOTO 140 
 159 END 
+```
+
 When RUN is entered, this program draws circles in I5 colors 
 across the entire screen. To stop the program, press + 
 STOP . 
+
 Sample 2 
+
+
+```
 10 REM KEYBOARD ORGAN 
 20 SCREEN 1 
 30 COLOR 1, 3, 3:CLS 
-40 LOCATE 4, 1:PRlNT “KEYBOARD ORGAN" 
-50 PRINT “ l_'l_l_l_l_l—lfi " 
-60 PRINT "KEY IAIDIFIHI JIKI ; |” 
-70 PRINT “ l—l—l—l—l—l——l—l " 
-SBPRINT“ I—|+l+|+I+|+|+l" 
-97
-
-99 PRINT “NOTEIBICIDIFIGIAICI” 
-I90 PRINT “ " 
-IIB PRINT “ l_T__l—I_l__l'jfi—l_l—l ” 
+40 LOCATE 4, 1:PRlNT "KEYBOARD ORGAN" 
+50 PRINT " l_'l_l_l_l_l—lfi " 
+60 PRINT "KEY IAIDIFIHI JIKI ; |" 
+70 PRINT " l—l—l—l—l—l——l—l " 
+SBPRINT" I—|+l+|+I+|+|+l" 
+99 PRINT "NOTEIBICIDIFIGIAICI" 
+I90 PRINT " " 
+IIB PRINT " l_T__l—I_l__l'jfi—l_l—l " 
 I20 PRINT "KEY IZIXICIVIBINIMI , I . |/l " 
-I35 PRINT “ |—l—l—-l—+—-l——+—l—l—%—-l ” 
-I45 PRINT “NOTElBlClDlEl FIGIAIBICIDI " 
-I50 PRINT “ l__|__L_I_l_L_l_I_l_.l_.| ” 
-I65 PRINT “PLAY NOTES BY PRESSING KEYS 
+I35 PRINT " |—l—l—-l—+—-l——+—l—l—%—-l " 
+I45 PRINT "NOTElBlClDlEl FIGIAIBICIDI " 
+I50 PRINT " l__|__L_I_l_L_l_I_l_.l_.| " 
+I65 PRINT "PLAY NOTES BY PRESSING KEYS 
 (Z—/9 A_ I) 
-I70 A$=INKEY$:IF A$= “ " THEN 1'/B 
-I80 IF A$= “ Z " THEN PLAY “O3B" 
-I95 IF A$=“ X " THEN PLAY “04C" 
-2% IF A$= “ C " THEN PLAY “O4D" 
-ZIU IF A$= “ V ” THEN PLAY “O4E" 
-Z20 IF A$=" B " THEN PLAY “O4F" 
-230 IF A$= “ N " THEN PLAY “O4G" 
-Z45 IF A$=“ M ” THEN PLAY “O4A" 
-Z59 IF A$=“ , " THEN PLAY “O4B" 
-Z60 IF A$=“ . " THEN PLAY “QSC” 
-279 IF A$=“ / " THEN PLAY "O5D" 
-280 IF A$= " A " THEN PLAY “ose-" 
-Z99 IF A$= " D " THEN PLAY “O4C+ " 
-399 IF A$=“ F ” THEN PLAY “O4D+” 
-310 IF A$=“ H ” THEN PLAY “O4F+" 
-320 IF A$=“ J ” THEN PLAY “O4G+" 
-339 IF A$=“ K " THEN PLAY “O4A+" 
-345 IF A$=“ Z " THEN PLAY “OSC+" 
+I70 A$=INKEY$:IF A$= " " THEN 1'/B 
+I80 IF A$= " Z " THEN PLAY "O3B" 
+I95 IF A$=" X " THEN PLAY "04C" 
+2% IF A$= " C " THEN PLAY "O4D" 
+ZIU IF A$= " V " THEN PLAY "O4E" 
+Z20 IF A$=" B " THEN PLAY "O4F" 
+230 IF A$= " N " THEN PLAY "O4G" 
+Z45 IF A$=" M " THEN PLAY "O4A" 
+Z59 IF A$=" , " THEN PLAY "O4B" 
+Z60 IF A$=" . " THEN PLAY "QSC" 
+279 IF A$=" / " THEN PLAY "O5D" 
+280 IF A$= " A " THEN PLAY "ose-" 
+Z99 IF A$= " D " THEN PLAY "O4C+ " 
+399 IF A$=" F " THEN PLAY "O4D+" 
+310 IF A$=" H " THEN PLAY "O4F+" 
+320 IF A$=" J " THEN PLAY "O4G+" 
+339 IF A$=" K " THEN PLAY "O4A+" 
+345 IF A$=" Z " THEN PLAY "OSC+" 
 350 GOTO I79 
 360 END 
+```
+
 To stop the program, press CTRL + STOP . (Press the keys in 
 the uppercase mode.) 
-* The graphic symbols in lines 50 to 150 are only included to 
+
+The graphic symbols in lines 50 to 150 are only included to 
 make the screen more readable, and may be omitted. 
-98
+
 
 Sample 3 
+
+```
 I0 REM ANIMATION 
 20 SCREEN 2, I 
 30 COLOR I5, I, l:CLS 
@@ -2357,7 +2712,7 @@ Zflfl NEXT I
 250 SPRlTE$(l)= B$ 
 260 SPRITE$(2)= C$ 
 270 X=fl:Y= I00 
-280 PLAY “Sl3Ml5flF A F A F A F A F A F A 
+280 PLAY "Sl3Ml5flF A F A F A F A F A F A 
 290 PUT SPRITE D, (X, Y), 8, 0 
 300 PUT SPRITE 1, (X, Y), l, 1 
 310 PUT SPRITE 2, (X, Y), I5, 2 
@@ -2365,8 +2720,6 @@ Zflfl NEXT I
 330 IF X>2S5 THEN X=0 ELSE 290 
 340 GOTO 289 
 350 END 
-99
-
 360 DATA I5, 
 370 DATA 65, 
 380 DATA 95. 
@@ -2393,14 +2746,16 @@ Zflfl NEXT I
 0, 9, 
 0, 68, 0 
 430 DATA 0, 252, 216, I43, 233, 255, B, 
+```
+
 When RUN is input, an ambulance runs across the screen from 
 left to right while sounding its siren. To stop the program, press 
 +-
 I00
 
-I“IIIIIIFIIIIII(EIIIIIIII|II“IIw,III 
+I"IIIIIIFIIIIII(EIIIIIIII|II"IIw,III 
 II 
-unuuuuuuu”unnnmuuunuunnnnnunnnuuununununununnunu”” 
+unuuuuuuu"unnnmuuunuunnnnnunnnuuununununununnunu"" 
 IIIIIvIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII1IIIIIIIIIIIIIIIIIIIIIIIImIIIIIIIIIIIIIIIIII I 
 IIIIIIIIIIlIIII8III|IIIIIIIIIIIKIIIIIIIIIIIIIIIIIIIIIIIIIIII-IaI‘uall 
 IIIIIIIIIIIIIII'IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII.IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII 
@@ -2411,7 +2766,7 @@ Graphic Screen Design Sheets
 e 5 _ 1 I §_:::::::::::::::::::: #::::::::: 
 i:i:i:i:i:i:i:i:i:i: s-:::::::::: IIIIIIIII 
 I 
-lIla‘“
+lIla‘"
 I 
 E 
 IIIIIII 
@@ -2441,11 +2796,11 @@ II
 II 
 IIIIIIIIIII 
 mg IIIIIIIII 
-“ IIIIIII 
+" IIIIIII 
 IIIIIIIIIIIIIIII Q IIIIIIIII _IIIIIIIIIIIIIIIIIIIIII 
 m_I 
 IIIIIIIIIIIIIIIIIIIIIIIIIIIIEli
-”III
+"III
 IIIIIIIIIIIIIII‘El
 M FIII 
 102
@@ -2459,49 +2814,47 @@ I-IIIII IIIIIIII iiiiiiiiiiiiiiii IIIIIIII IIIIIIII
 103 
 i‘ii:ii-ii! .'i:i-i:!:!:!i
 
-INDEX 
-AUTO...... . . . . . . . . . . . . . . . . . . . . . l0 
-BEEP....... . . . . . . . . . . . . . . . . . . . . . 88 
-Cl-1RS....... .... .. 44 
-CIRCLE ...... .. 6| 
-CLS ............ .. 22 
-COLOR....... S2 
-CONT...... .... .. 28 
-DELETE..... .... .. I6 
-DRAW . . . . . . . . . . . .. 67 
-END .............. .... .. 9 
-FOR~NEXT............. 29 
-GOSUB-RETURN 36 
-GOTO ......... 24 
-lF—THEN .... .... .. 33 
-lF~Tl-IEN-ELSE...... ..... .. 35 
-[NT .................. 46 
-INKEY$...... 47 
-INPUT 3| 
-KEY...... . . . . . . i . . . . ..1l 
-LlNE........ . . . . . . . . . . . . . . .. 57 
-L1ST............ .... .. 13 
-LOCATE ....... 22 
-NEW ............. . 9 
-ON SPRITE GOSUB 83 
-PAlNT...... .... 59 
-PLAY .... . . . . . . . . . . .. 89 
-PRINT . , . . . . . . . . . . . .. I8 
-PRESET ..... 66 
-PSET ............ 65 
-PUT SPRlTE........ 76 
-READ-DATA...“ .... .. 38 
-REM ....... .... .. 8 
-RENUM ..... . . . . . . . . . . .. IS 
-RESTORE...... .... .. 4| 
-RND.......... 46 
-SCREEN............ .... S0, 57 
-SPRITE ON/OFF/STOP . . . . . . . . . . . . .. 83 
-SPRl'I'ES.,....... . . . . . . . . . . . . , . . . . . . . . . . .. 75 
-STOP . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. 27
 
--WJALG 
-Printld in Japan 
-HC~Br\S|C-GB~A 
-A I
+## INDEX 
 
+* AUTO...... . . . . . . . . . . . . . . . . . . . . . l0 
+* BEEP....... . . . . . . . . . . . . . . . . . . . . . 88 
+* Cl-1RS....... .... .. 44 
+* CIRCLE ...... .. 6| 
+* CLS ............ .. 22 
+* COLOR....... S2 
+* CONT...... .... .. 28 
+* DELETE..... .... .. I6 
+* DRAW . . . . . . . . . . . .. 67 
+* END .............. .... .. 9 
+* FOR~NEXT............. 29 
+* GOSUB-RETURN 36 
+* GOTO ......... 24 
+* lF—THEN .... .... .. 33 
+* lF~Tl-IEN-ELSE...... ..... .. 35 
+* [NT .................. 46 
+* INKEY$...... 47 
+* INPUT 3| 
+* KEY...... . . . . . . i . . . . ..1l 
+* LlNE........ . . . . . . . . . . . . . . .. 57 
+* L1ST............ .... .. 13 
+* LOCATE ....... 22 
+* [NEW](new)
+* ON SPRITE GOSUB 83 
+* PAlNT...... .... 59 
+* PLAY .... . . . . . . . . . . .. 89 
+* PRINT . , . . . . . . . . . . . .. I8 
+* PRESET ..... 66 
+* PSET ............ 65 
+* PUT SPRlTE........ 76 
+* READ-DATA..." .... .. 38 
+* [REM](rem]
+* RENUM ..... . . . . . . . . . . .. IS 
+* RESTORE...... .... .. 4| 
+* RND.......... 46 
+* SCREEN............ .... S0, 57 
+* SPRITE ON/OFF/STOP . . . . . . . . . . . . .. 83 
+* SPRl'I'ES.,....... . . . . . . . . . . . . , . . . . . . . . . . .. 75 
+* STOP . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. 27
+
+Printed in Japan 
