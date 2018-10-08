@@ -151,7 +151,7 @@ operations to be performed. Any number from B to 65529 may be used.
 #### REM
 
 The contents of the remarks statement are ignored when the program runs. They 
-are only used to make the program easier to understand. An apostrophe (   ) may 
+are only used to make the program easier to understand. An apostrophe ( ' ) may 
 be used if the REM statement is omitted. 
 
 #### END
@@ -316,8 +316,9 @@ The LIST command displays the  program on the screen.
 
 Format 
 
-```basic
+```txt
 LIST
+```
 
 The entire program is displayed on the screen 
 
@@ -605,14 +606,13 @@ positions the cursor at the home position (upper left of the screen).
 
 This command moves the cursor  to the specified position. 
 
-# (Revision must continue at this point)
 
 ```txt
 LOCATE horizontal position, vertical position
 ```
 
 The small dark square on the screen is known as the cursor. When 
-the PRINT command is used the characters can be written in the 
+the PRINT command is used, the characters can be written in the 
 cursor position. Because the cursor can be moved freely to any 
 location specified by the program, characters can also be written 
 in any desired location. 
@@ -639,10 +639,10 @@ RUN ->
          MSX BASIC 
 
 OK
-```txt
+```
 
 Up to now only one command could be written on a line but 
-in BASIC by using the colon ":" any number of commands 
+in BASIC, by using the colon ":", any number of commands 
 in a single line. When a number of commands are written in 
 a single line using the colon, this is called a multistatement. If 
 line 30 is written as 
@@ -667,16 +667,14 @@ should avoid using this when possible.
 When the power is turned on 24 lines of 37 characters can be displayed 
 on the screen (Screen Mode 0). 
 
-
-
-The horizontal positions are 0- 36 (37 places). 
+The horizontal positions are 0-36 (37 places). 
 
 The vertical places are 0-23 (24 places). 
 
 Any position within this range can be specified. This is how one 
 page of a screen looks in the screen mode. 
 
-![](file:img/jvc-msx-basic-page024.png)
+![](img/jvc-msx-basic-page024.png)
 
 
 #### GOTO
@@ -685,7 +683,7 @@ Command to jump to the specified line.
 
 Format 
 
-```
+```txt
 GOTO line number
 ```
 
@@ -699,42 +697,69 @@ This command causes the program to jump to the specified line number. A program 
 50 END 
 ```
 
-a RUN 
+RUN ->
 
-DO not use this command until you learn how to interrupt execution of a 
-program. 
-
-
-Variable: 
-
-```basic
-10 A=l 
-20 PRINT A
-30 A=A+l 
+```txt
+1
+2
+3
+4
+5
+6
+7
+8
+.
+.
+.
 ```
 
-The character "A" used here is called a variable number. A variable is used as 
-a container or storage area for a numerical value which can change. Please 
-remember the name which is attached to the container or storage area. 
 
-Format Q) 
+DO not use this command until you learn how to interrupt execution of a program. 
 
+
+```basic
+10 A=1 
+20 PRINT A 
+30 A=A+1 
+```
+
+The character "A" used here is called a variable number. 
+
+**Variable: **
+
+A variable is used as a container or storage area for a numerical value which can change. Please remember the name which is attached to the container or storage area. 
+
+Format (1) 
+
+```txt
 Variable name = expression
+```
 
 In this case the equals sign doesn't mean "equals" or "is the same as". 
 Instead, this means that the value on the right is entered into the value on 
-the left. In this case, 1 is entered to the container or storage area 
-called "A" 
+the left. 
 
-Format @ 
+```basic
+10 A=1 
+```
+In this case, 1 is entered to the container or storage area called "A" 
 
+Format (2) 
+
+```txt
 PRINT variable name 1 
-' 20 PRINT A     
+```
+
+```basic
+20 PRINT A 
+```
 
 In this case the value entered in the storage area called "A" is 
 displayed on the screen. 
 
-l 30A=A+l     
+```basic
+30 A=A+1 
+```
 
 This statement means that 1 is added to the value of A. This is 
 entered into the storage area A and becomes the new value of A. 
@@ -751,87 +776,126 @@ A124
 A125 
 ```
 
-These are all interpreted as the same variable 
+These are all interpreted as the same variable.
 
 Only the first two characters can be distinguished by the 
 computer. 
 
+```basic
 40 GOTO 20 
+```
+
 
 This means jump to line 20. When this program is run, numbers 
 will be displayed one after another on the screen without stopping. 
+
 The computer will execute the lines up to line 40 one by one. The 
 program never reaches the line 50 END statement because when 
-it gets to line 40 it jumps back to line 26. 
+it gets to line 40 it jumps back to line 20. 
 
-10 
-20 
-30 Loop 
-40 
-... To stop execution. read the explanation of 
-STOP on the next page. 
+![](img/jvc-msx-basic-page027.png)
+
+_To stop execution. read the explanation of STOP on the next page._
 
 
 
-This command is used to interrupt 
-STQP the program execution. 
-To stop the program, press the key while holding the 
-key down. 
+
+#### STOP
+
+This command is used to interrupt the program execution. 
+
+To stop the program, press the key [STOP] while holding the [CTRL] key down. 
+
 The message 
-T Break in line number 
+
+```txt
+Break in line number 
+```
+
 will be displayed on the screen to indicate the point in the program 
 where the interrupt occured. 
+
+```txt
+.
+.
+.
 49 
 50 
 51 
-Brea 
+Break in 20
 OK 
-
-k in
+```
 
 At this time program execution can be continued by using the 
 CONT command. 
+
+```txt
+.
+.
+.
 49 
 50 
-5 l 
-Break in 20 
-ox 
+51 
+Break in 20
+OK 
 CONT 
 52 
 53 
 54 
 55 
 56 
+.
+.
+.
+```
 
-The interrupted line number will be stored and used later. 
+_The interrupted line number will be stored and used later_ 
 
-Break in line number 
-28
+![](img/jvc-msx-basic-page029.png)
 
-Format 
+_Break in line number_
+
+#### FOR ~ NEXT
+
+
 Command to repeal the same process 
+
+Format :
 
 ```
 FOR variable = beginning value TO ending value 
+...
 NEXT variable 
 ```
+
 This command is used to repeat the same process within a program 
 a fixed number of times, and then stop automatically. 
 
-```
+```basic
 10 FOR I=1 TO 10 
 20 PRINT I 
-30 NEXT 1 
+30 NEXT I 
 40 END
 ```
  
-3 RUN 
-O7<;\ooo~|o\u|-s>w:~.:- 
-FOR T9 
-H *1 .. , 
-l 
+RUN ->
 
-It hasn't reached the final value yet, has it? 
+```basic
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+```
+
+![](img/jvc-msx-basic-page029.png)
+
+_It hasn't reached the final value yet, has it?_
 
 
 
@@ -841,13 +905,18 @@ statement.
 When the value of a variable is changed in constant steps, the 
 size of each step can be specified with the STEP command. 
 
+```txt
 STEP variable increment 
+```
+
 is written like this 
 
-```
-10 FOR l=l TO 10 STEP 2 
-20 PRINT l 
-30 NEXT l 
+# (Revision must continue at this point)
+
+```basic
+10 FOR I=1 TO 10 STEP 2 
+20 PRINT I 
+30 NEXT I 
 40 END 
 ```
 
