@@ -290,7 +290,7 @@ How did it go? Did everything run properly?
 
 **Common Errors**
 
-_ An error message tells the line number of a mistake._
+_An error message tells the line number of a mistake._
 
 ```txt
 Syntax error in line number
@@ -349,7 +349,7 @@ Lines 30 to 60 are displayed on the screen
 
 (1) Rewriting a command 
 
-Suppose that you want to change the A+B in line 50 to A*B. Move the cursor key to the position of the "+" sign and enter the "*" symbol. Then press the [RETURN] .The following characters will then appear. 
+Suppose that you want to change the A+B in line 50 to A\*B. Move the cursor key to the position of the "+" sign and enter the "\*" symbol. Then press the [RETURN] .The following characters will then appear. 
 
 ```basic
 50 PRINT A*B
@@ -473,94 +473,115 @@ mistake can make a big difference in the way the program runs.
 
 This command is used the most for writing letters and numbers. 
 
-# (Revision must continue at this point)
 
+```basic
+PRINT "character string"
+```
 
-PRINT "character string" -> The characters enclosed in double quotation marks are displayed on the screen. 
+The characters enclosed in double quotation marks are displayed on the screen. 
 
+```basic
+PRINT numerical value
+```
 
-```PRINT numerical value``` -> The numerical value is displayed on the screen as shown. 
+The numerical value is displayed on the screen as shown. 
 
-PRINT -> One line of blanks is displayed 
-on the screen. 
+```basic
+PRINT
+```
 
-Character strings and answers to calculations can ) 
-also be written instantly. 
-I8
+One line of blanks is displayed on the screen. 
 
+_Character strings and answers to calculations can also be written instantly._
+
+```basic
 10 PRINT "ABCDEF" 
-20 PRINT "UV. " 
+20 PRINT "+++" 
 30 PRINT "5*9" 
 40 PRINT 
 50 PRINT 59 
-60 PRINT 54=9 
+60 PRINT 5*9 
 70 END 
-it RUN
+```
+
+RUN ->
+
+```
 ABCDEF 
-'7' 
-5*9 
-59 - 
++++ 
+5*9
+ 
+59
 45 
 OK 
+```
 
-When the PRINT calculation format is used, the MSX computer can 
-be used just like an electric calculator. 
-addition PRINT 7 + 8 
-subtraction PRINT 15 - 7 
-multiplication PRINT 5 iv 8 
-division PRINT 20/2 
-I9
+When the _PRINT calculation_ format_ is used, the MSX computer can be used just like an electric calculator. 
+
+addition | PRINT 7 + 8 
+subtraction | PRINT 15 - 7 
+multiplication | PRINT 5 * 8 
+division PRINT | 20/2 
 
 Let's enter the next program. 
+
+```basic
 10 ? 7+8 
 20 ? 15-7 
-3B?5-:8 
-40?20/2 
-50?2.00flBfl=v1000fl=vt000f10 
-6flEND 
-Q RUN 
+30 ? 5*8 
+40 ? 20/2 
+50 ? 200000*10000*100000
+60 END 
+```
+
+RUN ->
+
+```txt
 15 
 8
 40 
 10 
 2E+ 14 
 OK 
-in 
-Abbreviated Format 
-Instead of writing PRINT in each statement, the PRINT command 
-may be omitted and a question mark "'2" can be used as 
-an abbreviation. 
-The answer for line 50 was 2E + l4. This might seem like a strange 
-number, but this just means that the number 2 is followed by a 
-string of I4 zeros. 
-/ 
-20
+```
 
-' Mistakes using the comma "." and the colon ";" 
+**Abbreviated Format**
+
+Instead of writing PRINT in each statement, the PRINT command may be omitted and a question mark "?" can be used as an abbreviation. 
+
+The answer for line 50 was 2E + 14. This might seem like a strange number, but this just means that the number 2 is followed by a string of 14 zeros. 
+
+
+**Mistakes using the comma "." and the colon ";" **
+
 Enter the following program. 
+
+```basic
 10 PRINT "ABC" 
 20 PRINT "A", "B", "C" 
-30 PRINT I, 2, 3 
+30 PRINT 1, 2, 3 
 40 PRINT "A" ; "B" ; "C" 
-50PRINTl;2;3 
+50 PRINT 1;2;3 
 60 END 
-Q RUN 
-ABC 
-cA V 1BO V _. J 
-14 characters    I4 characters $9969 
-C 
-14 characters 14 characters 
-r \7 < 
-space space space 
-Q3 space 
-A B C 
-space 
-OK 
+```
 
-when the comma is used, the first 14 places of the variable number 
-are displayed. Then the first I4 places of the second variable 
+RUN ->
+
+```txt
+ABC 
+A             B            C
+1             2            3
+ 1
+ 3
+ABC
+ 1  2  3
+OK 
+```
+
+When the comma is used, the first 14 places of the variable number 
+are displayed. Then the first 14 places of the second variable 
 are displayed. When the semicolon is displayed, this indicates that 
-the next filed to be printed will be start at the first character following 
+the next field to be printed will be start at the first character following 
 the preceding field. 
 
 The first character in a numeric field is blank so that the minus 
@@ -573,7 +594,7 @@ field when displayed.
 
 This command is used to clear the screen. 
 
-```
+```txt
 CLS
 ```
 
@@ -584,38 +605,58 @@ positions the cursor at the home position (upper left of the screen).
 
 This command moves the cursor  to the specified position. 
 
-         
+# (Revision must continue at this point)
+
+```txt
 LOCATE horizontal position, vertical position
-         
+```
 
 The small dark square on the screen is known as the cursor. When 
 the PRINT command is used the characters can be written in the 
 cursor position. Because the cursor can be moved freely to any 
 location specified by the program, characters can also be written 
 in any desired location. 
+
+```basic
 10 CLS 
 20 PRINT "MSX BASIC" 
 30 LOCATE 10,10 : PRINT "HELLO" 
-40 END 
-Q RUN 
-I7 
-MSX BASIC 
-O characters 
-OK    IO characters 110 
-22
+40 END
+```
 
-' Up to now only one command could be written on a line but 
+RUN ->
+
+```txt
+
+
+
+
+
+
+
+
+
+         MSX BASIC 
+
+OK
+```txt
+
+Up to now only one command could be written on a line but 
 in BASIC by using the colon ":" any number of commands 
 in a single line. When a number of commands are written in 
 a single line using the colon, this is called a multistatement. If 
 line 30 is written as 
 
-30 LOCATE 10,10 : PRINT "HELLO" l 
+```basic
+30 LOCATE 10,10 : PRINT "HELLO"
+```
 
 this is the same as 
 
+```basic
 30 LOCATE 10,10 
-35 PRINT "I-IELLO" 
+35 PRINT "HELLO" 
+```
 
 If a program is written in multistatements the program will become 
 shorter. The advantage of this is that the program will run 
@@ -626,17 +667,17 @@ should avoid using this when possible.
 When the power is turned on 24 lines of 37 characters can be displayed 
 on the screen (Screen Mode 0). 
 
+
+
 The horizontal positions are 0- 36 (37 places). 
 
 The vertical places are 0-23 (24 places). 
 
 Any position within this range can be specified. This is how one 
 page of a screen looks in the screen mode. 
-horizontal -v 
-(9.5) (36.9)
-everitica 
-(0,22) (36,22)
-23
+
+![](file:img/jvc-msx-basic-page024.png)
+
 
 #### GOTO
 
