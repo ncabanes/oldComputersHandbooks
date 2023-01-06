@@ -858,7 +858,7 @@ The notation <...> is used to denote a particular unspecified instance of the ty
 
 #### 2.6.1 LET
 
-**Form:** \<line number\> LET \<variable\> = \<expression\>
+**Form:** `<line number> LET <variable> = <expression>`
 
 **Example:** 
 
@@ -874,7 +874,7 @@ equality, but is rather a command to the computer to perform certain computation
 
 #### 2. 6. 2 READ and DATA
 
-**Form:** <line number> READ <list of variables>
+**Form:** `<line number> READ <list of variables>`
 
 **Example:** 
 
@@ -949,79 +949,104 @@ additional flexibility is explained in section 3. 1.
 
 **Comment:** Sometimes called an unconditional go to, GO TO is used to interrupt the normal sequence of executing statements in the increasing order of their line numbers.
 
-Form:  `<line number> IF <expression> <relation> <expression> THEN <line number>`
+**Form:**  `<line number> IF <expression> <relation> <expression> THEN <line number>`
 
-Example: 
+**Example:**
 
 ```basic
 140 IF X > Y + Z THEN 200
 85 IF X * SIN(X) >= 1 THEN 100
 ```
 
-### ( == Revision must continue here == )
 
-**Comment**: Sometimes called a conditional go to, the IF-THEN
-statement provides a way to select one of two sequences in the program depending on the results of some previous computation. If the condition is met, the implied go to is performed; if the condition is not met, the next statement in sequence is performed.
+**Comment**: Sometimes called a conditional go to, the IF-THEN statement provides a way to select one of two sequences in the program depending on the results of some previous computation. If the condition is met, the implied go to is performed; if the condition is not met, the next statement in sequence is performed.
 Any of the six standard relations may be used.
 
-Symbol <
-<->
-<C>
-Meaning less than
-less than or equal equal
-greater than or equal greater than not equal
+| Symbol | Meaning
+|---------------|---------
+| \< | less than
+| \<= | less than or equal
+| = |  equal
+| \>= | greater than or equal
+| \> |  greater than
+| \<\> |  not equal
 
-#### 2. 6. 5 FOR and NEXT Form:
 
-Example:
-Comment:
-Comment:
-<Oine number> FOR ^Variable/* = <4xpression^> TO ^expressions
-or
-<<line number> FOR <^rariable]> = ^expressior^ TO ^expression^> STEP ^expressions
+#### 2. 6. 5 FOR and NEXT 
+
+**Form:** `<line number> FOR <variable> = <expression^> TO <expression>`
+
+or `<line number> FOR <variable> = <expression> TO <expression> STEP <expression>`
+
+**Example:**
+
 120 FOR X4 = (17 + C0S(A)) /3 TO 3*SQR(10) STEP 1/4
-(This represents the body of the loop. )
+... (This represents the body of the loop. )
 235 NEXT X4
 
-Omitting the STEP part of the FOR statement is equivalent to having the 
+**Comment:** Omitting the STEP part of the FOR statement is equivalent to having the 
 stepsize equal to unity.
 
-The above example will, assuming A to be equal to 0, cause the body of the loop 
+**Comment:** The above example will, assuming A to be equal to 0, cause the body of the loop 
 to be performed several times, first with X4 equal to 6, next with X4 equal to 
-6. 25, then 6. 50, and so on. The last time the body of the loop will be 
-performed is with X4 equal to 9- 25, which is less than or equal to the final 
+6.25, then 6.50, and so on. The last time the body of the loop will be 
+performed is with X4 equal to 9.25, which is less than or equal to the final 
 value 9.486 (approximately).
 
-The F(jR statement goes into the body of a loop if the variable has a value 
+The FOR statement goes into the body of a loop if the variable has a value 
 less than or equal to the final value (in the case of a positive stepsize), or 
 if the variable has a value greater than or equal to the final value (in the 
-case of a negative stepsize.) Upon leaving the loop, the program continues with 
-the statement following the NEXT; the variable used in the FOR statement then 
+case of a negative stepsize.) 
+
+Upon leaving the loop, the program continues with the statement following the NEXT; the variable used in the FOR statement then 
 has the value it had during the last passage through the loop ( 9. 25 in the 
 above example.)
 
-Example: 240 F<JR X = 8 TO 3 STEP -1
 
-Comment: The body of the loop is performed with X equal to
+**Example: **
+
+```basic
+240 FOR X = 8 TO 3 STEP -1
+```
+
+**Comment: ** The body of the loop is performed with X equal to
 8, 7, 6, 5, 4, and 3, and X has the value 3 upon leaving the loop.
 
-Example: 456 FOR J = -3T0 12 STEP 2
+**Example: **
 
-Comment: The body of the loop will be performed with J equal to -3, -1, 1, 3, 
+```basic
+456 FOR J = -3 TO 12 STEP 2
+```
+
+**Comment:** The body of the loop will be performed with J equal to -3, -1, 1, 3, 
 5, 7, 9, and 11. J will have the value 11 upon leaving the loop.
 
-Example: 50 FOR Z = 2 TO -2
+**Example: **
 
-Comment: The body of the loop will not be performed. Instead, the computer will 
+```basic
+50 FOR Z = 2 TO -2
+```
+
+**Comment:** The body of the loop will not be performed. Instead, the computer will 
 proceed to the statement immediately following the corresponding NEXT. The 
 value of Z will then be 1, which is the initial value (2) minus the step size 
 (1).
 
+
 #### 2. 6. 6 END
 
-Form:    <line number> END
-Example: 999 END
+**Form:** `<line number> END`
+
+**Example: **
+
+```basic
+999 END
+```
+
 Comment: An END statement is required in all programs. It must also be the statement with the highest line number in the program.
+
+### ( == Revision must continue here == )
+
 
 ## III. MORE ADVANCED BASIC
 
