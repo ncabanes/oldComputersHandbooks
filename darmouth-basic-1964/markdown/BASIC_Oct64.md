@@ -858,13 +858,13 @@ The notation <...> is used to denote a particular unspecified instance of the ty
 
 #### 2.6.1 LET
 
-**Form:**    <line number> LET <variable> = <expression>
+**Form:** \<line number\> LET \<variable\> = \<expression\>
 
 **Example:** 
 
 ```basic
 100 LET X = X + 1
-259 LET W7 = (W - X4t 3)*(Z - A1/(A - fe)) - 17
+259 LET W7 = (W - X4 ↑ 3)*(Z - A1/(A - B)) - 17
 ```
 
 **Comment:** The LET statement is not a statement of algebraic
@@ -876,7 +876,9 @@ equality, but is rather a command to the computer to perform certain computation
 
 **Form:** <line number> READ <list of variables>
 
-**Example:** 150 READ X, Y, Z, X1, Y2, Z(K+I, J)
+**Example:** 
+
+150 READ X, Y, Z, X1, Y2, Z(K+I, J)
 
 **Form:** <line number> DATA <list of numbers>
 
@@ -887,55 +889,81 @@ equality, but is rather a command to the computer to perform certain computation
 **Comment:** Before the program is run, the computer takes all the DATA statements in the order in which they appear and Creates a large data block. Each time a READ statement is encountered anywhere in the program, the data block supplies the next available number or numbers. If the data block runs out of data, with a READ statement still asking for more, the program is assumed to be done.
 
 
-### ( == Revision must continue here == )
-
-
-
 
 #### 2. 6. 3 PRINT
-Form:
-Example: Form: Example:
-Comment:
-Example: Comment:
-Example: Comment:
-Comment:
-line number> PRINT <^ist of expressions to be printed^-
-100 PRINT X, Y, Z, B*B - 4*A*C, EXP( L<jG( 17))
-^line number> PRINT " <^any string of characters/' "
-200 PRINT "THIS PRGRAM IS N0 G00T>. "
-150 PRINT "COMPUTES X + Y = Z"
 
-The numerical quantities printed need not be simple variables, they may be any 
+**Form**: `<line number> PRINT <list of expressions to be printed>`
+
+Example: 
+
+```basic
+100 PRINT X, Y, Z, B*B - 4*A*C, EXP( LOG( 17))
+```
+
+**Form:** `<line number> PRINT "<any string of characters>"`
+
+Example:
+
+```basic
+200 PRINT "THIS PROGRAM IS N0 GOOD."
+150 PRINT "COMPUTES X + Y = Z"
+```
+
+**Comment:** The numerical quantities printed need not be simple variables, they may be any 
 expressions. The expression is first evaluated, then printed. There may be any 
 number of expressions separated by commas, but they will be printed five to a 
 line.
 
-150 PRINT "X", "Y", "Z"
+**Example:** 
 
-Several messages may be included in the list separated by commas. The effect is 
+```basic
+150 PRINT "X", "Y", "Z"
+```
+
+**Comment:** Several messages may be included in the list separated by commas. The effect is 
 to print the letter X in the first column, the letter Y in the 16th column, and 
 the letter Z in the 31st column.
 
-200 PRINT "X = X, "Y = Y
+**Example:**
 
-Labels and expressions may appear in the same print statement.
+```basic
+200 PRINT "X = ", X, "Y = ", Y
+```
 
-Much more variety is permitted in PRINT statements than is shown here. The 
+**Comment:** Labels and expressions may appear in the same print statement.
+
+**Comment:** Much more variety is permitted in PRINT statements than is shown here. The 
 additional flexibility is explained in section 3. 1.
 
-#### 2.6.4 GO TO and IF-THEN
-Form:    <C[line number> GO TO <(line numbers-
-Example: 150 GOTO 75
-240 G<Z> TO 850
-Comment: Sometimes called an unconditional go to, GO TO is used to interrupt the normal sequence of executing statements in the increasing order of their line numbers.
-Form:    <^line number> IF ^expression^ ^relatioi^
-^expression> THEN <*Line number>
-Example: 140 IF X ^ Y + Z THEN 200
-85 IF X * SIN(X) 1 THEN 100
 
-Comment: Sometimes called a conditional go to, the IF-THEN
+#### 2.6.4 GO TO and IF-THEN
+
+**Form:**    `<line number> GO TO <line number>`
+
+**Example:**
+
+```basic
+150 GOTO 75
+240 GO TO 850
+```
+
+**Comment:** Sometimes called an unconditional go to, GO TO is used to interrupt the normal sequence of executing statements in the increasing order of their line numbers.
+
+Form:  `<line number> IF <expression> <relation> <expression> THEN <line number>`
+
+Example: 
+
+```basic
+140 IF X > Y + Z THEN 200
+85 IF X * SIN(X) >= 1 THEN 100
+```
+
+### ( == Revision must continue here == )
+
+**Comment**: Sometimes called a conditional go to, the IF-THEN
 statement provides a way to select one of two sequences in the program depending on the results of some previous computation. If the condition is met, the implied go to is performed; if the condition is not met, the next statement in sequence is performed.
 Any of the six standard relations may be used.
+
 Symbol <
 <->
 <C>
@@ -950,7 +978,7 @@ Comment:
 Comment:
 <Oine number> FOR ^Variable/* = <4xpression^> TO ^expressions
 or
-<^line number> FOR <^rariable]> = ^expressior^ TO ^expression^> STEP ^expressions
+<<line number> FOR <^rariable]> = ^expressior^ TO ^expression^> STEP ^expressions
 120 FOR X4 = (17 + C0S(A)) /3 TO 3*SQR(10) STEP 1/4
 (This represents the body of the loop. )
 235 NEXT X4
@@ -991,7 +1019,7 @@ value of Z will then be 1, which is the initial value (2) minus the step size
 
 #### 2. 6. 6 END
 
-Form:    <^line number> END
+Form:    <line number> END
 Example: 999 END
 Comment: An END statement is required in all programs. It must also be the statement with the highest line number in the program.
 
