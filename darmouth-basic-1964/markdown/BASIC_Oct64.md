@@ -1003,16 +1003,16 @@ has the value it had during the last passage through the loop ( 9. 25 in the
 above example.)
 
 
-**Example: **
+**Example:**
 
 ```basic
 240 FOR X = 8 TO 3 STEP -1
 ```
 
-**Comment: ** The body of the loop is performed with X equal to
+**Comment:** The body of the loop is performed with X equal to
 8, 7, 6, 5, 4, and 3, and X has the value 3 upon leaving the loop.
 
-**Example: **
+**Example:**
 
 ```basic
 456 FOR J = -3 TO 12 STEP 2
@@ -1021,7 +1021,7 @@ above example.)
 **Comment:** The body of the loop will be performed with J equal to -3, -1, 1, 3, 
 5, 7, 9, and 11. J will have the value 11 upon leaving the loop.
 
-**Example: **
+**Example:**
 
 ```basic
 50 FOR Z = 2 TO -2
@@ -1037,7 +1037,7 @@ value of Z will then be 1, which is the initial value (2) minus the step size
 
 **Form:** `<line number> END`
 
-**Example: **
+**Example:**
 
 ```basic
 999 END
@@ -1178,15 +1178,15 @@ time:
 2 secs.
 ```
 
-### ( == Revision must continue here == )
+### ( == This block is checked == )
 
 ### 3.2 Lists and Tables
 
 In addition to the ordinary variables used by BASIC, there are variables that 
 can be used to designate lists or tables. For instance, A(7) would denote the 
-seventh item in a list called A; 'B(3, 7) denotes the item in the third row and 
-seventh column of the table called B. We commonly write AV and Bj^ y for those 
-same items, and use the term subscripts to denote the numbers that point to the 
+seventh item in a list called A; B(3, 7) denotes the item in the third row and 
+seventh column of the table called B. We commonly write A<sub>7</sub> and B<sub>3,7</sub> for those 
+same items, and use the term *subscripts* to denote the numbers that point to the 
 desired items in the list or table. (The reader may recognize that lists and 
 tables are called, respectively, vectors and matrices by mathematicians.)
 
@@ -1198,47 +1198,59 @@ may not be used to denote both a list and a table in the same program. The
 following are acceptable examples of list and table items, though not 
 necessarily in the same program:
 
+```basic
 B( I + K )    B( I, K)    Q( A(3, 7), B - C )
+```txt
 
 The example on the next page shows a simple use of both lists and tables in the 
 same program. We might think of this program as one that computes the total 
 sales for each of five salesmen selling three different good s. The list P 
 gives the price of the three goods. The table S gives the individual item sales 
 of the five salesmen, where the rows stand for the items and the columns for 
-the salesmen. We assume that the items sell for $1. 25, 4. 30, and 2. 50, 
+the salesmen. We assume that the items sell for $1.25, 4.30, and 2.50, 
 respectively, and that salesman 1 sold 40 of item 1, 10 of item 2, and 35 of 
 item 3, and so on.
 
+### ( == Revision must continue here == )
+
 ```txt
-useh ng. 999999 pr0blem name: sales 6 sept. 1964 time: 23:16
-10    f0r i =    1 t0 3
-20    read pci)    
-30    next i    
-40    for i =    i t0 3
-50    FCR j =    1 t0 5
-60    read sci    .J)
-70    next j    
-so    next i    
-90    fsr j =    1 t0 5
-100    let s =    0
-110    fcr i =    1 t0 3
-120    let s =    s + pci) * sci,j)
-130    next i    
-140    print "t0tal sales f0r salesman    
-150    next j    
-200    data 1.    25, 4.30, 2.50
-210    data 40    , 20, 37, 29, 42
-220    data 10    , 16, 3, 21, 8
-230    data 35    , 47, 29, 16, 33
-300    end    
-run
-user y    is. 999999    pr0bleh    name: sales    6 sept    . 1964
-t0tal    sales f0r    salesman    1    $    180.5
-t0tal    sales f0r    salesman    2    $    211 .3
-tvjtal    sales fbr    salesman    3    $    131 .65
-t0tal    sales f0r    salesman    4    $    .166.55
-t0tal    sales f0r    salesman    5    $    169.4
-time:    1 secs.                
+USER NO. 999999 PR0BLEM NAME: SALES 6 SEPT. 1964 TIME: 23:16
+```
+
+```basic
+10 FOR I = 1 TO 3
+20 READ P(I)    
+30 NEXT I    
+40 FOR I = 1 TO 3
+50 FCR J = 1 TO 5
+60 READ S(I,J)
+70 NEXT J    
+SO NEXT I    
+90 FOR J = 1 TO 5
+100 LET S = 0
+110 FCR I = 1 TO 3
+120 LET S = S + P(I) * S(I,J)
+130 NEXT I    
+140 PRINT "TOTAL SALES FOR SALESMAN"J, "$"S
+150 NEXT J    
+200 DATA 1.25, 4.30, 2.50
+210 DATA 40, 20, 37, 29, 42
+220 DATA 10, 16,  3, 21,  8
+230 DATA 35, 47, 29, 16, 33
+300 END    
+RUN
+```
+
+```txt
+USER NO. 999999 PR0BLEM NAME: SALES 6 SEPT. 1964 TIME: 23:17
+
+TOTAL    SALES FOR    SALESMAN    1    $    180.5
+TOTAL    SALES FOR    SALESMAN    2    $    211.3
+TOTAL    SALES FBR    SALESMAN    3    $    131.65
+TOTAL    SALES FOR    SALESMAN    4    $    166.55
+TOTAL    SALES FOR    SALESMAN    5    $    169.4
+
+TIME:    1 SECS.                
 ```
 
 By way of explanation, lines 10 through 30 read in the values of the list P . 
@@ -1262,7 +1274,7 @@ inclusive; similarly,
 It should be mentioned that using a DIM statement, does not require the user to 
 use all of the spaces so allocated.
 
-### 3. 3 Functions and Subroutines
+### 3.3 Functions and Subroutines
 
 Two additional functions that are in the BASIC repertory but which were not 
 described in section 2. 2 are INT and RND. INT is used to determine the integer 
@@ -1450,7 +1462,7 @@ is applied to two integers only. The main routine applies this subroutine to
 the first two integers, and then to the GCD of these and the third integer. The 
 GCD is then printed, and a new case considered.
 
-### 3. 4 Some Ideas for More Advanced Programmers
+### 3.4 Some Ideas for More Advanced Programmers
 
 An important part of any compute? program is the description of what it does, 
 and what data should be supplied. This description is commonly called 
