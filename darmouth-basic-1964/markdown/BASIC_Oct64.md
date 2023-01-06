@@ -724,17 +724,17 @@ be printed the location of the maximum, the maximum, and the spacing. The
 program as first written down on paper was:
 
 ```basic
-10    READ D
-20    LET X0 = 0
-30    FOR X = 0 TO 3 STEP D
-40    IF SIN(X) <= M THEN 100
-50    LET X0 = X
-60    LET M = SIN(X0)
-70    PRINT X0, X, D
-80    NEXT X0
-90    GO TO 20
-100    DATA . 1, . 01, . 001
-110    END
+10 READ D
+20 LET X0 = 0
+30 FOR X = 0 TO 3 STEP D
+40 IF SIN(X) <= M THEN 100
+50 LET X0 = X
+60 LET M = SIN(X0)
+70 PRINT X0, X, D
+80 NEXT X0
+90 GO TO 20
+100 DATA .1, .01, .001
+110 END
 ```
 
 
@@ -743,12 +743,12 @@ program as first written down on paper was:
 
 
 ```txt
-    HELLO
-    USER NUMBER--999999
-    SYSTEM--BASIC
-    NEW OR OLD--NEW
-    NEW PROBLEM NAME-—MAXSIN
-    READY.
+HELLO
+USER NUMBER--999999
+SYSTEM--BASIC
+NEW OR OLD--NEW
+NEW PROBLEM NAME-—MAXSIN
+READY.
 ```
 
 ```basic
@@ -830,9 +830,11 @@ user    n0. 999999 pr08lem name: maxsin 6 sept. 1964 time: 21:48
 save ready.
 ```
 
+### ( == End of first block to be revised == )
+
 1.    Notice the use of the backwards arrow to correct mistakes as you go along.
 2.    The user notices at this point that he had mistyped the word LET earlier, and corrects it.
-3.    An inspection of statement 70 shows that a variable X(J> is used, which is illegal, when X0 was intended. The line is retyped correctly.
+3.    An inspection of statement 70 shows that a variable XO is used, which is illegal, when X0 was intended. The line is retyped correctly.
 4.    The variable in the NEXT statement should have been X instead of X0, and the change is made.
 5.    By chance, the user notices that originally the IF-THEN statement pointed to a DATA statement, and the correction is made.
 6.    The problem runs for a long time without any output. Since we expect output almost immediately, we suspect something is wrong. It must be that the PRINT statement is forever bypassed. This could happen only if M were so large that the IF-THEN statement was always satisfied. We then observe that we forgot to initialize M to some value less than the maximum value on the sine curve, so we choose -1.
@@ -844,34 +846,51 @@ save ready.
 12.    The final corrected version of the program is listed.
 13.    The program is saved for later use. (This should not be done unless future use is necessary. )
 
-### 2. 6 Summary of Elementary BASIC Statements
+
+
+
+### 2.6 Summary of Elementary BASIC Statements
 
 This section gives a short and concise but complete description of
 each of the nine types of BASIC statements discussed earlier in this chapter.
 
-The notation ^ ... ^ is used to denote a particular unspecified instance of the type Of thing referred to inside the J. Thus, <^line number^ is used to stand for any particular line number. <Variabl^> refers to any variable, which is a single letter possibly followed by a single digit. ^expression)> stands for any particular expression, no matter how complicated, so long as it follows the rules for forming expressions given in section 2. 2 . ■{iiumber^ stands for any constant or data number.
+The notation <...> is used to denote a particular unspecified instance of the type Of thing referred to inside the < >. Thus, <line number> is used to stand for any particular line number. <Variable> refers to any variable, which is a single letter possibly followed by a single digit. <expression> stands for any particular expression, no matter how complicated, so long as it follows the rules for forming expressions given in section 2.2 . <number> stands for any constant or data number.
 
-#### 2. 6. 1 LET
-•^expressioi£>
-Form:    line number^ LET ^yariable^ =
-Example: 100 LET X = X + 1
+#### 2.6.1 LET
+
+**Form:**    <line number> LET <variable> = <expression>
+
+**Example:** 
+
+```basic
+100 LET X = X + 1
 259 LET W7 = (W - X4t 3)*(Z - A1/(A - fe)) - 17
-Comment: The LET statement is not a statement of algebraic
-equality, but is rather a command to the computer to perform certain computations and to assign the answer to a certain variable. Thus, thte first eftamjple tells the computer to take the current value of X, add 1 to it, and assign the answer to the variable X. Ih Other words, X is increased by unity.
+```
+
+**Comment:** The LET statement is not a statement of algebraic
+equality, but is rather a command to the computer to perform certain computations and to assign the answer to a certain variable. Thus, the first examjple tells the computer to take the current value of X, add 1 to it, and assign the answer to the variable X. In other words, X is increased by unity.
+
+
 
 #### 2. 6. 2 READ and DATA
-Form:
-Example:
-Form:
-Example:
-Comment:
-Comment:
-<C line number/* READ <^ist of variable^*
-150 READ X, Y, Z, XI, Y2, Z(K+I, J)
-line number^) DATA ^list of numbers^
-300 DATA 4, 2, 1.5, 0. 6734E-2, -174. 321
-A READ statement causes the variables listed in it to be given in order the next available numbers in the collection of DATA statements.
-Before the program is run, the computer takes all the DATA statements in the order in which they appear and Creates a large data block. Each time a READ statement is encountered anywhere in the program, the data block supplies the next available number or numbers. If the data block runs out of data, with a READ statement still asking for more, the program is assumed to be done.
+
+**Form:** <line number> READ <list of variables>
+
+**Example:** 150 READ X, Y, Z, X1, Y2, Z(K+I, J)
+
+**Form:** <line number> DATA <list of numbers>
+
+**Example:** 300 DATA 4, 2, 1.5, 0.6734E-2, -174.21
+
+**Comment:** A READ statement causes the variables listed in it to be given in order the next available numbers in the collection of DATA statements.
+
+**Comment:** Before the program is run, the computer takes all the DATA statements in the order in which they appear and Creates a large data block. Each time a READ statement is encountered anywhere in the program, the data block supplies the next available number or numbers. If the data block runs out of data, with a READ statement still asking for more, the program is assumed to be done.
+
+
+### ( == Revision must continue here == )
+
+
+
 
 #### 2. 6. 3 PRINT
 Form:
@@ -880,9 +899,9 @@ Comment:
 Example: Comment:
 Example: Comment:
 Comment:
-line number^ PRINT <^ist of expressions to be printed^-
+line number> PRINT <^ist of expressions to be printed^-
 100 PRINT X, Y, Z, B*B - 4*A*C, EXP( L<jG( 17))
-^line number^ PRINT " <^any string of characters/' "
+^line number> PRINT " <^any string of characters/' "
 200 PRINT "THIS PRGRAM IS N0 G00T>. "
 150 PRINT "COMPUTES X + Y = Z"
 
@@ -905,12 +924,12 @@ Much more variety is permitted in PRINT statements than is shown here. The
 additional flexibility is explained in section 3. 1.
 
 #### 2.6.4 GO TO and IF-THEN
-Form:    <C[line number^ GO TO <(line numbers-
+Form:    <C[line number> GO TO <(line numbers-
 Example: 150 GOTO 75
 240 G<Z> TO 850
 Comment: Sometimes called an unconditional go to, GO TO is used to interrupt the normal sequence of executing statements in the increasing order of their line numbers.
-Form:    <^line number^ IF ^expression^ ^relatioi^
-^expression> THEN <*Line number^
+Form:    <^line number> IF ^expression^ ^relatioi^
+^expression> THEN <*Line number>
 Example: 140 IF X ^ Y + Z THEN 200
 85 IF X * SIN(X) 1 THEN 100
 
@@ -929,9 +948,9 @@ greater than or equal greater than not equal
 Example:
 Comment:
 Comment:
-<Oine number^ FOR ^Variable/* = <4xpression^> TO ^expressions
+<Oine number> FOR ^Variable/* = <4xpression^> TO ^expressions
 or
-<^line number^ FOR <^rariable]> = ^expressior^ TO ^expression^> STEP ^expressions
+<^line number> FOR <^rariable]> = ^expressior^ TO ^expression^> STEP ^expressions
 120 FOR X4 = (17 + C0S(A)) /3 TO 3*SQR(10) STEP 1/4
 (This represents the body of the loop. )
 235 NEXT X4
@@ -943,7 +962,7 @@ The above example will, assuming A to be equal to 0, cause the body of the loop
 to be performed several times, first with X4 equal to 6, next with X4 equal to 
 6. 25, then 6. 50, and so on. The last time the body of the loop will be 
 performed is with X4 equal to 9- 25, which is less than or equal to the final 
-value 9.486 (appr oximate ly).
+value 9.486 (approximately).
 
 The F(jR statement goes into the body of a loop if the variable has a value 
 less than or equal to the final value (in the case of a positive stepsize), or 
@@ -972,34 +991,47 @@ value of Z will then be 1, which is the initial value (2) minus the step size
 
 #### 2. 6. 6 END
 
-Form:    <^line number^ END
+Form:    <^line number> END
 Example: 999 END
 Comment: An END statement is required in all programs. It must also be the statement with the highest line number in the program.
 
-## Ill. MORE ADVANCED BASIC
-## 3. 1 More About PRINT
+## III. MORE ADVANCED BASIC
 
-One of the conveneinces of BASIC is that the format of answers is automatically 
-supplied for the beginner. The PRINT statement does, however, permit a greater 
-flexibility for the more advanced programmer who wishes to specify a more 
-elaborate output.
+### 3. 1 More About PRINT
+
+One of the conveniences of BASIC is that the format of answers is automatically supplied for the beginner. The PRINT statement does, however, permit a greater flexibility for the more advanced programmer who wishes to specify a more elaborate output.
 
 The teletype line is divided into five zones of fifteen spaces each by BASIC, 
 allowing the printing of up to five numbers per line. Three simple rules 
 control the use of these zones.
 
-1.    A label, in quotes, is printed just as it appears.
-2.    A comma is a signal to move to the next print zone, or to the first print zone of the next line if it has just filled the fifth print zone.
-3.    The end of a PRINT statement signals a new line, unless a comma is the last symbol.
+1. A label, in quotes, is printed just as it appears.
+2. A comma is a signal to move to the next print zone, or to the first print zone of the next line if it has just filled the fifth print zone.
+3. The end of a PRINT statement signals a new line, unless a comma is the last symbol.
 
-Each number occupies one zone. Each label occupies a whole number of
-zones; if it occupies part of a zone, the rest of the zone is filled with
-blanks. If a label runs through the fifth zone, part of it may be lost.
+Each number occupies one zone. Each label occupies a whole number of zones; if it occupies part of a zone, the rest of the zone is filled with blanks. If a label runs through the fifth zone, part of it may be lost.
 
 The examples on the following pages illustrate some of the various ways in which the PRINT statement can be used. It should be noted that a blank PRINT statement causes the typewriter to move to the next line, as is implied by rule 3 above.
 
-The format in which BASIC prints numbers is not under the control
-of the user. However, the following rules may be used to guide the program-
+The format in which BASIC prints numbers is not under the control of the user. However, the following rules may be used to guide the programmer in interpreting his printed results.
+
+### ( == Check listing == )
+
+1.    No more than six significant digits are printed (except for integers -- see rule 4.)
+
+2.    Any trailing zeros after the decimal point are not printed.
+
+3.    For numbers less than 0. 1, the form X. XXXXX E-Y is used *unless* the entire significant part of the number can be printed as a six decimal number. Thus, .03456 means that the number is exactly .0345600000, while 3.45600 E-2 means that the number has been *rounded* to .0345600 .
+
+4.    If the number is an exact integer, the decimal point is not printed. Furthermore, integers of up through nine digits are printed in full.
+
+A packed form of output is available by using the character ";" instead of "," . Briefly, whereas"," tells the computer to move to the next zone for the next answer, ; tells the computer to move to the beginning of the next multiple of three characters for the next answer instead of to the next zone, with six characters being the minimum. One can thus pack many more than five numbers on a line if the numbers themselves require less than a full zone to print. An example of this option is shown on the next page.
+
+### ( == Check listing == )
+
+With packed output using the semi-colon, the programmer can print 11 three digit numbers per line, 8 six digit numbers per line, or 6 nine digit numbers per line. Mixtures of the three types in subsequent lines may not line up, as the example shows. The user should be careful about using the semi-colon with full length numbers which might occur near the end of a print line. BASIC checks to see if there are 12 or more spaces at the end of a line before printing a number there, but some numbers require 15 spaces. The same warning holds for printing labels near the end of the line. In each case, the last few characters may be lost.
+
+### ( == Check listing == )
 
 ```txt
 new
@@ -1068,19 +1100,8 @@ time: 2 secs.
 78125,
 ```
 
-mer in interpreting his printed results.
 
-1.    No more than six significant digits are printed (except for integers -- see rule 4.)
-
-2.    Any trailing zeros after the decimal point are not printed.
-
-3.    For numbers less than 0. 1, the form X. XXXXX E-Y is used unless the entire significant part of the number can be printed as a six decimal number. Thus, . 03456 means that the number is exactly . 0345600000, while 3. 45600 E-2 means that the number has been rounded to . 0345600 .
-
-4.    If the number is an exact integer, the decimal point is not printed. Furthermore, integers of up through nine digits are printed in full.
-
-A packed form of output is available by using the character ";Min-stead of "," . Briefly, whereas"," tells the computer to move to the next zone for the next answer, ; tells the computer to move to the beginning of the next multiple of three characters for the next answer instead of to the next zone, with six characters being the minimum. One can thus pack many more than five numbers on a line if the numbers themselves require less than a full zone to print. An example of this option is shown on the next page.
-
-With packed output using the semi-colon, the programmer can print 11 three digit numbers per line, 8 six digit numbers per line, or 6 nine digit numbers per line. Mixtures of the three types in subsequent lines may not line up, as the example shows. The user should be careful about using the semi-colon with full length numbers which might occur near the end of a print line. BASIC checks to see if there are 12 or more spaces at the end of a line before printing a number there, but some numbers require 15 spaces. The same warning holds for printing labels near the end of the line. In each case, the last few characters may be lost.
+### (==== )
 
 ```txt
 10    f0r i = 1 t0 100
@@ -1103,6 +1124,8 @@ user n0.    999999    pr0blem    name: print 6        sept. 1964    time:    22:
 time:
 2 secs.
 ```
+
+### ( == Revision must continue here == )
 
 ### 3.2 Lists and Tables
 
@@ -1277,7 +1300,7 @@ The DEF statement permits the user to define a function other than the standard
 functions listed in section 2. 2 so that he doesn't have to keep repeating the 
 formula for the function each time he uses it in his program. The name of a 
 defined function must be three letter s, the iitOi of which are FN . The user 
-thus may define up to 26 functioihs. The following examples illustrate the form 
+thus may define up to 26 functions. The following examples illustrate the form 
 of the DEF statement:
 
 ```basic
@@ -1459,7 +1482,7 @@ may be replaced by
 
 BASIC allows GO TO and IF-THEN statements to point to REM and DATA statements. 
 The effect is to perform a vacuous statement having that number and proceed to 
-the next numberedstatement. In the case of DATA statements, the END statement 
+the next numbered statement. In the case of DATA statements, the END statement 
 might eventually be reached. However, for REM statements the programmer might 
 deliberately have his G(jT<#'s point to REM statements, the remark part 
 identifying that part of the program.
@@ -1642,12 +1665,10 @@ MAT G = ZER(M, N) Introduce a. 6 matrix, dimensions shown. MAT C = C0N( M, N) Ma
 
 MAT C = TRN(A) Transpose. MAT C = INV(A) Inverse.
 
-MAT C = (k)*A    Constant multiple, note parentheaese.
+MAT C = (k)*A    Constant multiple, note parentheses.
 
 In appropriate places, vectors may be substituted for matrices. E. g. , MAT 
-READ A(7) will read a 7-component column vector, MAT PRINT prints all vectors 
-as row-vectors, for convenience, M and N mny be formulas. Thus one has the 
-possibility of writing
+READ A(7) will read a 7-component column vector, MAT PRINT prints all vectors as row-vectors, for convenience, M and N may be formulas. Thus one has the possibility of writing
 
 DIM    A(20,20)
 READ M
@@ -1845,4 +1866,5 @@ In this summary it is assumed that all statements begin with a line number. Foll
 
 
 ### NOTES
+
 
