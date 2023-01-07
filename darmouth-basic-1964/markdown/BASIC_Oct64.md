@@ -737,107 +737,127 @@ program as first written down on paper was:
 110 END
 ```
 
-
-
-### ( == Revision must continue here == )
-
+And the debugging process might be as follows:
 
 ```txt
 HELLO
 USER NUMBER--999999
 SYSTEM--BASIC
 NEW OR OLD--NEW
-NEW PROBLEM NAME-—MAXSIN
+NEW PROBLEM NAME--MAXSIN
 READY.
 ```
 
 ```basic
-10    read d
-20    lwr xo = 0
-30    f0r x = 0 t0 3 str«-ep d    /-n
-40    if sine«-( x) <= m then 100 <£—-(J/
-50    let xo = x
-60    let m = sincx)
-70    print x0, x, d
-80    next xo
-90    g0 t0 20
-20    let xo = 0 ^---- \j-)
-loo«-«-*-l 00 data .1, .01, .001 ——__(7)
-110    end run
+10 READ D
+20 LWR X0 = 0
+30 FOR X = 0 TO 3 STR←EP D
+40 IF SINE←(X) <= M THEN 100          ← 1
+50 LET X0 = X
+60 LET M = SIN(X0)
+70 PRINT X0, X, D
+80 NEXT XO
+90 GO TO 20
+20 LET X0 = 0                         ← 2
+L00←←←100 DATA .1, .01, .001          ← 1
+110 END
+RUN
 ```
+1.    Notice the use of the backwards arrow to correct mistakes as you go along.
+
+2.    The user notices at this point that he had mistyped the word LET earlier, and corrects it.
+
 
 ```txt
-user n0. 999999
-pr0blem name: maxsin 6 sept. 1964
-time: 21:37
-illegal f0rmula    in 70 ^
-n0t matched with f0r in 80 f0r with0ut next
-time: 0 secs.
+USER NO. 999999   PROBLEM NAME: MAXSIN   6 SEPT. 1964   TIME: 21:37 
 
-70    print xo, x, d
-40    if sincx) <= m then 80
-ro    next x run
-user n0. 999999 pr0blem name:
-st0p ready.
-maxsin 6 sept. 1964 time: 21:38
-20 let m r -1 run
+ILLEGAL FORMULA      IN 70   ← 3
+NOT MATCHED WITH FOR IN 80   ← 4 
+FOR WITHOUT NEXT             ← 4
+
+TIME: 0 SECS.
+```
+
+```basic
+70 PRINT X0, X, D            ← 3
+40 IF SIN(X) <= M THEN 100   ← 5
+80 NEXT X0                   ← 4
+```
+3.    An inspection of statement 70 shows that a variable XO is used, which is illegal, when X0 was intended. The line is retyped correctly.
+
+4.    The variable in the NEXT statement should have been X instead of X0, and the change is made.
+
+5.    By chance, the user notices that originally the IF-THEN statement pointed to a DATA statement, and the correction is made.
+
+```txt
+USER NO. 999999   PROBLEM NAME: MAXSIN   6 SEPT. 1964   TIME: 21:38 
+
+STOP          ← 6
+READY.
+```
+
+6.    The problem runs for a long time without any output. Since we expect output almost immediately, we suspect something is wrong. It must be that the PRINT statement is forever bypassed. This could happen only if M were so large that the IF-THEN statement was always satisfied. We then observe that we forgot to initialize M to some value less than the maximum value on the sine curve, so we choose -1.
 
 
-user n0. 999999 pr0blem name: maxsin 6 sept. 1964 time: 21:42
+20 LET M = -1 
+RUN
+
+### ( == Revision must continue here == )
+
+
+
+USER N0. 999999 PR0BLEM NAME: MAXSIN 6 SEPT. 1964 TIME: 21:42
 0    0
 .1    .1
 .2    .2
 .3    .3 .4
-st0p. ready.
+ST0P. READY.
 70
-85 print x0, m, d run
-user m0. 999999 problem name: maxsin 6 sept. 1964 time: 21:43
+85 PRINT X0, M, D RUN
+USER M0. 999999 PROBLEM NAME: MAXSIN 6 SEPT. 1964 TIME: 21:43
 .9995 74 .999574 .99
 1.6 1.6 1.6
-st0p. ready.
-90 g0 t0 10 5 print "x value", "sine2«-", res0luti0n" <-run
+ST0P. READY.
+90 G0 T0 10 5 PRINT "X VALUE", "SINE2«-", RES0LUTI0N" <-RUN
 <D
-user n0. 999999 pr0blem name: maxsin 6 sept. 1964 time: 21:44
-inc0rrect f0rmat in 5 --"
-time: 1 secs.
+USER N0. 999999 PR0BLEM NAME: MAXSIN 6 SEPT. 1964 TIME: 21:44
+INC0RRECT F0RMAT IN 5 --"
+TIME: 1 SECS.
 
-5 print "x value", "sine", "res0luti0n" --/7q)
-run    ^ly
-user n0. 999999 pr0blem name: maxsin 6 sept. 1964 time: 21:46
-x value    sine    res0luti0n
+5 PRINT "X VALUE", "SINE", "RES0LUTI0N" --/7Q)
+RUN    ^LY
+USER N0. 999999 PR0BLEM NAME: MAXSIN 6 SEPT. 1964 TIME: 21:46
+X VALUE    SINE    RES0LUTI0N
 1.6    .999574    .1
 1.57    1.    .01
 1.571    1.    .001
-time: 1 mins. 0 secs.
+TIME: 1 MINS. 0 SECS.
 ®
-list    --—----"-—-----(3)
-user    n0. 999999 pr08lem name: maxsin 6 sept. 1964 time: 21:48
+LIST    --—----"-—-----(3)
+USER    N0. 999999 PR08LEM NAME: MAXSIN 6 SEPT. 1964 TIME: 21:48
 ```
 
-```basic
-5    print "x value", "sine", "res0luti0n"
-10    read d
-20    let m = -1
-30    f0r x = 0 t0 3 step d
-40    if sin(x) <= m then 80
-50    let x0 = x
-60    let m = sincx)
-80    next x
-85    print xo, m, d
-90    g0 t0 10
-100    data .1, .01, .001
-110    end
-save ready.
+```BASIC
+5    PRINT "X VALUE", "SINE", "RES0LUTI0N"
+10    READ D
+20    LET M = -1
+30    F0R X = 0 T0 3 STEP D
+40    IF SIN(X) <= M THEN 80
+50    LET X0 = X
+60    LET M = SINCX)
+80    NEXT X
+85    PRINT XO, M, D
+90    G0 T0 10
+100    DATA .1, .01, .001
+110    END
+SAVE READY.
 ```
 
 ### ( == End of first block to be revised == )
 
-1.    Notice the use of the backwards arrow to correct mistakes as you go along.
-2.    The user notices at this point that he had mistyped the word LET earlier, and corrects it.
-3.    An inspection of statement 70 shows that a variable XO is used, which is illegal, when X0 was intended. The line is retyped correctly.
-4.    The variable in the NEXT statement should have been X instead of X0, and the change is made.
-5.    By chance, the user notices that originally the IF-THEN statement pointed to a DATA statement, and the correction is made.
-6.    The problem runs for a long time without any output. Since we expect output almost immediately, we suspect something is wrong. It must be that the PRINT statement is forever bypassed. This could happen only if M were so large that the IF-THEN statement was always satisfied. We then observe that we forgot to initialize M to some value less than the maximum value on the sine curve, so we choose -1.
+
+
+
 7.    At last we get printed output, but it appears that the printing is taking place each time through the loop rather than at the end of the loop. We move the print statement from before to after the NEXT statement, and incidentally change it to print M rather than X as the second term.
 8.    Ugh. Still not correct. We seem to be doing the first case over and over again. An infinite loop! This is corrected by going back to statement 10 instead of statement 20.
 9.    While we are at it, we put in labels to identify each column in the printed output.
@@ -1345,8 +1365,8 @@ TIME: 1 SECS.
 20 FOR I = 1 TO N
 30 LET X = RND(X)
 40 NEXT I
-50 FOR I = 1 T0 20
-60 PRINT INT( 1Q*RND(X) );
+50 FOR I = 1 TO 20
+60 PRINT INT( 10*RND(X) );
 70 NEXT I
 80 DATA 115
 90 END
