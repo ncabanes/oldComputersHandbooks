@@ -1078,7 +1078,7 @@ The format in which BASIC prints numbers is not under the control of the user. H
 
 4.    If the number is an exact integer, the decimal point is not printed. Furthermore, integers of up through nine digits are printed in full.
 
-A packed form of output is available by using the character ";" instead of "," . Briefly, whereas"," tells the computer to move to the next zone for the next answer, ; tells the computer to move to the beginning of the next multiple of three characters for the next answer instead of to the next zone, with six characters being the minimum. One can thus pack many more than five numbers on a line if the numbers themselves require less than a full zone to print. An example of this option is shown on the next page.
+A packed form of output is available by using the character ";" instead of "," . Briefly, whereas "," tells the computer to move to the next zone for the next answer, ; tells the computer to move to the beginning of the next multiple of three characters for the next answer instead of to the next zone, with six characters being the minimum. One can thus pack many more than five numbers on a line if the numbers themselves require less than a full zone to print. An example of this option is shown on the next page.
 
 ### ( == Check listing == )
 
@@ -1240,7 +1240,7 @@ RUN
 ```
 
 ```txt
-USER NO. 999999 PR0BLEM NAME: SALES 6 SEPT. 1964 TIME: 23:17
+USER NO. 999999   PROBLEM NAME: SALES   6 SEPT. 1964   TIME: 23:17
 
 TOTAL    SALES FOR    SALESMAN    1    $    180.5
 TOTAL    SALES FOR    SALESMAN    2    $    211.3
@@ -1311,61 +1311,54 @@ time it is used in a program. Thus, to produce and print 20 random digits, one
 might write a program like that shown on the next page.
 
 
-### ( == Revision must continue here == )
-
-```txt
-10    fgr i :
-20    print
-30    next i
-40    end run
-: 1 t0 20 intc 10*rndcx) );
-user n0. 999999
-9 6
-time:
-0 6
-4 9
-1 secs.
-pr0blem names rand0m
-1 3
-6 4
-4 0
-9 7
-6 sept. 1964 time: 23:33 3 8
-5
-•7
-8 7
-run
-user n0. 999999
-9 6
-0 6
-4 9
-pr0blem name: rand0m 6 sept. 1964
-1 3
-6 4
-4 0
-9 7
-5 7
-8 7
-time: 23:34
-time:
-1 secs.
-10    read n
-20    f0r i = i t0 n
-30    let x = rnd(x)
-40    next i
-50    f0r i = 1 t0 20
-60    print intc 1q*rndcx> );
-70    next i
-80    data 115
-90    end
-run
-user n0. 999999    pr0blem name: rand0m    6 sept. 1964 time: 23:35
-7 9 9    0 9 4 5    9 9 7    5
-2 2 4    2 0 0 0    3 3
-Time: i secs.
+```basic
+10 FOR I = 1 T0 20
+20 PRINT INT(10*RND(X) );
+30 NEXT I
+40 END
+RUN
 ```
 
-### ( == Next block is checked == )
+```txt
+USER NO. 999999   PROBLEM NAME: RANDOM   6 SEPT. 1964   TIME: 23:33 
+
+ 9     0     4     1     6     4     9     5     8     3     8
+ 6     6     9     3     4     0     7     7     7
+
+TIME: 1 SECS.
+
+RUN
+
+USER NO. 999999   PROBLEM NAME: RANDOM   6 SEPT. 1964   TIME: 23:34 
+
+ 9     0     4     1     6     4     9     5     8     3     8
+ 6     6     9     3     4     0     7     7     7
+
+TIME: 1 SECS.
+```
+
+```basic
+10 READ N
+20 FOR I = 1 TO N
+30 LET X = RND(X)
+40 NEXT I
+50 FOR I = 1 T0 20
+60 PRINT INT( 1Q*RND(X) );
+70 NEXT I
+80 DATA 115
+90 END
+RUN
+```
+
+```txt
+USER NO. 999999   PROBLEM NAME: RANDOM   6 SEPT. 1964   TIME: 23:35 
+
+ 7     9     9     0     9     4     5     9     9     7     5
+ 2     2     4     2     0     0     0     3     3
+
+TIME: 1 SECS.
+```
+
 
 The middle example shows that the next time the program is run, the same 
 sequence is obtained. To vary the sequence we might "throw away" an arbitrary 
@@ -1690,18 +1683,18 @@ in the future.
 
 ## IV. CARDBASIC
 
-### 4. 1 Purpose
+### 4.1 Purpose
 
 A card-operated (on-line) version of BASIC is available and provides the 
 following advantages over teletypes:
 
-(1)    Longer programs are.allowed. ; .
+1. Longer programs are allowed.
 
-(2)    There is no limit on DATA.
+2. There is no limit on DATA.
 
-(3)    Output is on the highspeed printer. This is much faster and allows 8 numbers per line in the normal format, and up to 18 in packed format.
+3. Output is on the highspeed printer. This is much faster and allows 8 numbers per line in the normal format, and up to 18 in packed format.
 
-(4)    Matrix subroutines are available.
+4, Matrix subroutines are available.
 
 ### 4. 2 How to Prepare a Deck.
 
@@ -1712,13 +1705,19 @@ symbols on a key-punch, the following modifications are needed:
 In PRINT, use single quote (') in place of quote (").
 
 For the relational symbols, use the following three letter equivalents.
-EQU
-<    LSS y GRT
-<    = LQU >= GQU <> NQU
+
+|---------------|---------
+| = |  EQU
+| \< | LSS
+| \> |  GRT
+| \<= | LQU
+| \>= | GQU
+| \<\> |  NQU
+
 
 In place of a semi-colon in a PRINT statement, you must use a 5-8 multiple punch.
 
-### 4. 3 Differences in Operation.
+### 4.3 Differences in Operation.
 
 Do not type DATA as part of your program deck. Instead, add to the end of your 
 program (after the END card) a data deck. There are no line numbers for data, 
@@ -1732,13 +1731,16 @@ instruction MAT. See the next section for a detailed description.
 
 You have much larger matrices available. The limitations are:
 
-(1)    At most 1000 components in any one vector or list.
+1. At most 1000 components in any one vector or list.
 
-(2)    No matrix or table dimension may exceed 500.
+2, No matrix or table dimension may exceed 500.
 
-(3)    The total number of components in all vectors and matrices (lists and tables) may not exceed 4000.
+3. The total number of components in all vectors and matrices (lists and tables) may not exceed 4000.
 
-Matrices must start with component 1 (not 0). 4.4 MAT
+Matrices must start with component 1 (not 0). 
+
+
+### 4.4 MAT
 
 Matrix subroutines are available in CARDBASIC. They are called by means of the 
 MAT instruction. Observe the following restrictions: (1) A matrix in an MAT 
@@ -1748,33 +1750,31 @@ MAT statement.
 
 Allowed MAT operations are:
 
-MAT READ A(M, N)    Read one matrix, dimensions shown.
-
-MAT PRINT A    Print one matrix.
-
-MAT C = A + B    Add two matrices.
-
-MAT C = A - B    Subtract matrices.
-
-MAT C = A* B    Multiply matrices.
-
-MAT G = ZER(M, N) Introduce a. 6 matrix, dimensions shown. MAT C = C0N( M, N) Matrix of all l's, dimensions shown. MAT C = IDN(N)    Identity matrix, dimension shown.
-
-MAT C = TRN(A) Transpose. MAT C = INV(A) Inverse.
-
-MAT C = (k)*A    Constant multiple, note parentheses.
+ * MAT READ A(M, N)    Read one matrix, dimensions shown.
+ * MAT PRINT A    Print one matrix.
+ * MAT C = A + B    Add two matrices.
+ * MAT C = A - B    Subtract matrices.
+ * MAT C = A * B    Multiply matrices.
+ * MAT G = ZER(M, N) Introduce a. 0 matrix, dimensions shown. 
+ * MAT C = C0N( M, N) Matrix of all 1's, dimensions shown. 
+ * MAT C = IDN(N)    Identity matrix, dimension shown.
+ * MAT C = TRN(A) Transpose. 
+ * MAT C = INV(A) Inverse.
+ * MAT C = (k)*A    Constant multiple, note parentheses.
 
 In appropriate places, vectors may be substituted for matrices. E. g. , MAT 
 READ A(7) will read a 7-component column vector, MAT PRINT prints all vectors as row-vectors, for convenience, M and N may be formulas. Thus one has the possibility of writing
 
-DIM    A(20,20)
+```basic
+DIM A(20,20)
 READ M
 MAT READ A(M, M)
+```
 
 This allows A to be any square matrix up to 20 x 20, its actual dimension
 specified in the data. If MAT PRINT A is followed by a 5*8 multiple punch,
 matrices will be printed in the ";" packed format.
-s.
+
 
 ## IV. APPENDICES
 
