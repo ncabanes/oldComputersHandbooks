@@ -676,7 +676,7 @@ machine for someone else to use. Remember the motto,
 > TYPING IS NO SUBSTITUTE FOR THINKING
 
 
-### 2.5    Errors and Debugging
+### 2.5 Errors and Debugging
 
 It may occasionally happen that the first run of a new problem will be 
 error-free and give the correct answers. But it is much more common that errors 
@@ -854,7 +854,7 @@ save ready.
 This section gives a short and concise but complete description of
 each of the nine types of BASIC statements discussed earlier in this chapter.
 
-The notation <...> is used to denote a particular unspecified instance of the type Of thing referred to inside the < >. Thus, <line number> is used to stand for any particular line number. <Variable> refers to any variable, which is a single letter possibly followed by a single digit. <expression> stands for any particular expression, no matter how complicated, so long as it follows the rules for forming expressions given in section 2.2 . <number> stands for any constant or data number.
+The notation \<...\> is used to denote a particular unspecified instance of the type Of thing referred to inside the \< \>. Thus, \<line number\> is used to stand for any particular line number. \<Variable\> refers to any variable, which is a single letter possibly followed by a single digit. \<expression\> stands for any particular expression, no matter how complicated, so long as it follows the rules for forming expressions given in section 2.2 . \<number\> stands for any constant or data number.
 
 #### 2.6.1 LET
 
@@ -872,7 +872,7 @@ equality, but is rather a command to the computer to perform certain computation
 
 
 
-#### 2. 6. 2 READ and DATA
+#### 2.6.2 READ and DATA
 
 **Form:** `<line number> READ <list of variables>`
 
@@ -890,7 +890,7 @@ equality, but is rather a command to the computer to perform certain computation
 
 
 
-#### 2. 6. 3 PRINT
+#### 2.6.3 PRINT
 
 **Form**: `<line number> PRINT <list of expressions to be printed>`
 
@@ -972,7 +972,7 @@ Any of the six standard relations may be used.
 | \<\> |  not equal
 
 
-#### 2. 6. 5 FOR and NEXT 
+#### 2.6.5 FOR and NEXT 
 
 **Form:** `<line number> FOR <variable> = <expression^> TO <expression>`
 
@@ -1033,7 +1033,7 @@ value of Z will then be 1, which is the initial value (2) minus the step size
 (1).
 
 
-#### 2. 6. 6 END
+#### 2.6.6 END
 
 **Form:** `<line number> END`
 
@@ -1153,32 +1153,35 @@ time: 2 secs.
 78125,
 ```
 
+### (==Checked from here ==)
 
-### (==== )
+
+```basic
+10 FOR I = 1 T0 100
+20 PRINT I*I*I;
+30 NEXT I
+40 END 
+RUN
+```
 
 ```txt
-10    f0r i = 1 t0 100
-20    print 1*1*1}
-30    next i
-40    end run
-user n0.    999999    pr0blem    name: print 6        sept. 1964    time:    22:14
-1 8    27    64 125 216        343 !    512 729    1000    1331
+USER NO. 999999   PROBLEM NAME: PRINT   6 SEPT. 1964   TIME: 22:14 
+
+1     8    27    64 125 216        343 !    512 729    1000    1331
 1728    2197    2744    3375    4096    4913    5832    6859
-8000    9261    10648    12167    13824    15625    1 7576    19683
+8000    9261    10648    12167    13824    15625    17576    19683
 21952    24389    27000    29791    32768    35937    39304    42875
 46656    50653    54872    59319    64000    68921    74088    79507
 85184    91 125    97336    103823    110592    117649    125000    132651
 140608    148877    157464    1663 75    175616    185193    195112    205379
 216000    226981    23 8328    250047    262144    274625    287496    300763
-3 14432    328509    343000    357911    373248    389017    405224    421875
+314432    328509    343000    357911    373248    389017    405224    421875
 438976    456533    474552    493039    512000    531441    551368    571787
 592704    614125    636056    658503    681472    704969    729000    753571
 778688    804357    830584    8573 75    884736    912673    941192    970299
-time:
-2 secs.
-```
 
-### ( == This block is checked == )
+TIME: 2 SECS.
+```
 
 ### 3.2 Lists and Tables
 
@@ -1212,7 +1215,7 @@ respectively, and that salesman 1 sold 40 of item 1, 10 of item 2, and 35 of
 item 3, and so on.
 
 ```txt
-USER NO. 999999 PR0BLEM NAME: SALES 6 SEPT. 1964 TIME: 23:16
+USER NO. 999999   PROBLEM NAME: SALES   6 SEPT. 1964   TIME: 23:16 
 ```
 
 ```basic
@@ -1273,7 +1276,7 @@ inclusive; similarly,
 
 ```basic
 20 DIM B(15, 20) , S(3) 
-```basic
+```
 
 means that the subscripts of B run from 0 through 15 for rows, and 0 through 20 for columns, and that the subscript of the list S runs from 0 through 3. The numbers used to denote the size of a list or table in a DIM statement must be integer numbers. The DIM statement is used not only to indicate that lists and tables are larger than 0-10 in each subscript, but also to allocate storage space in very large programs by telling the computer that only, say, 4 spaces are needed for the list S as shown above.
 
@@ -1297,7 +1300,7 @@ INT can be used to round to any specific number of decimal places. Again, for
 positive numbers,
 
 ```basic
-INT( 100*X + . 5)/100 
+INT( 100*X + .5)/100 
 ```
 
 will round X to the nearest correct two decimal number.
@@ -1482,50 +1485,45 @@ is applied to two integers only. The main routine applies this subroutine to
 the first two integers, and then to the GCD of these and the third integer. The 
 GCD is then printed, and a new case considered.
 
-### ( == Revision must continue here == )
-
 ```txt
-user n0. 999999 problem name: gcd3n0
-6 sept. 1964 time: 23:27
-10 print "a", hb", "c", "gcd"
-20 read a, b, c
-30 let x = a
-40 let y = b
-50 GOSUB 200
-60 let x = g
-70 let y = c
-80 GOSUB 200
-90 print a, b, c, g
-100 g0 t0 20
-110 data 60, 90, 120
-120 data 38456, 64872, 9876$
-130 data 32, 384, 72
-200 let q = intcx/y)
-210 let r = x - q*y
-220 if r = 0 then 300
-230 let x = y
-240 let y = r
-250 g0 t0 200
-300 let g = y
-310 return
-999 end
-run
-user n0. 999999 pr0blem name: gcd3n0 6 sept. 1964 time: 23:28
-a
-60
-38456 32
-b
-90
-64872 384
-c
-120
-98765
-72
-gcd 30
-time: 1 secs
+USER NO. 999999   PROBLEM NAME: GCD3N0   6 SEPT. 1964   TIME: 23:27 
 ```
 
+```basic
+10 PRINT "A", B", "C", "GCD"
+20 READ A, B, C
+30 LET X = A
+40 LET Y = B
+50 GOSUB 200
+60 LET X = G
+70 LET Y = C
+80 GOSUB 200
+90 PRINT A, B, C, G
+100 GO TO 20
+110 DATA 60, 90, 120
+120 DATA 38456, 64872, 98765
+130 DATA 32, 384, 72
+200 LET Q = INT(X/Y)
+210 LET R = X - Q*Y
+220 IF R = 0 THEN 300
+230 LET X = Y
+240 LET Y = R
+250 GO TO 200
+300 LET G = Y
+310 RETURN
+999 END
+RUN
+```
 
+```txt
+USER NO. 999999   PROBLEM NAME: GCD3N0   6 SEPT. 1964   TIME: 23:28 
+a      b      c       gcd
+ 60     90     120     30
+ 38456  64872  98765   1
+ 32     384    72      8
+
+TIME: 1 SECS
+```
 
 ### 3.4 Some Ideas for More Advanced Programmers
 
@@ -1537,15 +1535,15 @@ capability with the REM statement. For example,
 
 
 ```basic
-1    REM THIS PROGRAM SOLVES LINEAR EQUATIONS OF THE FORM
-2    REM A1*X1 + A2*X2 = Bl, A3*X1 + A4*X3 = B2. THE DATA
-3    REM MUST FIRST LIST TlfE.fWH VALUES 0F A IN ORDER, THEN
-4    REM : THE DESIRED RIGHT HANI? SIDES FOR WHICH SO LUTIONS
-5    REM ARE NEEDED,
+1 REM THIS PROGRAM SOLVES LINEAR EQUATIONS OF THE FORM
+2 REM A1*X1 + A2*X2 = B1, A3*X1 + A4*X3 = B2. THE DATA
+3 REM MUST FIRST LIST THE FOUR VALUES OF A IN ORDER, THEN
+4 REM THE DESIRED RIGHT HAND SIDES FOR WHICH SOLUTIONS
+5 REM ARE NEEDED,
 ```
 
 might reasonably be added to the original example for solving linear equations. 
-For longer programs, more detailed REM'f may be needed, especially ones spotted 
+For longer programs, more detailed REM's may be needed, especially ones spotted 
 throughout the program to remind you what each of the parts does. Each user 
 quickly learns how much documentation he needs to permit him to understand his 
 program, and where to put REM statements. But it is certain that REM's are 
@@ -1574,7 +1572,7 @@ BASIC allows GO TO and IF-THEN statements to point to REM and DATA statements.
 The effect is to perform a vacuous statement having that number and proceed to 
 the next numbered statement. In the case of DATA statements, the END statement 
 might eventually be reached. However, for REM statements the programmer might 
-deliberately have his G(jT<#'s point to REM statements, the remark part 
+deliberately have his GOTO's point to REM statements, the remark part 
 identifying that part of the program.
 
 One of the most important and difficult problems in computing is that of 
@@ -1589,41 +1587,40 @@ Most programmers eventually write or encounter a program something like this:
 10 LET X = 0 
 20 LET S = S + X 
 30 IF X >= 2 THEN 60 
-40 LET X = X + . 1 
+40 LET X = X + .1 
 50 GO TO 20 
 60 PRINT S 
 70 END
 ```
 
-for computing the sum of all the non-negative multiples of . 1 less than or 
+for computing the sum of all the non-negative multiples of .1 less than or 
 equal to 2. The correct answer is 21, but invariably the program will produce 
-23. 1 as the answer. What is wrong? Round-off has reared its ugly head high 
+23.1 as the answer. What is wrong? Round-off has reared its ugly head high 
 enough for us to see. The explanation is that the computer works in the binary 
-number system, and cannot express . 1 exactly. Just as 1/3 cannot be expressed 
-in terms of a single decimal number, neither can . 1 be expressed in terms of a 
-single binary number. It turns out that . 1 in the computer is a number very 
-slightly less than . 1. Thus, when the loop in the above example has been 
-performed 21 times, the value of X is not 2 exactly, but is very slightly le ss 
+number system, and cannot express .1 exactly. Just as 1/3 cannot be expressed 
+in terms of a single decimal number, neither can .1 be expressed in terms of a 
+single binary number. It turns out that .1 in the computer is a number very 
+slightly less than .1. Thus, when the loop in the above example has been 
+performed 21 times, the value of X is not 2 exactly, but is very slightly less 
 than 2. The IF statement in line 30
+determines that the final value, exactly 2, has not yet been achieved or 
+exceeded, and so calls for one more passage through the loop.
 
-<iptftrmta#« that the final val\je, exactly 2; Jkmi *at pM k*«n achieved or 
-exceeded, and fo calls for one mor§ pa§fi$ff through the leef*
-
-If the programmer had known that the computer treats * 1 as a number slightly 
-less, he could have compie^##tfd by writing 1, 95 in place of 2 in statement 
-30. A better way rests on tfei ftPt that the computer performs exactly correct 
-arithmetic for integers, Th# may tlws count the number of times through the 
+If the programmer had known that the computer treats .1 as a number slightly 
+less, he could have compensated by writing 1.95 in place of 2 in statement 
+30. A better way rests on the fact that the computer performs exactly correct 
+arithmetic for integers. The user may thus count the number of times through the 
 loop with integers. The example may be rewritten as follows:
 
 ```basic
-5    LET S = 0
-10    LET N = 0
-20    LET S = S + N/10
-30    IF N >= 20 THEN 60
-40    LET N = N + 1
-50    GOTO 20
-60    PRINT S
-70    END
+5 LET S = 0
+10 LET N = 0
+20 LET S = S + N/10
+30 IF N >= 20 THEN 60
+40 LET N = N + 1
+50 GOTO 20
+60 PRINT S
+70 END
 ```
 
 Better still, a FOR statement can shorten the program to
@@ -1651,7 +1648,7 @@ carefully your programming to see if you have mixed up any of the variables. It
 is often difficult to spot such errors because one tends to see in a program 
 what he expects to see rather than what is there.
 
-Another method that'is extremely useful in providing clues as to the nature and 
+Another method that is extremely useful in providing clues as to the nature and 
 location of the bug or bugs is tracing. In BASIC this tracing may be 
 accomplished by inserting superfluous PRINT statements at various places in 
 your program to print the values of some of the intermediate quantities. When 
@@ -1659,7 +1656,7 @@ the program is then RUN, the values of these intermediate quantities often
 suggest the exact nature of the error. When the program has been debugged and 
 is working properly, these statements are removed.
 
-There are some natters that do not affect the correct running of programs, but 
+There are some matters that do not affect the correct running of programs, but 
 pertain to style and neatness. For instance, as between two or more similar 
 ways to prepare a part of a program, one should select the one that is most 
 easily understood unless there is an important reason not to do so.
@@ -1669,16 +1666,16 @@ that it reflects the READ statements that correspond. The first example on
 linear equations represents bad style, but was done purposely to illustrate 
 that one can arbitrarily group the data in the DATA statements.
 
-'.One- tends' after a while to pl&ce 'his data statements near the end of the 
+One tends after a while to place his data statements near the end of the 
 program, or near the beginning, but at least in one group to avoid confusing 
 himself with DATA statements spread throughout the program.
 
 Some programmers also tend to give the END statement a number like 9999 to 
 insure that it will be the one with the highest number.
 
-No doubt the user will be able to devise ether ways to make a program neat and 
+No doubt the user will be able to devise other ways to make a program neat and 
 readable. But again, the important consideration in style is to program in a 
-way that makes it more und&riltatidable and useful to both oneself and others 
+way that makes it more understandable and useful to both oneself and others 
 in the future.
 
 ## IV. CARDBASIC
@@ -1706,6 +1703,7 @@ In PRINT, use single quote (') in place of quote (").
 
 For the relational symbols, use the following three letter equivalents.
 
+| Symbol | Equivalent
 |---------------|---------
 | = |  EQU
 | \< | LSS
