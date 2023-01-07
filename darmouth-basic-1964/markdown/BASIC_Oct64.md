@@ -796,74 +796,113 @@ STOP          ← 6
 READY.
 ```
 
+```basic
+20 LET M = -1    ← 6
+RUN
+```
+
 6.    The problem runs for a long time without any output. Since we expect output almost immediately, we suspect something is wrong. It must be that the PRINT statement is forever bypassed. This could happen only if M were so large that the IF-THEN statement was always satisfied. We then observe that we forgot to initialize M to some value less than the maximum value on the sine curve, so we choose -1.
 
 
-20 LET M = -1 
+```txt
+USER NO. 999999   PROBLEM NAME: MAXSIN   6 SEPT. 1964   TIME: 21:42 
+
+0     0     .1
+.1    .1    .1
+.2    .2    .1
+.3    .3    .1                            ← 7
+.4
+STOP. 
+READY.
+```
+
+```basic
+70                                        ← 7
+85 PRINT X0, M, D                         ← 7
 RUN
-
-### ( == Revision must continue here == )
-
-
-
-USER N0. 999999 PR0BLEM NAME: MAXSIN 6 SEPT. 1964 TIME: 21:42
-0    0
-.1    .1
-.2    .2
-.3    .3 .4
-ST0P. READY.
-70
-85 PRINT X0, M, D RUN
-USER M0. 999999 PROBLEM NAME: MAXSIN 6 SEPT. 1964 TIME: 21:43
-.9995 74 .999574 .99
-1.6 1.6 1.6
-ST0P. READY.
-90 G0 T0 10 5 PRINT "X VALUE", "SINE2«-", RES0LUTI0N" <-RUN
-<D
-USER N0. 999999 PR0BLEM NAME: MAXSIN 6 SEPT. 1964 TIME: 21:44
-INC0RRECT F0RMAT IN 5 --"
-TIME: 1 SECS.
-
-5 PRINT "X VALUE", "SINE", "RES0LUTI0N" --/7Q)
-RUN    ^LY
-USER N0. 999999 PR0BLEM NAME: MAXSIN 6 SEPT. 1964 TIME: 21:46
-X VALUE    SINE    RES0LUTI0N
-1.6    .999574    .1
-1.57    1.    .01
-1.571    1.    .001
-TIME: 1 MINS. 0 SECS.
-®
-LIST    --—----"-—-----(3)
-USER    N0. 999999 PR08LEM NAME: MAXSIN 6 SEPT. 1964 TIME: 21:48
 ```
-
-```BASIC
-5    PRINT "X VALUE", "SINE", "RES0LUTI0N"
-10    READ D
-20    LET M = -1
-30    F0R X = 0 T0 3 STEP D
-40    IF SIN(X) <= M THEN 80
-50    LET X0 = X
-60    LET M = SINCX)
-80    NEXT X
-85    PRINT XO, M, D
-90    G0 T0 10
-100    DATA .1, .01, .001
-110    END
-SAVE READY.
-```
-
-### ( == End of first block to be revised == )
-
-
-
 
 7.    At last we get printed output, but it appears that the printing is taking place each time through the loop rather than at the end of the loop. We move the print statement from before to after the NEXT statement, and incidentally change it to print M rather than X as the second term.
-8.    Ugh. Still not correct. We seem to be doing the first case over and over again. An infinite loop! This is corrected by going back to statement 10 instead of statement 20.
-9.    While we are at it, we put in labels to identify each column in the printed output.
+
+
+```txt
+USER NO. 999999   PROBLEM NAME: MAXSIN   6 SEPT. 1964   TIME: 21:43 
+
+1.6    .999574      .1
+1.6    .999574      .1                      ← 8
+1.6    .99
+1.6
+
+STOP.
+READY.
+```
+
+```basic
+90 GO TO 10                                 ← 8
+5 PRINT "X VALUE", "SINE2←", RESOLUTION"    ← 9
+RUN
+```
+
+8. Ugh. Still not correct. We seem to be doing the first case over and over again. An infinite loop! This is corrected by going back to statement 10 instead of statement 20.
+
+9. While we are at it, we put in labels to identify each column in the printed output.
+
+
+```txt
+USER NO. 999999   PROBLEM NAME: MAXSIN   6 SEPT. 1964   TIME: 21:44 
+
+INCORRECT FORMAT IN 5                       ← 10
+TIME: 1 SECS.
+```
+
+```basic
+5 PRINT "X VALUE", "SINE", "RESOLUTION"     ← 10
+RUN
+```
+
 10.    Forgot the opening " for the third label.
-11.    We finally obtain the desired answers.
+
+```txt
+USER NO. 999999   PROBLEM NAME: MAXSIN   6 SEPT. 1964   TIME: 21:44 
+X VALUE    SINE      RESOLUTION
+ 1.6        .999574   .1
+ 1.57       1.        .01
+ 1.571      1.        .001                  ← 11
+
+TIME: 1 MINS. 0 SECS.
+```
+
+11. We finally obtain the desired answers.
+
+
+
+```basic
+LIST                                        ← 12
+```
+
 12.    The final corrected version of the program is listed.
+
+```txt
+USER NO. 999999   PROBLEM NAME: MAXSIN   6 SEPT. 1964   TIME: 21:48 
+```
+
+```basic
+5 PRINT "X VALUE", "SINE", "RESOLUTION"
+10 READ D
+20 LET M = -1
+30 F0R X = 0 T0 3 STEP D
+40 IF SIN(X) <= M THEN 80
+50 LET X0 = X
+60 LET M = SIN(X)
+80 NEXT X
+85 PRINT X0, M, D
+90 GO TO 10
+100 DATA .1, .01, .001
+110 END
+SAVE                                        ← 13
+READY.
+```
+
 13.    The program is saved for later use. (This should not be done unless future use is necessary. )
 
 
@@ -1000,9 +1039,11 @@ or `<line number> FOR <variable> = <expression> TO <expression> STEP <expression
 
 **Example:**
 
-120 FOR X4 = (17 + C0S(A)) /3 TO 3*SQR(10) STEP 1/4
+```basic
+120 FOR X4 = (17 + COS(A))/3 TO 3*SQR(10) STEP 1/4
 ... (This represents the body of the loop. )
 235 NEXT X4
+```
 
 **Comment:** Omitting the STEP part of the FOR statement is equivalent to having the 
 stepsize equal to unity.
@@ -1064,8 +1105,6 @@ value of Z will then be 1, which is the initial value (2) minus the step size
 ```
 
 Comment: An END statement is required in all programs. It must also be the statement with the highest line number in the program.
-
-### ( == Revision must continue here == )
 
 
 ## III. MORE ADVANCED BASIC
