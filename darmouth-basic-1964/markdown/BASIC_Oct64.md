@@ -1200,7 +1200,7 @@ necessarily in the same program:
 
 ```basic
 B( I + K )    B( I, K)    Q( A(3, 7), B - C )
-```txt
+```
 
 The example on the next page shows a simple use of both lists and tables in the 
 same program. We might think of this program as one that computes the total 
@@ -1210,8 +1210,6 @@ of the five salesmen, where the rows stand for the items and the columns for
 the salesmen. We assume that the items sell for $1.25, 4.30, and 2.50, 
 respectively, and that salesman 1 sold 40 of item 1, 10 of item 2, and 35 of 
 item 3, and so on.
-
-### ( == Revision must continue here == )
 
 ```txt
 USER NO. 999999 PR0BLEM NAME: SALES 6 SEPT. 1964 TIME: 23:16
@@ -1228,7 +1226,7 @@ USER NO. 999999 PR0BLEM NAME: SALES 6 SEPT. 1964 TIME: 23:16
 SO NEXT I    
 90 FOR J = 1 TO 5
 100 LET S = 0
-110 FCR I = 1 TO 3
+110 FOR I = 1 TO 3
 120 LET S = S + P(I) * S(I,J)
 130 NEXT I    
 140 PRINT "TOTAL SALES FOR SALESMAN"J, "$"S
@@ -1246,15 +1244,17 @@ USER NO. 999999 PR0BLEM NAME: SALES 6 SEPT. 1964 TIME: 23:17
 
 TOTAL    SALES FOR    SALESMAN    1    $    180.5
 TOTAL    SALES FOR    SALESMAN    2    $    211.3
-TOTAL    SALES FBR    SALESMAN    3    $    131.65
+TOTAL    SALES FOR    SALESMAN    3    $    131.65
 TOTAL    SALES FOR    SALESMAN    4    $    166.55
 TOTAL    SALES FOR    SALESMAN    5    $    169.4
 
 TIME:    1 SECS.                
 ```
 
+
+
 By way of explanation, lines 10 through 30 read in the values of the list P . 
-Lines 40 through 80 read in the values of the table S. . Lines 90 through 150 
+Lines 40 through 80 read in the values of the table S. Lines 90 through 150 
 compute the total sales for the five salesmen and print each answer as it is 
 computed. The computation for a single salesman takes place in lines 100 
 through 130. In lines 90 through 150, the letter I stands for the good number, 
@@ -1264,12 +1264,18 @@ BASIC provides that each list has a subscript running from 0 to 10, inclusive.
 Each subscript in a table may run from 0 to 10. If the user desires to have 
 larger lists or tables, he may use a DIM statement in his program. For example,
 
+```basic
 10 DIM A( 17)
+```
 
 indicates to the computer that the subscript of the list A runs from 0 to 17, 
 inclusive; similarly,
 
-20 DIM B(15, 20) , S(3) means that the subscripts of B run from 0 through 15 for rows, and 0 through 20 for columns, and that the subscript of the list S runs from 0 through 3. The numbers used to denote the size of a list or table in a DIM statement must be integer numbers. The DIM statement is used not only to indicate that lists and tables are larger than 0-10 in each subscript, but also to allocate storage space in very large programs by telling the computer that only, say, 4 spaces are needed for the list S as shown above.
+```basic
+20 DIM B(15, 20) , S(3) 
+```basic
+
+means that the subscripts of B run from 0 through 15 for rows, and 0 through 20 for columns, and that the subscript of the list S runs from 0 through 3. The numbers used to denote the size of a list or table in a DIM statement must be integer numbers. The DIM statement is used not only to indicate that lists and tables are larger than 0-10 in each subscript, but also to allocate storage space in very large programs by telling the computer that only, say, 4 spaces are needed for the list S as shown above.
 
 It should be mentioned that using a DIM statement, does not require the user to 
 use all of the spaces so allocated.
@@ -1278,19 +1284,23 @@ use all of the spaces so allocated.
 
 Two additional functions that are in the BASIC repertory but which were not 
 described in section 2. 2 are INT and RND. INT is used to determine the integer 
-part of a number that might not be a whole number. Thus INT( 7.8) is equal to 7 
-.As with the other functions, the argument of INT may be any expression. One 
+part of a number that might not be a whole number. Thus INT( 7.8) is equal to 7 .
+As with the other functions, the argument of INT may be any expression. One 
 use of INT is to round numbers to the nearest whole integer. If the number is 
-positive, use INT(X + . 5) . The reader should verify that this process is 
+positive, use INT(X + .5) . The reader should verify that this process is 
 equivalent to the familiar process of rounding. If the number is negative, 
-INT(X - . 5) must be used. The reason is that INT( -7. 8) is -7, not -8. INT 
+INT(X - .5) must be used. The reason is that INT( -7.8) is -7, not -8. INT 
 always operates by chopping off the fractional part, whether the number is 
 positive or negative.
 
 INT can be used to round to any specific number of decimal places. Again, for 
 positive numbers,
 
-INT( 100*X + . 5)/100 will round X to the nearest correct two decimal number.
+```basic
+INT( 100*X + . 5)/100 
+```
+
+will round X to the nearest correct two decimal number.
 
 The function RND produces a random number between 0 and 1. The form of RND 
 requires an argument, though the argument has no significance; thus, we 
@@ -1300,10 +1310,8 @@ The property of RND is that it produces a new and different random number each
 time it is used in a program. Thus, to produce and print 20 random digits, one 
 might write a program like that shown on the next page.
 
-The middle example shows that the next time the program is run, the same 
-sequence is obtained. To vary the sequence we might "throw away" an arbitrary 
-number of random numbers at the start of the program. In the third example at 
-the bottom of the page, the first 115 random numbers are
+
+### ( == Revision must continue here == )
 
 ```txt
 10    fgr i :
@@ -1356,15 +1364,22 @@ user n0. 999999    pr0blem name: rand0m    6 sept. 1964 time: 23:35
 2 2 4    2 0 0 0    3 3
 Time: i secs.
 ```
+
+### ( == Next block is checked == )
+
+The middle example shows that the next time the program is run, the same 
+sequence is obtained. To vary the sequence we might "throw away" an arbitrary 
+number of random numbers at the start of the program. In the third example at 
+the bottom of the page, the first 115 random numbers are
 discarded. The output shows random digits numbered 116 through 135.
 
 Additional flexibility is provided in BASIC by three statements that permit the 
-use bf user-defined functions and subroutines.
+use of user-defined functions and subroutines.
 
 The DEF statement permits the user to define a function other than the standard 
-functions listed in section 2. 2 so that he doesn't have to keep repeating the 
+functions listed in section 2.2 so that he doesn't have to keep repeating the 
 formula for the function each time he uses it in his program. The name of a 
-defined function must be three letter s, the iitOi of which are FN . The user 
+defined function must be three letter s, the first two of which are FN . The user 
 thus may define up to 26 functions. The following examples illustrate the form 
 of the DEF statement:
 
@@ -1381,13 +1396,14 @@ of the DEF statement:
 Thus, FNF is the sine function measured in degrees, and FNL is the function 
 log-to-the-base-ten.
 
+
 The DEF statement may occur anywhere in the program. The user needs to be 
 cautioned that the variable used in the DEF statement must not be subscripted, 
 and that it is used every time that function is used. Thus, in a program 
 containing FNF as above defined, it is best not to use the variable Z elsewhere 
 in the program.
 
-The expression on the right of the equal sigh can be any expression that can be 
+The expression on the right of the equal sign can be any expression that can be 
 fit into one line. It could involve many other variables besides the one 
 denoting the argument of the function. Thus,
 
@@ -1395,15 +1411,16 @@ denoting the argument of the function. Thus,
 60 DEF FNX(X) = SQR(X*X + Y*Y) 
 ```
 
-may be used to set up a function that computes the square root Of the sum of 
+may be used to set up a function that computes the square root of the sum of 
 the squares of X and Y. To use FNX, one might use the following:
 
 ```basic
 10 LET Y = 30
-20 LET SI = FNX(40)
+20 LET S1 = FNX(40)
 ```
 
-Of course, SI would end up having the value 50.
+Of course, S1 would end up having the value 50.
+
 It should be noted that one does not need DEF unless the defined
 function must appear at two or more locations in the program. Thus,
 
@@ -1427,24 +1444,34 @@ might be more efficiently written as
 ```
 to compute a table of values of the sine function in degrees.
 
+
 The use of DEF is limited to those cases where the value of the function can be 
 computed within a single BASIC statement. Often much more complicated 
 functions, or perhaps even pieces of program that are not functions, must be 
 calculated at several different points within the program. For this, the GOSUB 
 statement may frequently be useful.
 
-The form of a GOSUB statement is illustrated as follows: 25 G(JSUB 180
+The form of a GOSUB statement is illustrated as follows: 
+
+```basic
+25 GOSUB 180
+```
 
 The effect of the GOSUB is exactly the same as a GOTO except that note is taken by the computer as to where the GOSUB statement is in the program. As soon as a RETURN statement is encountered, the computer automatically goes back to the statement immediately following the GOSUB. As a skeleton example,    ^
 
 ```basic
-100 LET X = 3 110 GOSUB 400 120 PRINT U, V, W
-200    LET X = 5
-210    GOSUB 400
-220    LET Z = U + 2*V + 3*W
-I
-400 LET U = X*X 410 LET V = X*X*X
-420 LET W - X*X*X*X + X*X*X + X*X + X 430 RETURN
+100 LET X = 3 
+110 GOSUB 400 
+120 PRINT U, V, W
+
+200 LET X = 5
+210 GOSUB 400
+220 LET Z = U + 2*V + 3*W
+
+400 LET U = X*X 
+410 LET V = X*X*X
+420 LET W - X*X*X*X + X*X*X + X*X + X 
+430 RETURN
 ```
 
 When statement 400 is entered by the GOSUB 400 in line 110, the computations in 
@@ -1462,13 +1489,7 @@ is applied to two integers only. The main routine applies this subroutine to
 the first two integers, and then to the GCD of these and the third integer. The 
 GCD is then printed, and a new case considered.
 
-### 3.4 Some Ideas for More Advanced Programmers
-
-An important part of any compute? program is the description of what it does, 
-and what data should be supplied. This description is commonly called 
-documentation. One of the ways a computer program can be documented is by 
-supplying remarks along with the program itself. BASIC provides for this 
-capability with the REM statement. For example,
+### ( == Revision must continue here == )
 
 ```txt
 user n0. 999999 problem name: gcd3n0
@@ -1510,6 +1531,17 @@ c
 gcd 30
 time: 1 secs
 ```
+
+
+
+### 3.4 Some Ideas for More Advanced Programmers
+
+An important part of any compute? program is the description of what it does, 
+and what data should be supplied. This description is commonly called 
+documentation. One of the ways a computer program can be documented is by 
+supplying remarks along with the program itself. BASIC provides for this 
+capability with the REM statement. For example,
+
 
 ```basic
 1    REM THIS PROGRAM SOLVES LINEAR EQUATIONS OF THE FORM
