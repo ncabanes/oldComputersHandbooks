@@ -864,7 +864,7 @@ Format :
 
 ```
 FOR variable = beginning value TO ending value 
-...
+  ...
 NEXT variable 
 ```
 
@@ -880,17 +880,18 @@ a fixed number of times, and then stop automatically.
  
 RUN ->
 
-```basic
-1
-2
-3
-4
-5
-6
-7
-8
-9
+```txt
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
 10
+OK
 ```
 
 ![](img/jvc-msx-basic-page029.png)
@@ -911,7 +912,7 @@ STEP variable increment
 
 is written like this 
 
-# (Revision must continue at this point)
+
 
 ```basic
 10 FOR I=1 TO 10 STEP 2 
@@ -920,17 +921,25 @@ is written like this
 40 END 
 ```
 
-Q RUN 
-IO
-7<\o-.iuiw- 
-__ STEP 2 
-   $   F-*1-W W Z 
+RUN ->
 
-This program will display the numbers from 1 to 10 on the screen 
+```txt
+ 1
+ 3
+ 5
+ 7
+ 9
+OK
+```
+
+This program will display the numbers from 1 to 10 on the screen.
 When the STEP 2 is entered, the numbers displayed on the screen 
-will increase by 2 each time 
+will increase by 2 each time.
 
-If there are many stens in a subroutine the number of written repetitions can be reduced 
+
+# Missing image (page 30) @@
+
+If there are many stens in a subroutine, the number of written repetitions can be reduced.
 
 #### INPUT
 
@@ -944,9 +953,9 @@ INPUT variable
 
 Up to now, the following method has been used to inform the computer of a variable value. 
 
-```
-lfi A=10 
-20 B=2fl 
+```basic
+l0 A=10 
+20 B=20 
 ```
 
 At the beginning of the program where the variable values are 
@@ -956,23 +965,31 @@ variables. The program has to be corrected.
 The INPUT command is used to input variable values from the 
 keyboard. 
 
-```
-Ifl INPUT A 
-20 PRINT A=t=3 
+```basic
+10 INPUT A 
+20 PRINT A*3 
 30 END 
 ```
-Q RUN 
-'?l 
-31
+
+RUN ->
+
+```txt
+?
+```
 
 The question mark will appear. This means that the computer is asking you what the value for the variable A in the line should be. For example, if you enter 
 
-[H J] 
+```txt
+? 5 [RETURN]
+```
 
-The computer will perform the calculation on line 20 as 5 it 3. The 
-answer will be 15. 
+The computer will perform the calculation on line 20 as 5 * 3. The answer will be 15. 
 
 Using the INPUT command 
+
+```txt
+?
+```
 
 is output, but you have no way of knowing whether character 
 or numeric information is requested, or how you should answer. 
@@ -982,62 +999,84 @@ mark.
 
 Format 
 
-l INPUT "character string";variable l 
+```basic
+INPUT "character string";variable
+```
+
 Well? let's change line 10 in the last program and then try and 
 run the program 
-10 INPUT "HOW MUCI-I IS A";A 
-20 PRINT A13 
-36 END 
-P $5 RUN 
-l HOW MUCH IS A? I l 
-32
 
-#### IF
+```txt
+10 INPUT "HOW MUCH IS A";A 
+20 PRINT A*3 
+30 END 
+```
+
+RUN ->
+
+```txt
+HOW MUCH IS A?
+```
+
+
+
+
+#### IF ~ THEN
 
 According to a condition 
 
-Format 
+Format (1)
 
-```
-l IF condition THEN statement
+```basic
+IF condition THEN statement
 ```
 
 If a specified condition is met, the operations following the THEN 
 statement are performed. If the condition is not met, the next line 
 in the program is executed. 
 
-Format @ 
+Format (2)
 
-```
-l IF condition THEN line number     
+```basic
+IF condition THEN line number     
 ```
 
 If a condition is met, the program will jump to the specified line 
 number. If the condition is not met the next line in the program 
 is executed. 
 
-The IF - THEN command is used when conditional judgements 
+The IF ~ THEN command is used when conditional judgements 
 have to be performed. 
 
-```
+```basic
 10 INPUT A 
-20 IF A>5l/I THEN PRINT "GREATER THAN SH" 
-:GOTO 10 
+20 IF A>50 THEN PRINT "GREATER THAN 50":GOTO 10 
 30 PRINT "LESS THAN 50" 
 40 GOTO 10 
 50 END 
 ```
 
 When this program is run, and the question mark appears, enter 
-any number and press the key. 
+any number and press [RETURN] the key.
+ 
 When the number which is input is greater than 50, 
-V GREATER THAN 50 J 
-33
 
-appears When the number which is input is less than 50, the following 
+```txt
+GREATER THAN 50
+```
+
+appears. When the number which is input is less than 50, the following 
 message is displayed. 
 
+```txt
 LESS THAN 50 
+```
+
+
+
+# Missing table (page 34) @@
+
+# Missing image (page 34) @@
 
 Conditional format 
 
@@ -1053,53 +1092,71 @@ A is greater than B
 A and B are not 
 equal 
 A is less than B 
-.5\11 
-52! >4?     w _iiti IIQ   F? 
-   @<~5'@
 
-If a condition is not satisfied, an 
-IF - THEN ~ ELSE other operation is performed. 
-Format (D 
-V IF condition THEN command (I) ELSE command (2) l 
+
+#### IF ~ THEN ~ ELSE
+
+If a condition is not satisfied, another operation is performed. 
+
+Format (1)
+
+```basic
+IF condition THEN command (1) ELSE command (2)
+```
+
 If a condition is met the first command is performed. If the condition 
 is not met the second command is performed. 
-Format @ 
+
+Format (2)
+
+```basic
+IF condition THEN line number (1) ELSE line number (2)
+```
 
 If the condition is met the first line is jumped to. If the condition 
 is not met, the program control jumps to the second line. 
-In this command either line numbers or commands may be used 
-in the same line without any problem. For example IF condition 
-THEN command ELS,E,|ine number|. TIIIS command IS HOW USCCI In 
-th preceding program. 
 
-II/I INPUT A 
-20 IF A>Sl?I THEN PRINT "GREATER THAN 55" 
-ELSE PRINT "LESS THAN 50" 
+In this command either line numbers or commands may be used 
+in the same line without any problem. For example 
+
+```basic
+IF condition THEN comman ELSE line number
+```
+
+This command is now used in the preceding program. 
+
+```basic
+10 INPUT A 
+20 IF A>60 THEN PRINT "GREATER THAN 50" ELSE PRINT "LESS THAN 50" 
 30 GOTO 10 
-40 END 
--2.___ _ "is ti; H.) 
-35 
-IF condition THEN line number(I) ELSE line number(2)    
+40 END
+```
+
+# Missing image (page 35) @@
+
+   
 
 #### GOSUB ~ RETURN
 
 This command is used to jump to a subroutine. 
 
-Format @ 
+Format (1)
 
 ```
 GOSUB line number 
+  ...
 RETURN 
 ```
 
 After jumping to the specified line number and performing the 
-subroutine, by using the statement in the subroutine, the 
+subroutine, by using the [RETURN] statement in the subroutine, the 
 program returns to the line following the GOSUB statement. 
 
-Format @ 
+Format (2)
 
 ```
-GO?UB line number 
+GOSUB line number 
+  ...
 RETURN line number 
 ```
 
@@ -1109,6 +1166,8 @@ returns to the line number specified in the RETURN statement.
 
 A subroutine is a part of a program which repeats the same 
 operations any number of times when the program is executed. 
+
+# (Revision must continue at this point) @@
 
 This is extremely convenient as it can be called 
 whenever it is needed. 
@@ -1162,7 +1221,7 @@ Data is entered as represented by variable (I), variable (2) and
 variable (3). 
 
 ```
-DATA constant(I), c0nstant(2), constant(3)
+DATA constant(I), constant(2), constant(3)
 ```
 
 More than one constant can be contained in a DATA statement. 
@@ -1200,7 +1259,7 @@ Dick and Harry can be calculated.
 ID FOR I = I TO 3 
 20 READ A$, B, C, D 
 39 X = INT((B + C + D)/3) 
-40 PRINT AS; "AVERAGE SCORE ";X 
+40 PRINT A$; "AVERAGE SCORE ";X 
 SB NEXT 
 60 END 
 7B DATA Tom, 74, 69, 78 
