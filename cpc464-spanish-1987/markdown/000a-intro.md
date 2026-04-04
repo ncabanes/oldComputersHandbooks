@@ -20,6 +20,8 @@ El capítulo cinco da un repaso a ciertas cuestiones básicas de la informática
 
 Finalmente, el apéndice 1 es un glosario de la terminología informática y un léxico inglés-castellano.
 
+![](img/cpc464_00_001_amstrad.png)
+
 © Copyright 1987 AMSTRAD plc
 
 El contenido de este manual y el producto en él descrito no pueden ser adaptados ni reproducidos, ni total ni parcialmente, salvo con el permiso escrito de AMSTRAD plc ('Amstrad').
