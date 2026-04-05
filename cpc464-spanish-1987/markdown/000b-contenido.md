@@ -1,6 +1,7 @@
 
 # Contenido
 
+```
 Capítulo 1 Curso se introducción
 
 Instalación y mantenimiento 1.1
@@ -23,15 +24,13 @@ Numeración de las líneas 2.8
 Capítulo 3 Lista completa de las palabras clave del BASIC de AMSTRAD
 
 Descripción de la notación utilizada
-
 Lista alfabética de las palabras clave, para las que se da:
 Palabra clave
 Sintaxis
 Descripción
 Observaciones especiales (cuando son necesarias) Palabras clave asociadas
-111
-Capítulo 4
-Para su referencia ...
+
+Capítulo 4 Para su referencia ...
 Posiciones del cursor y códigos ampliados de control 4.2 El sistema operativo 4.6
 Interrupciones 4.7
 
@@ -69,5 +68,6 @@ Apéndice 2 Algunos programas de juegos: 	o
 Rebotes	
 Bombardero	
 Amthello	
-Apéndice 3 Índice	e
+Apéndice 3 Índice
 6	Contenido	
+```
