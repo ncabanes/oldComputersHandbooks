@@ -1831,6 +1831,15 @@ IL
 
 
 
+## Apéndice: Erratas en el texto original
+
+Esta es una lista de erratas encontradas en el texto original y que han sido corregidas en esta revisión.
+
+ - "ON BREAK STOP" no recibe como parámetro el número de línea (pág 3/42)
+ - "ON <expresión> GOTO" no está relacionado con RETURN (pág 3/44)
+ 
+
+
 
 
 
