@@ -5231,9 +5231,6 @@ Los cambios han sido:
     \"obsevar\", \"ordendor\", \"pricipiantes\", \"siguiene\",
     \"softaware\", etc.
 
-```{=html}
-<!-- -->
-```
 -   Revisión de erratas en los fuentes de ejemplo. Por ejemplo \"mode\"
     en vez de \"move\" en la explicación de FILL en la página 1/64, o
     \"on sq(1)\" en vez de \"on sq81)\" en la explicación de ON SQ de la
@@ -5285,9 +5282,6 @@ como:
 
 -   Captura de la pantalla del CPC a un fichero.
 
-```{=html}
-<!-- -->
-```
 -   Volcado de toda la memoria a un fichero (\"snapshot\") o volcado
     desde un fichero a la memoria.
 
