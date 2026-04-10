@@ -1434,423 +1434,367 @@ El juego de la reflexión. Trate de rodear y capturar los cuadrados de su oponen
 3080 DATA 515,365,530,365
 ```
 
+
 # Apéndice 3. Indice
 
 (Las referencias corresponden a los números de capítulo y de página; por ejemplo, 1.42
 significa capítulo 1 página 42.)
 
-A ABS  3.3
-AFTER   3.3 5.25
-Alimentación, interruptor   1.4 1.5
-Altavoces externos   1.8 1.54
-Ampliaciones del sistema residentes   4.41
-110 Amplificador externo  
-AND   1.8 4.37
-3.4 5.15
-ASC   3.5
-ASCII   4.8 4.21
-ASCII, caracteres  4.8 4.9 5.11
-ASCII, ficheros   3.61 4.30
-ATN  3.5
-Auriculares   1.8 1.54
-AUTO  2.8 3.5
+A 
 
-ID B BASIC   1.20 3.1 4.28 5.5
-B1N$   3.6
-bit   5.7
-BORDER  1.39 3.6 4.5
-BORR, tecla   1.10
-Borrado de los canales de sonido  3.73 5.32
-BREAK   3.6
-BRILLO, control   1.4
-11111 Byte  5.7
-
-C CALL  3.7
-Capacidad de los discos   1.41
-Caracteres   1.46 4.9 5.11
-Caracteres de control   4.3
-Caracteres definibles por el usuario  3.68 5.17
-Caracteres expansibles   3.32 4.22
-Caracteres transparentes   4.4
-CHAIN  3.7
-CHAIN MERGE   3.8
-CHR$  1.45 3.8 5.12
-CINT   3.9
-Circunferencias   1.49
-CLEAR   3.9
-CLG   3.9
-
-Índice A3/1
-411
+* ABS  3.3
+* AFTER   3.3 5.25
+* Alimentación, interruptor   1.4 1.5
+* Altavoces externos   1.8 1.54
+* Ampliaciones del sistema residentes   4.41
+* 110 Amplificador externo  
+* AND   1.8 4.37
+* 3.4 5.15
+* ASC   3.5
+* ASCII   4.8 4.21
+* ASCII, caracteres  4.8 4.9 5.11
+* ASCII, ficheros   3.61 4.30
+* ATN  3.5
+* Auriculares   1.8 1.54
+* AUTO  2.8 3.5
 
 
+B 
 
-CLOSEIN  2.9 3.10 
-CLOSEOUT  2.8 3.10
+* BASIC   1.20 3.1 4.28 5.5
+* B1N$   3.6
+* bit   5.7
+* BORDER  1.39 3.6 4.5
+* BORR, tecla   1.10
+* Borrado de los canales de sonido  3.73 5.32
+* BREAK   3.6
+* BRILLO, control   1.4
+* Byte  5.7
 
-CLR, tecla   1.12
-CLS   1.20 3.10 4.3 1111
-Código de máquina   4.6
-Códigos de control   4.2 4.3 
-Colas de sonido  3.45 3.66 4.7 5.31 5.37
-Colores   1.38 1.41 
-Colores parpadeantes   1.42 3,64
-Conexión de una clavija de red   1.1 1111
-Conexión del ordenador   1.2
-1111
-Conexión de periféricos  1.7 4.36 4.37 4.38
-CONT   3.11 4.29 1111
-CONTRASTE, control   1.4
-COPIA, tecla   1.26 
-COS   3.11
-CREAL   3.11 
-Cursor, teclas del   1.9
+C 
 
+* CALL  3.7
+* Capacidad de los discos   1.41
+* Caracteres   1.46 4.9 5.11
+* Caracteres de control   4.3
+* Caracteres definibles por el usuario  3.68 5.17
+* Caracteres expansibles   3.32 4.22
+* Caracteres transparentes   4.4
+* CHAIN  3.7
+* CHAIN MERGE   3.8
+* CHR$  1.45 3.8 5.12
+* CINT   3.9
+* Circunferencias   1.49
+* CLEAR   3.9
+* CLG   3.9
+* CLOSEIN  2.9 3.10 
+* CLOSEOUT  2.8 3.10
+* CLR, tecla   1.12
+* CLS   1.20 3.10 4.3 1111
+* Código de máquina   4.6
+* Códigos de control   4.2 4.3 
+* Colas de sonido  3.45 3.66 4.7 5.31 5.37
+* Colores   1.38 1.41 
+* Colores parpadeantes   1.42 3,64
+* Conexión de una clavija de red   1.1 1111
+* Conexión del ordenador   1.2
+* Conexión de periféricos  1.7 4.36 4.37 4.38
+* CONT   3.11 4.29 1111
+* CONTRASTE, control   1.4
+* COPIA, tecla   1.26 
+* COS   3.11
+* CREAL   3.11 
+* Cursor, teclas del   1.9
 
-D DATA   3.12 4.28 5.26
-DEF FN   3.12 4.30 
-DEFINT  3.13
-DEFREAL  3.13 
-DEFSTR  3.14
-DEG   3.14 
-DELETE   3.14 
-DI  3.15 5.26
-DIM   2.3 3.16 4.29 
-DRAW   1.48 3.16
-DRAWR  3.17 
+D 
 
-E Edición de programas   1.25 
-EDIT  1.25 3.17
-El   3.17 5.26 
-ELSE  1.27 3.18
-ENC., piloto   1.4 1.5 
-END   3.18 
-ENT  1.58 3.18 5.35
-ENV   1.56 3.20 5.32
+* DATA   3.12 4.28 5.26
+* DEF FN   3.12 4.30 
+* DEFINT  3.13
+* DEFREAL  3.13 
+* DEFSTR  3.14
+* DEG   3.14 
+* DELETE   3.14 
+* DI  3.15 5.26
+* DIM   2.3 3.16 4.29 
+* DRAW   1.48 3.16
+* DRAWR  3.17 
 
-Envolvente de tono   1.58 3.18 5.35
-Envolvente de volumen  1.56 3.20 5.32 
-EOF  3.22 4.30
-ERASE  3.22 
-ERL   3.22
-ERR   3.23 
-ERROR   3.23
-1111
-ESC, tecla   1.12
-Escritura transparente   4.4 
+E 
 
-A3/2 Índice 
-o
+* Edición de programas   1.25 
+* EDIT  1.25 3.17
+* EI   3.17 5.26 
+* ELSE  1.27 3.18
+* ENC., piloto   1.4 1.5 
+* END   3.18 
+* ENT  1.58 3.18 5.35
+* ENV   1.56 3.20 5.32
+* Envolvente de tono   1.58 3.18 5.35
+* Envolvente de volumen  1.56 3.20 5.32 
+* EOF  3.22 4.30
+* ERASE  3.22 
+* ERL   3.22
+* ERR   3.23 
+* ERROR   3.23
+* ESC, tecla   1.12
+* Escritura transparente   4.4 
+* Estéreo, zócalo   4.37
+* Estereofonía   1.8 1.54
+* EVERY  3.24 5.26
+* EXP   3.24
+* E/S  4.36 4.44
+* E/S, zócalo  1.8 1.54
 
+F 
 
-Estéreo, zócalo   4.37
-Estereofonía   1.8 1.54
-ili EVERY  3.24 5.26
-EXP   3.24
-ID E/S  4.36 4.44
-E/S, zócalo  1.8 1.54
-ID
-F Ficheros ASCII   3.61 4.30
-Ficheros de BASIC  3.61
-e Ficheros binarios   3.61
-e Ficheros protegidos   3.61
-FIJA MAYS, tecla   1.10
-e FIX  3.24
-FN  3.25
-e FOR  1.28 3.25 4.28 4.30 5.12
-FRE  3.25
-e
-G GOSUB  1.29 3.26
-ID GOTO  1.22 3.26
-Grabación de variables   2.9 3.78
-Gráficos   1.45
-ID
-H Hardware   4.42
-HEX$  3.26
-HIMEM   3.26 4.42
-111
-e I IF  1.27 3.27
-Impresoras   1.7 4.39
-INK   1.39 3.27 4.5
-e INKEY   3.28 4.40
-INKEY$  2.11 3.29 4.40
-INP  3.29
-INPUT   1.23 2.2 3.29 4.29
-INSTR  2.4 3.30
-e INT  3.31
-Interfaz serie   5.3
-Interrupciones   4.7 5.24
-INTRO, tecla   1.9
-e
-J JOY   3.31 4.40
-Joysticks   1.7 4.21 4.23 4.40
-411 JOYSTICK, zócalo   1.7 4.36
-III
-K KEY  3.32 4.22
-KEY DEF   3.32 4.22 4.40
-o
+* Ficheros ASCII   3.61 4.30
+* Ficheros de BASIC  3.61
+* Ficheros binarios   3.61
+* Ficheros protegidos   3.61
+* FIJA MAYS, tecla   1.10
+* FIX  3.24
+* FN  3.25
+* FOR  1.28 3.25 4.28 4.30 5.12
+* FRE  3.25
 
-Índice A3/3
-411
+G 
 
+* GOSUB  1.29 3.26
+* GOTO  1.22 3.26
+* Grabación de variables   2.9 3.78
+* Gráficos   1.45
 
+H 
 
+* Hardware   4.42
+* HEX$  3.26
+* HIMEM   3.26 4.42
 
-L LEFT$   3.33 
-LEN  2.8 3.33
-LET  3.34 
-LINE INPUT   3.34
-LIST  1.22 1.44 3.34 
-Listas   2.3 3.16 3.22 4.29
-LOAD  3.35 
-LOCATE  1.45 3.35 4.6
+I
 
-LOG   3.36
-LOG10   3.36
+* IF  1.27 3.27
+* Impresoras   1.7 4.39
+* INK   1.39 3.27 4.5
+* INKEY   3.28 4.40
+* INKEY$  2.11 3.29 4.40
+* INP  3.29
+* INPUT   1.23 2.2 3.29 4.29
+* INSTR  2.4 3.30
+* INT  3.31
+* Interfaz serie   5.3
+* Interrupciones   4.7 5.24
+* INTRO, tecla   1.9
 
-Lógica   3.4 3.41 3.46 3.79 5.14
-LOWER$  3.36 
+J 
 
-M Matrices   2.3 3.16
-MAX  3.37 
-MAYS, teclas   1.10
+* JOY   3.31 4.40
+* Joysticks   1.7 4.21 4.23 4.40
+* JOYSTICK, zócalo   1.7 4.36
 
-MEMORY  3.37 4.28 4.42
-Mensajes de error   4.28 
-Menú  2.5 3.44
-MERGE  3.37 
-MID$   3.38
-MIN   3.39 
-MOD  1.32 3.39
-MODE  1.38 3.39 4.3 
-Modos de tinta   4.5
+K 
 
-Modulador/fuente de alimentación (MP1)  1.3 1.5 1.38 1.54
-Monitor   1.2 
-MONITOR, zócalo   1.2 1.3 4.37
-MOVE  1.49 3.40 
-MOVER  3.40
+* KEY  3.32 4.22
+* KEY DEF   3.32 4.22 4.40
 
-N NEW  1.50 3.40 
-NEXT  1.28 3.41 4.28 4.30 5.12
+L 
 
-NOT   3.41 5.14
-Notas musicales   4.24 
-Números aleatorios   3.59
-Números binarios   5.6 
-Números de los errores   4.28
-Números hexadecimales  5.9 
-O ON BREAK GOSUB  3.42
-ON BREAK STOP  3.42
-ON ERROR GOTO   3.43 4.30
-ON GOSUB  2.5 3.43
-ON GOTO  3.44
-ON SQ GOSUB  3.44 4.7 5.38
-OPENIN   2.9 3.45 4.30
-A3/4 Índice
+* LEFT$   3.33 
+* LEN  2.8 3.33
+* LET  3.34 
+* LINE INPUT   3.34
+* LIST  1.22 1.44 3.34 
+* Listas   2.3 3.16 3.22 4.29
+* LOAD  3.35 
+* LOCATE  1.45 3.35 4.6
+* LOG   3.36
+* LOG10   3.36
+* Lógica   3.4 3.41 3.46 3.79 5.14
+* LOWER$  3.36 
 
+M 
 
-e
+* Matrices   2.3 3.16
+* MAX  3.37 
+* MAYS, teclas   1.10
+* MEMORY  3.37 4.28 4.42
+* Mensajes de error   4.28 
+* Menú  2.5 3.44
+* MERGE  3.37 
+* MID$   3.38
+* MIN   3.39 
+* MOD  1.32 3.39
+* MODE  1.38 3.39 4.3 
+* Modos de tinta   4.5
+* Modulador/fuente de alimentación (MP1)  1.3 1.5 1.38 1.54
+* Monitor   1.2 
+* MONITOR, zócalo   1.2 1.3 4.37
+* MOVE  1.49 3.40 
+* MOVER  3.40
 
+N 
 
+* NEW  1.50 3.40 
+* NEXT  1.28 3.41 4.28 4.30 5.12
+* NOT   3.41 5.14
+* Notas musicales   4.24 
+* Números aleatorios   3.59
+* Números binarios   5.6 
+* Números de los errores   4.28
+* Números hexadecimales  5.9 
 
+O 
 
+* ON BREAK GOSUB  3.42
+* ON BREAK STOP  3.42
+* ON ERROR GOTO   3.43 4.30
+* ON GOSUB  2.5 3.43
+* ON GOTO  3.44
+* ON SQ GOSUB  3.44 4.7 5.38
+* OPENIN   2.9 3.45 4.30
+* OPENOUT  2.8 3.45 4.30
+* Operadores   1.30 5.15
+* OR  3.46 5.15
+* ORIGIN   1.51 3.46
+* OUT  3.47
 
- 
+P
 
-
-OPENOUT  2.8 3.45 4.30
-Operadores   1.30 5.15
-OR  3.46 5.15
-ORIGIN   1.51 3.46
-OUT  3.47
-ID
-P Palabras clave   1.20 3.1
-PAPER   1.39 3.47 4.4
-PEEK   3.47
-PEN  1.39 3.48 4.4
-Periféricos   1.7 5.2
-PI   3.48
-Piloto (de la unidad de disco)   1.8
-Plantillas   4.32 4.33 4.34 4.35
-PLOT   1.47 3.48
-O PLOTR  3.49
-POKE  3.49
-Potenciación   1.33 1.35
-PRINT  1.21 3.50 5.18
-PRINT SPC  3.51 5.19
-PRINT TAB   3.51 5.19
-PRINT USING   3.51 5.20
-PUERTA DEL USUARIO, zócalo   1.7 4.36
-
-
-R RAD   3.53
-Raíz cuadrada   1.33 3.66
-Raíz cúbica   1.33
-RANDOMIZE  3.54
-READ   3.54 7.28 5.26
-RELEASE   3.55 5.36
-REM  1.28 2.2 3.55
-REMAIN   3.56 5.26
-RENUM   2.7 3.56
-RESTORE   3.57 5.28
-RESUME   3.57 4.30
-RESUME NEXT   3.58
-Retención de los canales de sonido 3  62 5.32
-RETURN  1.29 3.58 7.28
-RETURN, tecla   1.9 1.12
-RIGHT$  3.59
-RND  3.59
-ROM adicional   4.44
-ROUND  3.60
-RS232C  5.3
-RSX   4.41
-RUN   1.21 3.60
-
-Índice A3/5
-, --1 I&
+* Palabras clave   1.20 3.1
+* PAPER   1.39 3.47 4.4
+* PEEK   3.47
+* PEN  1.39 3.48 4.4
+* Periféricos   1.7 5.2
+* PI   3.48
+* Piloto (de la unidad de disco)   1.8
+* Plantillas   4.32 4.33 4.34 4.35
+* PLOT   1.47 3.48
+* PLOTR  3.49
+* POKE  3.49
+* Potenciación   1.33 1.35
+* PRINT  1.21 3.50 5.18
+* PRINT SPC  3.51 5.19
+* PRINT TAB   3.51 5.19
+* PRINT USING   3.51 5.20
+* PUERTA DEL USUARIO, zócalo   1.7 4.36
 
 
+R 
 
+* RAD   3.53
+* Raíz cuadrada   1.33 3.66
+* Raíz cúbica   1.33
+* RANDOMIZE  3.54
+* READ   3.54 7.28 5.26
+* RELEASE   3.55 5.36
+* REM  1.28 2.2 3.55
+* REMAIN   3.56 5.26
+* RENUM   2.7 3.56
+* RESTORE   3.57 5.28
+* RESUME   3.57 4.30
+* RESUME NEXT   3.58
+* Retención de los canales de sonido 3.62 5.32
+* RETURN  1.29 3.58 7.28
+* RETURN, tecla   1.9 1.12
+* RIGHT$  3.59
+* RND  3.59
+* ROM adicional   4.44
+* ROUND  3.60
+* RS232C  5.3
+* RSX   4.41
+* RUN   1.21 3.60
 
-S SAVE   3.61
+S 
 
-SGN   3.61
-SIN   3.62 11.
-Sincronización de canales   3.62 5.31
-Sintetizador de voz   1.8 5.3 
-Software  1.14
-SOUND   1.54 3.62 4.24 5.29 
-SPACE$  3.64
-SPC   3.64 5.19
-SPEED INK   3.64
-SPEED KEY  3.65
-SPEED WRITE   3.65 
-SQ   3.66 5.38
-SQR  1.33 3.66 
-STEP  1.28 3.66
-STOP   3.67 
-STR$  3.67
-STRING$  3.67 
-Suma de verificación   5.27
-IIII
-SWAP  3.68
-SYMBOL  3.68 4.5 5.17 
-SYMBOL AFTER  3.70 4.42
-Syntax error   1.13 7.28 
+* SAVE   3.61
+* SGN   3.61
+* SIN   3.62 11.
+* Sincronización de canales   3.62 5.31
+* Sintetizador de voz   1.8 5.3 
+* Software  1.14
+* SOUND   1.54 3.62 4.24 5.29 
+* SPACE$  3.64
+* SPC   3.64 5.19
+* SPEED INK   3.64
+* SPEED KEY  3.65
+* SPEED WRITE   3.65 
+* SQ   3.66 5.38
+* SQR  1.33 3.66 
+* STEP  1.28 3.66
+* STOP   3.67 
+* STR$  3.67
+* STRING$  3.67 
+* Suma de verificación   5.27
+* SWAP  3.68
+* SYMBOL  3.68 4.5 5.17 
+* SYMBOL AFTER  3.70 4.42
+* Syntax error   1.13 7.28 
 
-T TAB  3.70 5.19 
-TAG  3.70
-TAGOFF   3.71 
-TAN   3.71
-Teclado   1.9 4.21 4.22 4.23 4.40 
-Teclas definibles por el usuario   3.32 4.21 4.22 4.23
-Televisor   1.3 1.5 1.54 
-TEST   3.72
-TESTR   3.72 
-THEN  1.27 3.72
-TIME   3.73 
-TO  3.73 
-TROFF  3.73
-TRON  3.73 
-U UNIDAD DE DISCO, zócalo  1.8 4.38
-UNT   3.74
-UPPER$  3.74
-USING   3.74 5.20
-V VAL   3.75
-Variables   1.24 4.31 5.12
-Variables, grabación de   2.8 3.61 3.78
-Variables literales   1.24 4.29
-A3/6 Índice
+T 
 
+* TAB  3.70 5.19 
+* TAG  3.70
+* TAGOFF   3.71 
+* TAN   3.71
+* Teclado   1.9 4.21 4.22 4.23 4.40 
+* Teclas definibles por el usuario   3.32 4.21 4.22 4.23
+* Televisor   1.3 1.5 1.54 
+* TEST   3.72
+* TESTR   3.72 
+* THEN  1.27 3.72
+* TIME   3.73 
+* TO  3.73 
+* TROFF  3.73
+* TRON  3.73 
 
+U 
 
+* UNIDAD DE DISCO, zócalo  1.8 4.38
+* UNT   3.74
+* UPPER$  3.74
+* USING   3.74 5.20
 
-
-
-
-
-r
-o
-
+V 
+* VAL   3.75
+* Variables   1.24 4.31 5.12
+* Variables, grabación de   2.8 3.61 3.78
+* Variables literales   1.24 4.29
+* Vibrato   5.34
+* Volcado de pantalla   3.61
+* VOLUMEN, control  1.8 1.54
+* VPOS   3.75
   
-IIII   
-IIII  Vibrato   5.34
-  Volcado de pantalla   3.61
- VOLUMEN, control  1.8 1.54
-  VPOS   3.75
+W 
+
+* WAIT  3.75
+* WEND   3.76 4.31
+* WHILE   3.76 4.28 4.31
+* WIDTH   3.76
+* WINDOW   2.10 3.77 4.5 5.22
+* WINDOW SWAP  3.77 5.23
+* WRITE   2.8 3.78 5.19
   
-W WAIT  3.75
-  WEND   3.76 4.31
- WHILE   3.76 4.28 4.31
- WIDTH   3.76
-  WINDOW   2.10 3.77 4.5 5.22
- WINDOW SWAP  3.77 5.23
-  WRITE   2.8 3.78 5.19
+X 
+
+* XOR   3.79 5.17
+* XPOS  3.79
   
-X XOR   3.79 5.17
- XPOS  3.79
+Y 
+
+* YPOS   3.80
   
- Y YPOS   3.80
+Z 
+
+* Zócalos de corriente contínua  1.2 1.3
+* ZONE   3.80 5.18
   
-Z Zócalos de corriente contínua  1.2 1.3
-el  ZONE   3.80 5.18
-  
-III   
 
-
-
-
-
-
-o
-
-
-410
-O el
-O
-
-Índice A3/7
-IL
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Apéndice: Erratas en el texto original
+# Apéndice 4: Erratas en el texto original
 
 Esta es una lista de erratas encontradas en el texto original y que han sido corregidas en esta revisión.
 
+ - Alguna errata poco importante: imprescidible (2/2), softaware (5/4)
+ - La explicación de 2/9 habla de retornar con INTRO, y debería ser retornar con RETURN. (pág 2/9)
  - "ON BREAK STOP" no recibe como parámetro el número de línea (pág 3/42)
  - "ON <expresión> GOTO" no está relacionado con RETURN (pág 3/44)
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Aravaca, 22. 28040 MADRID. Tel. 459 30 01, Télex 47660 INSC E, Fax 459 22 92 Delegación en Cataluña: Tarragona, 110. 08015 BARCELONA, Tel. 325 10 58
-GRUPO INDESCOMP
