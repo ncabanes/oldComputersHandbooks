@@ -2,7 +2,7 @@
 # Contenido
 
 ```
-Capítulo 1 Curso se introducción
+Capítulo 1 Curso de introducción
 
 Instalación y mantenimiento 1.1
 Conexión de periféricos 1.7
@@ -28,46 +28,53 @@ Lista alfabética de las palabras clave, para las que se da:
 Palabra clave
 Sintaxis
 Descripción
-Observaciones especiales (cuando son necesarias) Palabras clave asociadas
+Observaciones especiales (cuando son necesarias) 
+Palabras clave asociadas
 
 Capítulo 4 Para su referencia ...
-Posiciones del cursor y códigos ampliados de control 4.2 El sistema operativo 4.6
+Posiciones del cursor y códigos ampliados de control 4.2 
+El sistema operativo 4.6
 Interrupciones 4.7
-
-Contenido	5
 Caracteres ASCII y caracteres gráficos 4.8
 Esquemas del teclado 4.21
 Sonidos 4.24
 Mensajes de error 4.28
 Palabras reservadas de BASIC 4.31
-Plantillas 4.32 Conexiones 4.36 Impresoras 4.39 Joysticks 4.40
+Plantillas 4.32 
+Conexiones 4.36 
+Impresoras 4.39 
+Joysticks 4.40
 Ampliaciones del sistema residentes (RSX) 4.41
 Memoria 4.42
+
 Capítulo 5
 Cuando usted guste ...
+
 Sobre la informática en general:
-El mundo de los ordenadores
-Hardware y software
-Comparación de unos ordenadores con otros Aclaración de algunos conceptos
-Cómo maneja el ordenador las instrucciones del usuario El mundo digital
-Bits y bytes Sistema binario
-Sistema hexadecimal
+    El mundo de los ordenadores
+    Hardware y software
+    Comparación de unos ordenadores con otros 
+    Aclaración de algunos conceptos
+    Cómo maneja el ordenador las instrucciones del usuario 
+    El mundo digital
+    Bits y bytes Sistema binario
+    Sistema hexadecimal
 Sobre el CPC464 en particular:
-Juego de caracteres
-Variables Lógica
-Caracteres definidos por el usuario
-Formatos de escritura
-Ventanas Interrupciones
-Datos
-Sonido
-Gráficos
+    Juego de caracteres
+    Variables Lógica
+    Caracteres definidos por el usuario
+    Formatos de escritura
+    Ventanas Interrupciones
+    Datos
+    Sonido
+    Gráficos
+
 Apéndices	
 	
 Apéndice 1 Léxico inglés-castellano y glosario 	
-Apéndice 2 Algunos programas de juegos: 	o
-Rebotes	
-Bombardero	
-Amthello	
+Apéndice 2 Algunos programas de juegos:
+    Rebotes	
+    Bombardero	
+    Amthello	
 Apéndice 3 Índice
-6	Contenido	
 ```
